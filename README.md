@@ -1,2 +1,2 @@
-# arcus
+# Arcus
 Azure development in a breeze

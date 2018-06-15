@@ -1,7 +1,9 @@
 # Arcus
 Azure development in a breeze.
 
-We currently support:
+![Arcus](./media/arcus.png)
+
+## Features
 - [Azure Event Grid](https://github.com/arcus-azure/arcus.eventgrid)
 
-![Arcus](./media/arcus.png)
+Missing something? Create an issue!

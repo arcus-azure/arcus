@@ -4,6 +4,12 @@ Arcus provides some tooling to streamline the governance & setup of new projects
 ## GitHub Repo Configurator
 GitHub Repo Configurator configures a GitHub repository according to a defined repository manifest.
 
+### Building the tool
+You can easily build the tool with the .NET Core commands:
+```shell
+dotnet build .\src\Arcus.Tools.Repository.App\Arcus.Tools.Repository.App.csproj
+```
+
 ### Running the tool
 Run the tool
 ```shell

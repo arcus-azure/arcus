@@ -1,0 +1,13 @@
+labels:
+  - name: management
+    description: All issues related to management of the project
+    color: f282af
+issues:
+  - title: Provide NuGet badge
+    description: Provide NuGet badge in the README
+    milestoneName: Project Setup
+    labels:
+    - management
+milestones:
+ - title: Project Setup
+   description: All tasks related to creating a new Arcus project

@@ -10,11 +10,11 @@ dotnet build .\src
 ## Running the tool
 Run the tool
 ```shell
-Arcus.Tools.Repository.App.exe
-        --username "<github-username>"
-        --password "<github-password>"
-        --repo-name "<github-repo>" #  example: arcus/arcus.keyvault
-        --configuration-file "<path-to-configuration>"
+dotnet .\Arcus.Tools.Repository.App.dll
+             --username "<github-username>"
+             --password "<github-password>"
+             --repo-name "<github-repo>" #  example: arcus/arcus.keyvault
+             --configuration-file "<path-to-configuration>"
 ```
 
 ## Manifest

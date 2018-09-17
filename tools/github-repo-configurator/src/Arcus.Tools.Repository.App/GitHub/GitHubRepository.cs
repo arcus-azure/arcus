@@ -29,9 +29,11 @@ namespace Arcus.Tools.Repository.App.GitHub
 
         public async Task CreateIssue(Issue issue, Octokit.Repository githubRepo, Milestone relatedMilestone)
         {
+            var optimizedDescription = issue.Description.Replace("- [ ]", "\r\n- [ ]");
+
             var newIssue = new NewIssue(issue.Title)
             {
-                Body = issue.Description,
+                Body = optimizedDescription,
                 Milestone = relatedMilestone.Number
             };
 
@@ -41,7 +43,7 @@ namespace Arcus.Tools.Repository.App.GitHub
             }
 
             var createdIssue = await GitHubClient.Issue.Create(githubRepo.Id, newIssue);
-            Log($"Issue '{createdIssue.Title}' created (#{createdIssue.Id})");
+            Log($"Issue '{createdIssue.Title}' created (#{createdIssue.Number})");
         }
 
         public async Task CreateIssueIfNotExists(Issue issue, Octokit.Repository githubRepo)

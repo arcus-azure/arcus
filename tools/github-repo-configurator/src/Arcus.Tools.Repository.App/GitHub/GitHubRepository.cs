@@ -127,6 +127,11 @@ namespace Arcus.Tools.Repository.App.GitHub
         {
             IReadOnlyList<Octokit.Repository> allRepositories = await GitHubClient.Repository.GetAllForCurrent();
             var foundRepository = allRepositories.FirstOrDefault(repo => repo.FullName.Equals(repositoryName, StringComparison.InvariantCultureIgnoreCase));
+            if (foundRepository == null)
+            {
+                throw new Exception("Repository '{repositoryName}' was not found. Make sure you are a collaborator on the repository");
+            }
+
             return foundRepository;
         }
 

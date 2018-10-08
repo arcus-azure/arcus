@@ -31,7 +31,6 @@ issues:
     description: Provide NuGet badge in the README
     milestoneName: Project Setup
     labels:
-    - management
     - documentation
   - title: Provide MIT license
     description: Provide MIT license on the repository and clearly document in the README
@@ -45,11 +44,18 @@ issues:
     labels:
     - management
     - automation
+  - title: Define branch policies
+    description: "Define branch policies on the `master` branch. It should:
+    - [ ] Build every PR with our CI
+    - [ ] Be approved by 1 person"
+    milestoneName: Project Setup
+    labels:
+    - management
+    - automation
   - title: Provide CI badge
     description: Provide CI badge in the README
     milestoneName: Project Setup
     labels:
-    - management
     - documentation
   - title: Configure code owners
     description: Configure code owners that need to approve changes before merging them in. ([docs](https://help.github.com/articles/about-codeowners/))
@@ -73,8 +79,30 @@ issues:
     - [ ] How to install it"
     milestoneName: Project Setup
     labels:
-    - management
     - documentation
+  - title: Provide a release pipeline for MyGet.org
+    description: "Provide a release pipeline for MyGet.org. It should do the following:
+    - [ ] Configure to run for every PR
+    - [ ] Use 'Determine NuGet Package Version' task group to determin package version
+    - [ ] Build the codebase
+    - [ ] Run test suite
+    - [ ] Push all NuGet packages to MyGet.org"
+    milestoneName: Project Setup
+    labels:
+    - management
+    - automation
+  - title: Provide a release pipeline for NuGet.org
+    description: "Provide a release pipeline for NuGet.org. It should do the following:
+    - [ ] Build the codebase
+    - [ ] Run test suite
+    - [ ] Tag the codebase on success
+    - [ ] Create a GitHub pre-release for a preview releases
+    - [ ] Create a GitHub release for full releases
+    - [ ] Push all NuGet packages to NuGet.org"
+    milestoneName: Project Setup
+    labels:
+    - management
+    - automation
 milestones:
  - title: Project Setup
    description: All tasks related to creating a new Arcus project

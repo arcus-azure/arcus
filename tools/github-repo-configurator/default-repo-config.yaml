@@ -33,12 +33,6 @@ issues:
     labels:
     - management
     - documentation
-  - title: Provide CI badge
-    description: Provide CI badge in the README
-    milestoneName: Project Setup
-    labels:
-    - management
-    - documentation
   - title: Provide MIT license
     description: Provide MIT license on the repository and clearly document in the README
     milestoneName: Project Setup
@@ -51,6 +45,12 @@ issues:
     labels:
     - management
     - automation
+  - title: Provide CI badge
+    description: Provide CI badge in the README
+    milestoneName: Project Setup
+    labels:
+    - management
+    - documentation
   - title: Configure code owners
     description: Configure code owners that need to approve changes before merging them in. ([docs](https://help.github.com/articles/about-codeowners/))
     milestoneName: Project Setup

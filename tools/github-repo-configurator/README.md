@@ -13,7 +13,7 @@ Run the tool
 dotnet .\Arcus.Tools.Repository.App.dll
              --username "<github-username>"
              --password "<github-password>"
-             --repo-name "<github-repo>" #  example: arcus/arcus.keyvault
+             --repo-name "<github-repo>" #  example: arcus-azure/arcus.keyvault
              --configuration-file "<path-to-configuration>"
 ```
 

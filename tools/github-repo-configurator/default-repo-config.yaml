@@ -51,7 +51,7 @@ issues:
       It should:
     
       - [ ] Build every PR with our CI
-      - [ ] Be approved by 1 person"
+      - [ ] Be approved by 1 person
     milestoneName: Project Setup
     labels:
     - management
@@ -73,7 +73,7 @@ issues:
 
       - [ ] Bug reports
       - [ ] Feature requests
-      - [ ] Support questions"
+      - [ ] Support questions
     milestoneName: Project Setup
     labels:
     - management

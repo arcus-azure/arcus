@@ -1,0 +1,7 @@
+repository: arcus-azure/arcus
+theme: jekyll-theme-slate
+logo: https://raw.githubusercontent.com/arcus-azure/arcus/master/media/arcus.png
+title: Arcus
+description: Azure development in a breeze
+plugins:
+  - jemoji

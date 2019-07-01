@@ -32,12 +32,6 @@ issues:
     milestoneName: Project Setup
     labels:
     - documentation
-  - title: Provide MIT license
-    description: Provide MIT license on the repository and clearly document in the README
-    milestoneName: Project Setup
-    labels:
-    - management
-    - documentation
   - title: Configure CI build
     description: Configure a CI build that will build & test the changes made in every PR
     milestoneName: Project Setup
@@ -63,17 +57,6 @@ issues:
     - documentation
   - title: Configure code owners
     description: Configure code owners that need to approve changes before merging them in. ([docs](https://help.github.com/articles/about-codeowners/))
-    milestoneName: Project Setup
-    labels:
-    - management
-    - automation
-  - title: Configure issue templates
-    description: |- 
-      Configure issue templates for the following scenarios at least:
-
-      - [ ] Bug reports
-      - [ ] Feature requests
-      - [ ] Support questions
     milestoneName: Project Setup
     labels:
     - management

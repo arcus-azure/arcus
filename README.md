@@ -13,3 +13,10 @@ We track issues in a variety of places for Arcus. If you have found an issue or 
 | **Event Grid Sidecar** | Requests & suggestions for Azure Event Grid Docker container | [Features](https://eventgrid-sidecar.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.eventgrid.sidecar/issues)
 | **Security** | Requests & suggestions for security integration(s) | [Features](https://security.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.security/issues)
 | **Web API** | Requests & suggestions for web api development | [Features](https://webapi.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.webapi/issues)
+
+ ## Starting a new components
+ 
+ Every new Arcus component repo should be created via our GitHub template which is located in [arcus-azure/arcus.template](https://github.com/arcus-azure/arcus.template).
+ 
+ Afterwards, run the [GitHub Repo Configurator
+](https://github.com/arcus-azure/arcus/tree/master/tools/github-repo-configurator) to generate all default labels, issues and milestoned.

@@ -1,13 +1,11 @@
 Developer Guide
 ===
 
-
 - [1. Coding Guidelines](#1-coding-guidelines)
     - [1.1. General](#11-general)
     - [1.2. Usage of `var`](#12-usage-of-var)
     - [1.3. Working with `async` methods](#13-working-with-async-methods)
     - [1.4. Testing](#14-testing)
-
 
 # 1. Coding Guidelines
 

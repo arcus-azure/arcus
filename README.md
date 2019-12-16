@@ -20,3 +20,6 @@ We track issues in a variety of places for Arcus. If you have found an issue or 
  
  Afterwards, run the [GitHub Repo Configurator
 ](https://github.com/arcus-azure/arcus/tree/master/tools/github-repo-configurator) to generate all default labels, issues and milestoned.
+
+## Contributing
+We are open for all contributions, learn more about our coding conventions in our ["Developer Guide"](DEVELOPER-GUIDE.md).

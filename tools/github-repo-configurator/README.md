@@ -4,13 +4,14 @@ GitHub Repo Configurator configures a GitHub repository according to a defined r
 ## Building the tool
 You can easily build the tool with the .NET Core commands:
 ```shell
-dotnet build .\src
+$ dotnet build .\src
 ```
 
 ## Running the tool
 Run the tool
 ```shell
-dotnet .\Arcus.Tools.Repository.App.dll
+$ cd src\Arcus.Tools.Repository.App\bin\Debug\netcoreapp2.1
+$ dotnet .\Arcus.Tools.Repository.App.dll
              --username "<github-username>"
              --password "<github-password>"
              --repo-name "<github-repo>" #  example: arcus-azure/arcus.keyvault
@@ -18,13 +19,9 @@ dotnet .\Arcus.Tools.Repository.App.dll
 ```
 
 ## Manifest
-A manifest is used to describe what labels, issues and milestones are required.
+A manifest is used to describe what issues and milestones are required.
 
 ```yaml
-labels:
-  - name: management
-    description: All issues related to management of the project
-    color: f282af
 issues:
   - title: Provide NuGet badge
     description: Provide NuGet badge in the README

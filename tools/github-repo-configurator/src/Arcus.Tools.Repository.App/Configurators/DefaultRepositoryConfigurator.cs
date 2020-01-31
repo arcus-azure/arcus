@@ -32,7 +32,6 @@ namespace Arcus.Tools.Repository.App.Configurators
 
             Console.WriteLine($"Starting with default configuration for repository {Repository}");
 
-            await CreateLabels(repositoryConfiguration.Labels, githubRepo);
             await CreateMilestones(repositoryConfiguration.Milestones, githubRepo);
             await CreateIssues(repositoryConfiguration.Issues, githubRepo);
 
@@ -52,14 +51,6 @@ namespace Arcus.Tools.Repository.App.Configurators
             foreach (var milestone in milestones)
             {
                 await githubRepository.CreateMilestoneIfNotExists(milestone, githubRepo);
-            }
-        }
-
-        private async Task CreateLabels(List<Label> labels, Octokit.Repository githubRepo)
-        {
-            foreach (var label in labels)
-            {
-                await githubRepository.CreateLabelIfNotExists(label, githubRepo);
             }
         }
     }

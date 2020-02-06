@@ -70,15 +70,20 @@ As part of that effort we have:
 - Exposed secret version
 - Improved usability
 
-## Web API
+## Security made simpler with Arcus Web API
 
-Security and exceptions, those were the main topics where the major changes happened in the GitHub [`Arcus.WebApi`](https://github.com/arcus-azure/arcus.webapi) repository.
-Because all API applications should have some type of 'global' exception handling functionality that handles 'unexpected' exceptions, we've created a middleware component that does this for us.
-This component is defaulting a _catch all_ exceptions and handles the HTTP responses for us; meaning we have less (but not nothing) to worry about forgotten exceptions.
+[Arcus Web API](https://github.com/arcus-azure/arcus.webapi) was one of our main focuses of 2019 where we wanted to start building a toolbox of features that we see on every project, mainly being security & exception handling.
 
-As for the security aspect, we've added two approaches to do authentication in API applications: _Shared Access Key_ and _Certificate_ authentication.
-Both approaches can be configured globally so the entire application requires authentication or more fine-grained on operation level, having more control about specific parts of your application.
-Oh, and a bonus: in a separate library, we've added OAuth integration for security definitions with OpenApi extensions.
+Nobody likes to keep on writing the same things over and over again, that's why we've introduced our **exception handling middleware** which takes care of unhandled exceptions and returns a proper HTTP 500 to the API consumer. If we've forgotton to handle an exception, it will be managed and logged so it can be reacted upon.
+
+Another important area was security - Every API should be secure-by-default but the problem is often that there is not enough time and/or focus spent on it.
+
+We now provide two ways of enforcing API authentication out of the box:
+
+- **Shared Access Key authentication** which supports header and/or query parameter for passing the key
+- **Mutual TLS (mTLS) authentication** which allows you to define the criteria
+
+Last but not least, we've added OAuth security definitions for easily annotating OpenAPI specs.
 
 ## Get started easily with Arcus Templates
 

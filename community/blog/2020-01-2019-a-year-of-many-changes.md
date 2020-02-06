@@ -1,8 +1,12 @@
 # 2019, A Year of Many Changes
 
-Last year, we made a whole diversity of changes in all GitHub Arcus repositories and even made some new ones. It was a year of making the existing 'basic' functionality future-proof and more extensive so new projects _really_ benefit from it.
+In 2019 we've [announced **Arcus**](https://www.codit.eu/blog/announcing-arcus/), a set of open-source components that make it easier to build applications that run on Microsoft Azure.
 
-Come and take a look at what we've done in the Arcus factory!
+Since then we've been working hard to provide more functionality, make it easier to use and even introduce new areas where we are investing in!
+
+With Arcus we strive to reduce rewriting functionality that all our customers need so that we can focus on their business needs rather than infrastructure.
+
+Come and take a look at what we've done on Arcus!
 
 ## YAML as New Build System
 
@@ -60,6 +64,18 @@ There is also another project template on the horizon that will create a .NET wo
 
 ## 2020, a Sneak Peak
 
-An upcoming, new, GitHub repository is in the working called [`Arcus.Messaging`](https://github.com/arcus-azure/Arcus.Messaging) where we will store functionality for 'messaging' runtime components.
+And we are not stopping there!
 
-...
+On most of our projects we use queues to decouple processes and process the workload asynchronously. We've seen that we have to write message pumps over and over again where we have to manage the pump, provide exception handling, telemetry, deserialization and more but we are going to provide all of this out-of-the-box! This would allow you to focus on the processing of the messages and not how you get them.
+
+More and more Azure services are starting to emit Event Grid events which allow us to automate processes. [Azure Key Vault is one of them](https://docs.microsoft.com/en-us/azure/event-grid/event-schema-key-vault) which notifies us about expiring certificates or secrets that are updated, we'll use this to automatically renew our cached secrets in a secure manner.
+
+Last but not least, deploying your applications to production is only the beginning and not the end. That's why observability is crucial for building production-ready platforms so that operation team understands what's going on. However, developers tend to not care about that until it's too late.
+
+Because of that we'll try to reduce the pain of providing good tracing, metrics, request logging, business event tracking and visual representation of the application by extending Serilog so that it works better with Azure Application Insights.
+
+And who knows what we'll add next! Do you have a great idea? Don't hesitate to let us know in the comments or on GitHub!
+
+Thanks for reading,
+
+Stijn & Tom.

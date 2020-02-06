@@ -80,26 +80,43 @@ Another important area was security - Every API should be secure-by-default but 
 
 We now provide two ways of enforcing API authentication out of the box:
 
-- **Shared Access Key authentication** which supports header and/or query parameter for passing the key
+- **Shared Access Key (SAS) authentication** which supports header and/or query parameter for passing the key
 - **Mutual TLS (mTLS) authentication** which allows you to define the criteria
 
 Last but not least, we've added OAuth security definitions for easily annotating OpenAPI specs.
 
 ## Get started easily with Arcus Templates
 
-Probably the where the biggest changes are made is the newly created GitHub [`Arcus.Templates`](https://github.com/arcus-azure/arcus.templates) repository.
-This will be the home of different types of project templates so you can kickstart your new project.
+As Arcus grows over time, we have more and more components that can help you build applications. We've seen that over time it's less trivial to figure out what you can help and starting new APIs can take some time to wire things up.
 
-Currently, a single project template is available that will create a web API application with already some commonly used, boilerplate code.
-The exception handling middleware from the [`Arcus.WebApi`](https://github.com/arcus-azure/arcus.webapi) repository is, for example, by default present in the resulting project.
-Just like a health check and logger.
+With [**Arcus Templates**](https://github.com/arcus-azure/arcus.templates) this all changes - It is the home of quickstart templates so you can kickstart your new project with a breeze.
 
-But the most interesting part is the additional available project options. 
-The newly added authentication mechanisms in the [`Arcus.WebApi`](https://github.com/arcus-azure/arcus.webapi) repository is also available here as project options.
-Adding `--authentication SharedAccessKey` to the CLI command is all that is required to correctly configure the authentication of your project.
-Other project options have also been added like Swagger and application settings, and many more interesting features are coming!
+First, install the template from NuGet:
 
-There is also another project template on the horizon that will create a .NET worker service project with TCP health probes and message pumps, so keep your eye on future work on Arcus!
+```shell
+> dotnet new --install Arcus.Templates.WebApi
+```
+
+When installed, the template can be created with shortname: arcus-webapi:
+
+```shell
+> dotnet new arcus-webapi --name Arcus.Demo.WebAPI
+```
+
+Et voila, you are ready to start building your application!
+
+As of now, **we provide the following components out-of-the-box**:
+
+- Exception middleware to log unhandled exceptions thrown during request processing
+- Content negotiation that only supports application/json
+- Open API documentation generation and UI *(only available locally, unless configured otherwise)*
+- A basic health endpoint with ASP.NET Core health checks & OpenAPI support
+- Default console logger, with capability to opt-in for Serilog
+- Dockerfile
+
+However, if you don't like certain aspects you can still tweak the template based on your needs.
+
+For example, we don't want to enforce authentication on your APIs but you can opt-in for Shared Access Key (SAS) or Mutual TLS (mTLS)!
 
 ## 2020, a Sneak Peak
 
@@ -114,6 +131,8 @@ More and more Azure services are starting to emit Event Grid events which allow 
 Last but not least, deploying your applications to production is only the beginning and not the end. That's why observability is crucial for building production-ready platforms so that the operation team understands what's going on. However, developers tend to not care about that until it's too late.
 
 Because of that, we'll try to reduce the pain of providing good tracing, metrics, request logging, business event tracking and visual representation of the application by extending Serilog so that it works better with Azure Application Insights.
+
+Smells like new templates coming up as well? Damn right.
 
 And who knows what we'll add next! Do you have a great idea? Don't hesitate to let us know in the comments or on GitHub!
 

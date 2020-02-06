@@ -8,25 +8,50 @@ With Arcus we strive to reduce rewriting functionality that all our customers ne
 
 Come and take a look at what we've done on Arcus!
 
-## YAML as New Build System
+## Transitioning to Azure Pipelines (YAML)
 
-In every existing new and future GitHub repositories, we will use YAML as our primary build system. This includes also the running tests and publishing NuGet packages. This was a major change across the Arcus landscape but was worth it.
+When we started working on Arcus, Azure Pipelines with YAML support did not exist yet in Azure DevOps so we started off with the classic Builds & Releases.
 
-We've also created a dedicated [`azure-devops-templates`](https://github.com/arcus-azure/azure-devops-templates) GitHub repository that contains reusable YAML templates. This reduces duplication, makes the structure of different parts of the build process central so we can quickly update _all_ Arcus repositories.
+Overtime we've noticed that it was slowing us down from delivering features:
 
-An example is [**Running Integration Tests**](https://github.com/arcus-azure/azure-devops-templates/blob/master/test/run-integration-tests.yml), which includes both the replacement of configuration tokens for application settings, as well as the `dotnet` command to run the tests.
+- PRs didn't include build changes, so CI failed while it shouldn't
+- Somebody with the correct permissions had to perform manual changes after a PR was merged
+- Hard to provide consistent pipelines across all GitHub repos
+- Pipelines are not in source control
 
-## Arcus.EventGrid
+That's why **we've decided to invest in migrating from classic Build & Releases into Azure Pipelines based on YAML**.
 
-The GitHub [`Arcus.EventGrid`](https://github.com/arcus-azure/arcus.eventgrid) repository was already contained some 'basic' functionality to interact with Azure EventGrid resources.
-Last year, we invested in both the sending- and receiving-side of EventGrid events.
+In every existing, new and future GitHub repositories; we use YAML as our primary build system. This was a major change across the Arcus organisation but was definately worth it!
+
+By doing this, **managing our pipelines has become super easy**:
+
+- New repos come with our standard pipelines out-of-the-box, thanks to our [GitHub template](https://github.com/arcus-azure/arcus.github.template)
+- Re-use of pipeline components with their own lifecycle
+- Changes to our pipelines can be done in the same PR
+- No more manual interactions
+
+
+As part of this effort, we've created a dedicated [`azure-devops-templates`](https://github.com/arcus-azure/azure-devops-templates) **GitHub repository that contains reusable [YAML templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops)**. This reduces duplication, makes the structure of different parts of the build process central so we can quickly update _all_ Arcus repositories with one PR.
+
+As an example, every project uses our [*Run Integration Tests*](https://github.com/arcus-azure/azure-devops-templates/blob/master/test/run-integration-tests.yml) template which replaces the configuration tokens for application settings, as well as the `dotnet` command to run the tests.
+
+### What about GitHub Actions?
+
+Good you've asked! It's fairly simple - GitHub Actions is even newer than Azure Pipelines.
+
+Since Azure Pipelines works fine for us there is no reason why we would move over to GitHub Actions.
+
+## Event Grid
+
+The GitHub [`Arcus.EventGrid`](https://github.com/arcus-azure/arcus.eventgrid) repository was already contained some 'basic' functionality to interact with Azure Event Grid resources.
+Last year, we invested in both the sending- and receiving-side of Event Grid events.
 By 'sending', we mean that we can now publish RAW events (without schema; raw JSON string) both as a single event and as a set of events using the `EventGridPublisher` as a starting point.
 With this new functionality, publishing events becomes super simple without worrying about predefining the schema in a class.
 
 The 'receiving' since also got an update. We now fully support 'CloudEvent' events using the official .NET SDK. 
-This means that the Arcus.EventGrid library can work with Azure EventGrid that is configured with EventGrid events or CloudEvent events.
+This means that the Arcus.EventGrid library can work with Azure Event Grid that is configured with Event Grid events or CloudEvent events.
 
-## Arcus.Security
+## Security
 
 The updates in the GitHub [`Arcus.Security`](https://github.com/arcus-azure/arcus.security) repository are most of all internal restructure-work and improvements for future upcoming features, such as:
 how the security provider implementations are initialized, configured, how we replace configuration tokens with secrets...
@@ -36,7 +61,7 @@ Client-throttling, for instance, has been added to accompany HTTP `TooManyReques
 How we authenticate with KeyVault has also received an update. 
 We've added certificate-based authentication and Azure Active-Directory for Managed Identity authentication with a raw connection string support.
 
-## Arcus.WebApi
+## Web API
 
 Security and exceptions, those were the main topics where the major changes happened in the GitHub [`Arcus.WebApi`](https://github.com/arcus-azure/arcus.webapi) repository.
 Because all API applications should have some type of 'global' exception handling functionality that handles 'unexpected' exceptions, we've created a middleware component that does this for us.
@@ -46,7 +71,7 @@ As for the security aspect, we've added two approaches to do authentication in A
 Both approaches can be configured globally so the entire application requires authentication or more fine-grained on operation level, having more control about specific parts of your application.
 Oh, and a bonus: in a separate library, we've added OAuth integration for security definitions with OpenApi extensions.
 
-## Arcus.Templates
+## Get started easily with Arcus Templates
 
 Probably the where the biggest changes are made is the newly created GitHub [`Arcus.Templates`](https://github.com/arcus-azure/arcus.templates) repository.
 This will be the home of different types of project templates so you can kickstart your new project.
@@ -56,7 +81,7 @@ The exception handling middleware from the [`Arcus.WebApi`](https://github.com/a
 Just like a health check and logger.
 
 But the most interesting part is the additional available project options. 
-The newly added authentication mechanisms in the [`Arcus.WebApi`](https://github.com/arcus-azure/arcus.webapi) repository is also available here as project options. 
+The newly added authentication mechanisms in the [`Arcus.WebApi`](https://github.com/arcus-azure/arcus.webapi) repository is also available here as project options.
 Adding `--authentication SharedAccessKey` to the CLI command is all that is required to correctly configure the authentication of your project.
 Other project options have also been added like Swagger and application settings, and many more interesting features are coming!
 

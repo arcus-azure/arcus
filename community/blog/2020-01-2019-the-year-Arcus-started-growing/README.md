@@ -1,4 +1,4 @@
-# 2019, A Year of Many Changes
+# 2019, the year Arcus started growing
 
 In 2019 we've [announced **Arcus**](https://www.codit.eu/blog/announcing-arcus/), a set of open-source components that make it easier to build applications that run on Microsoft Azure.
 

@@ -10,9 +10,9 @@ Come and take a look at what we've done on Arcus!
 
 ## Transitioning to Azure Pipelines (YAML)
 
-When we started working on Arcus, Azure Pipelines with YAML support did not exist yet in Azure DevOps so we started off with the classic Builds & Releases.
+When we started working on Arcus, Azure Pipelines with YAML support did not exist yet in Azure DevOps so we started with the classic Builds & Releases.
 
-Overtime we've noticed that it was slowing us down from delivering features:
+Over time we've noticed that it was slowing us down from delivering features:
 
 - PRs didn't include build changes, so CI failed while it shouldn't
 - Somebody with the correct permissions had to perform manual changes after a PR was merged
@@ -23,7 +23,7 @@ That's why **we've decided to invest in migrating from classic Build & Releases 
 
 ![Azure Pipelines](./media/azure-pipelines.png)
 
-In every existing, new and future GitHub repositories; we use YAML as our primary build system. This was a major change across the Arcus organisation but was definately worth it!
+In every existing, new and future GitHub repositories; we use YAML as our primary build system. This was a major change across the Arcus organization but it was definitely worth it!
 
 By doing this, **managing our pipelines has become super easy**:
 
@@ -39,7 +39,7 @@ As an example, every project uses our [*Run Integration Tests*](https://github.c
 
 ### What about GitHub Actions?
 
-Good you've asked! It's fairly simple - GitHub Actions is even newer than Azure Pipelines.
+Good that you've asked! It's fairly simple - GitHub Actions is even newer than Azure Pipelines.
 
 Since Azure Pipelines works fine for us there is no reason why we would move over to GitHub Actions.
 
@@ -74,7 +74,7 @@ As part of that effort we have:
 
 [Arcus Web API](https://github.com/arcus-azure/arcus.webapi) was one of our main focuses of 2019 where we wanted to start building a toolbox of features that we see on every project, mainly being security & exception handling.
 
-Nobody likes to keep on writing the same things over and over again, that's why we've introduced our **exception handling middleware** which takes care of unhandled exceptions and returns a proper HTTP 500 to the API consumer. If we've forgotton to handle an exception, it will be managed and logged so it can be reacted upon.
+Nobody likes to keep on writing the same things over and over again, that's why we've introduced our **exception handling middleware** which takes care of unhandled exceptions and returns a proper HTTP 500 to the API consumer. If we've forgotten to handle an exception, it will be managed and logged so it can be reacted upon.
 
 Another important area was security - Every API should be secure-by-default but the problem is often that there is not enough time and/or focus spent on it.
 
@@ -97,7 +97,7 @@ First, install the template from NuGet:
 > dotnet new --install Arcus.Templates.WebApi
 ```
 
-When installed, the template can be created with shortname: arcus-webapi:
+When installed, the template can be created with the short name: arcus-webapi:
 
 ```shell
 > dotnet new arcus-webapi --name Arcus.Demo.WebAPI
@@ -111,7 +111,7 @@ As of now, **we provide the following components out-of-the-box**:
 - Content negotiation that only supports application/json
 - Open API documentation generation and UI *(only available locally, unless configured otherwise)*
 - A basic health endpoint with ASP.NET Core health checks & OpenAPI support
-- Default console logger, with capability to opt-in for Serilog
+- Default console logger, with the capability to opt-in for Serilog
 - Dockerfile
 
 However, if you don't like certain aspects you can still tweak the template based on your needs.

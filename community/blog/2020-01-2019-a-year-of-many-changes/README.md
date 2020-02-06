@@ -21,6 +21,8 @@ Overtime we've noticed that it was slowing us down from delivering features:
 
 That's why **we've decided to invest in migrating from classic Build & Releases into Azure Pipelines based on YAML**.
 
+![Azure Pipelines](./media/azure-pipelines.png)
+
 In every existing, new and future GitHub repositories; we use YAML as our primary build system. This was a major change across the Arcus organisation but was definately worth it!
 
 By doing this, **managing our pipelines has become super easy**:
@@ -41,25 +43,32 @@ Good you've asked! It's fairly simple - GitHub Actions is even newer than Azure 
 
 Since Azure Pipelines works fine for us there is no reason why we would move over to GitHub Actions.
 
-## Event Grid
+## Arcus Event Grid is now more flexible and supports CloudEvents natively
 
-The GitHub [`Arcus.EventGrid`](https://github.com/arcus-azure/arcus.eventgrid) repository was already contained some 'basic' functionality to interact with Azure Event Grid resources.
-Last year, we invested in both the sending- and receiving-side of Event Grid events.
-By 'sending', we mean that we can now publish RAW events (without schema; raw JSON string) both as a single event and as a set of events using the `EventGridPublisher` as a starting point.
-With this new functionality, publishing events becomes super simple without worrying about predefining the schema in a class.
+[Arcus Event Grid](https://github.com/arcus-azure/arcus.eventgrid) was the first area that we've invested in and already provided some basic functionality to interact with Azure Event Grid, both sending and receiving.
 
-The 'receiving' since also got an update. We now fully support 'CloudEvent' events using the official .NET SDK. 
-This means that the Arcus.EventGrid library can work with Azure Event Grid that is configured with Event Grid events or CloudEvent events.
+In 2019 we've improved it a bit so that:
 
-## Security
+- You can send **raw payloads** (without schema, just a raw JSON string)
+- You can now **send single or collection of events at once**
+- Use the **official Azure event type from the Azure SDK**
+- Receive events in **CloudEvents** format, based on the official CloudEvents SDK
 
-The updates in the GitHub [`Arcus.Security`](https://github.com/arcus-azure/arcus.security) repository are most of all internal restructure-work and improvements for future upcoming features, such as:
-how the security provider implementations are initialized, configured, how we replace configuration tokens with secrets...
-Nonetheless, some interesting things happened internally to improve usability and stability.
-Client-throttling, for instance, has been added to accompany HTTP `TooManyRequests` errors returned from Azure KeyVault.
+This means that you are no longer locked-in to Azure Event Grid's schema and can use whatever you want!
 
-How we authenticate with KeyVault has also received an update. 
-We've added certificate-based authentication and Azure Active-Directory for Managed Identity authentication with a raw connection string support.
+## Arcus Security is now improved
+
+[Arcus Security](https://github.com/arcus-azure/arcus.security)'s focus in 2019 was mainly internal restructuring and improvements for future upcoming features.
+
+As part of that effort we have:
+
+- New ways to authenticate with Key Vault - Certificate-based authentication & raw connection string support for Managed Identity
+- Introduced resiliency to correctly handle HTTP `TooManyRequests` errors returned from Azure Key Vault
+- Integrated with .NET Core's `IConfigurationBuilder` as a configuration provider
+- Introduced in-memory caching of secrets to avoid hitting service limitations
+- Improved our internal testing
+- Exposed secret version
+- Improved usability
 
 ## Web API
 
@@ -90,6 +99,8 @@ There is also another project template on the horizon that will create a .NET wo
 ## 2020, a Sneak Peak
 
 And we are not stopping there!
+
+Security is important and we'll keep on investing in this area. Most of our Arcus components fully rely on Arcus Security so it's an essential part of our ecosystem.
 
 On most of our projects, we use queues to decouple processes and process the workload asynchronously. We've seen that we have to write message pumps over and over again where we have to manage the pump, provide exception handling, telemetry, deserialization and more but we are going to provide all of this out-of-the-box! This would allow you to focus on the processing of the messages and not how you get them.
 

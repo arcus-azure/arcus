@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a94cac62-0d30-4d52-a378-d60cc1717db9/deploy-status)](https://app.netlify.com/sites/arcus-staging/deploys)
+
 # Arcus
 Azure development in a breeze.
 

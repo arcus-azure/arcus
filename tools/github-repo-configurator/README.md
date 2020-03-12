@@ -4,6 +4,7 @@ GitHub Repo Configurator configures a GitHub repository according to a defined r
 ## Building the tool
 You can easily build the tool with the .NET Core commands:
 ```shell
+$ cd tools\github-repconfigurator
 $ dotnet build .\src
 ```
 
@@ -20,6 +21,9 @@ $ dotnet .\Arcus.Tools.Repository.App.dll
 
 ## Manifest
 A manifest is used to describe what issues and milestones are required.
+Two files are provided with default issues and milestones already:
+- `tools/github-repo-configurator/default-repo-config.yaml`: Default file for netstandard/netcore projects, oriented towards nuget.org
+- `tools/github-repo-configurator/default-pypi-config.yaml`: Default file for python package, oriented towards pypi.org
 
 ```yaml
 issues:
@@ -32,3 +36,5 @@ milestones:
  - title: Project Setup
    description: All tasks related to creating a new Arcus project
 ```
+
+* __issues

@@ -33,4 +33,6 @@ We'd like to thank the following services for supporting our open-source initiat
 - **Netlify** allows us to provide previews of our documentation changes in our
   pull requests that make it easier to review them.
 
-![Netlify](./media/logo-netlify.png)
+  <a href="https://www.netlify.com">
+    <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" alt="Deploys by Netlify" />
+  </a>

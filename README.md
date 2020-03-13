@@ -15,6 +15,11 @@ We track issues in a variety of places for Arcus. If you have found an issue or 
 | **Event Grid Sidecar** | Requests & suggestions for Azure Event Grid Docker container | [Features](https://eventgrid-sidecar.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.eventgrid.sidecar/issues)
 | **Security** | Requests & suggestions for security integration(s) | [Features](https://security.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.security/issues)
 | **Web API** | Requests & suggestions for web api development | [Features](https://webapi.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.webapi/issues)
+| **Messaging** | Requests & suggestions for messaging development | [Features](https://messaging.arcus-azure.net/#features) - [File an Issue](https://https://github.com/arcus-azure/arcus.messaging/issues)
+| **Background Jobs** | Requests & suggestions for reusable jobs & development of background jobs | [Features](https://background-jobs.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.backgroundjobs/issues)
+| **Observability** | Requests & suggestions for adding observability to applications | [Features](https://observability.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.observability/issues)
+| **.NET Templates** | Requests & suggestions for .NET templates to get started | [Features](https://templates.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.templates/issues)
+| **Machine Learning** | Requests & suggestions for machine learning in Azure | [Features](https://machine-learning.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.azureml/issues)
 
  ## Starting a new components
  

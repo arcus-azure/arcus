@@ -23,3 +23,11 @@ We track issues in a variety of places for Arcus. If you have found an issue or 
 This is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the web application. But you always need to state that Codit is the original author of this web application.
 
 *[Full license here](https://github.com/arcus-azure/arcus.security/blob/master/LICENSE)*
+
+# Thank you!
+We'd like to thank the following services for supporting our open-source initiative!
+
+- **Netlify** allows us to provide previews of our documentation changes in our
+  pull requests that make it easier to review them.
+
+![Netlify](./media/logo-netlify.png)

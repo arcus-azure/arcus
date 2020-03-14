@@ -129,7 +129,7 @@ namespace Arcus.Tools.Repository.App.GitHub
             var foundRepository = allRepositories.FirstOrDefault(repo => repo.FullName.Equals(repositoryName, StringComparison.InvariantCultureIgnoreCase));
             if (foundRepository == null)
             {
-                throw new Exception("Repository '{repositoryName}' was not found. Make sure you are a collaborator on the repository");
+                throw new Exception($"Repository '{repositoryName}' was not found. Make sure you are a collaborator on the repository and you use the full name. (such as arcus-azure/yourrepo)");
             }
 
             return foundRepository;

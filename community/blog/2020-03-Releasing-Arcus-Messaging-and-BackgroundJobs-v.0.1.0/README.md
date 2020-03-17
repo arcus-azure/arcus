@@ -5,7 +5,7 @@ Both help in in writing repeating jobs that securely receive external events and
 
 Come and take a look at what the basic features of these projects have to offer!
 
-## Receiving Messages From a Azure Service Bus Queues & Topics
+## Receiving Messages From Azure Service Bus Queues & Topics
 
 The [`Arcus.Messaging.Pumps.ServiceBus`](https://www.nuget.org/packages/Arcus.Messaging.Pumps.ServiceBus/) package provides something that's called a **message pump** for messages on Azure Service Bus.
 This pump can be registered very easily on startup of your application.

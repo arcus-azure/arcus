@@ -16,7 +16,7 @@ This allows a loosely coupled system between receiving and processing.
 
 See the [docs](https://messaging.arcus-azure.net/features/message-pumps/service-bus) for more info.
 
-## Monitoring Health of a Runtime Process
+## Monitoring Health of a Worker
 
 The [`Arcus.Messaging.Health`](https://www.nuget.org/packages/Arcus.Messaging.Health/) package provides the capability to expose a TCP probe health endpoint that allows a runtime to periodically check the liveness/readiness of the application.
 Using the already known [.NET Core Health Checks](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-3.1), we provide a very compatible system in a worker project.

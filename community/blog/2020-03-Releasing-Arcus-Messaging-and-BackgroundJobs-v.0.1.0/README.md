@@ -18,7 +18,9 @@ See the [docs](https://messaging.arcus-azure.net/features/message-pumps/service-
 
 ## Monitoring Health of a Worker
 
-The [`Arcus.Messaging.Health`](https://www.nuget.org/packages/Arcus.Messaging.Health/) package provides the capability to expose a TCP probe health endpoint that allows a runtime to periodically check the liveness/readiness of the application.
+With Arcus Messaging we provide provide the capability to expose a TCP health probe endpoint that allows processes to periodically check the liveness/readiness of the application which is extremely important in container workloads.
+
+This allows you to expose a health endpoint without having to include the HTTP stack in your workers, keeping your application simple.
 Using the already known [.NET Core Health Checks](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-3.1), we provide a very compatible system in a worker project.
 
 See the [docs](https://messaging.arcus-azure.net/features/tcp-health-probe) for more info.

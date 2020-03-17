@@ -1,4 +1,4 @@
-# Releasing Arcus Messaging & BackgroundJobs v0.1.0
+# Announcing Arcus Messaging & Background Jobs
 
 Recently we released v0.1.0 of the [`Arcus.Messaging`](https://github.com/arcus-azure/arcus.messaging/releases/tag/v0.1.0) and [`Arcus.BackgroundJobs`](https://github.com/arcus-azure/arcus.backgroundjobs/releases/tag/v0.1.0) project.
 Both help in in writing repeating jobs that securely receive external events and process them any way you want.

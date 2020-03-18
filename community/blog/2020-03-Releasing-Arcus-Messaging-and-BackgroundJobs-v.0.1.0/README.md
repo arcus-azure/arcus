@@ -63,7 +63,7 @@ See the [docs](https://messaging.arcus-azure.net/features/tcp-health-probe) for 
 ## Automatically Invalidate Azure Key Vault Secrets
 
 With Arcus BackgroundJobs we provide capabilities for running a background job that automatically invalidates Key Vault secrets based on the send out Azure Event Grid Events on the vault.
-Adding this job to you application makes sure the used [cached secret providers](https://security.arcus-azure.net/features/secrets/general) in your application are always updated with the most recent secrets.
+By adding this job to you application, it makes sure that your [cached secret providers](https://security.arcus-azure.net/features/secrets/general) in your application are always evicting the cache to use the most recent secrets.
 
 By using our [`Arcus.BackgroundJobs.KeyVault`](https://www.nuget.org/packages/Arcus.BackgroundJobs.KeyVault/) NuGet package, you can very easily opt-in to automatically invalidate Azure Key Vault secrets:
 

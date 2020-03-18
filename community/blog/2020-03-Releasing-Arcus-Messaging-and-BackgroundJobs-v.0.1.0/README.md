@@ -20,7 +20,7 @@ See the following section as an example to handle `Order` messages with a custom
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddServiceBusQueueMessagePump("ServiceBus:Queue:ConnectionString")
+    services.AddServiceBusQueueMessagePump((ISecretProvider secretProvider) => secretProvider.GetRawSecretAsync("ServiceBus:Queue:ConnectionString"))
             .WithServiceBusMessageHandler<OrdersMessageHandler, Order>();
 }
 ```

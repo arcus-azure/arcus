@@ -7,7 +7,7 @@ Come and take a look at what they have to offer!
 
 ## Receiving Messages From Azure Service Bus Queues & Topics
 
-With Arcus Messaging we provide something that's called a **message pump** for messages on Azure Service Bus.
+With Arcus Messaging we make it easier to process messages. By using a **message pump**, we will automatically get messages from a broker where we support Azure Service Bus for now.
 This pump can be registered very easily on startup of your application.
 
 Once registered, one or more **message handlers** can be registered that will eventually process the message. 

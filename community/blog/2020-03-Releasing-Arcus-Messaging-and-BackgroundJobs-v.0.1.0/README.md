@@ -30,12 +30,22 @@ Where the your `OrderMessageHandler` will process the `Order` messages received 
 ```csharp
 public class OrdersMessageHandler : IMessageHandler<Order>
 {
+    private readonly ILogger _logger;
+
+    public OrdersMessageHandler(ILogger<OrdersMessageHandler> logger)
+    {
+        _logger = logger
+    }
+
     public async Task ProcessMessageAsync(
         Order message, 
         MessageContext messageContext, 
         MessageCorrelationInfo correlationInfo, 
         CancellationToken cancellationToken)
     {
+        _logger.LogInformation(
+            "Processing order {OrderId} for {OrderAmount} units of {OrderArticle} bought by {CustomerFirstName} {CustomerLastName}", 
+            order.Id, order.Amount, order.ArticleNumber, order.Customer.FirstName, order.Customer.LastName);
     }
 }
 ```

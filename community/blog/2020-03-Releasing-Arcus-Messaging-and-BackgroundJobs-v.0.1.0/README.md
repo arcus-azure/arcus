@@ -10,7 +10,7 @@ Come and take a look at what they have to offer!
 With Arcus Messaging we make it easier to process messages. By using a **message pump**, we will automatically get messages from a broker where we support Azure Service Bus for now.
 This pump can be registered very easily on startup of your application.
 
-Once registered, one or more **message handlers** can be registered that will eventually process the message. 
+Once registered, one or more **message handlers** can be plugged in who will process messages. 
 Based on the message type, the pump will send the message to the correct registered handler.
 This allows a loosely coupled system between receiving and processing.
 

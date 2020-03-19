@@ -70,6 +70,8 @@ By using our [`Arcus.Messaging.Health`](https://www.nuget.org/packages/Arcus.Mes
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
+    services.AddHealthChecks();
+    services.AddAzureBlobStorage("UseDevelopmentStorage=true", "arcusblobs");
     services.AddTcpHealthProbes("Health:Tcp:Port");
 }
 ```

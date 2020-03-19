@@ -1,5 +1,11 @@
 # Announcing Arcus Messaging & Background Jobs
 
+At Codit, we have been doing messaging since the company has started - Initially by using Microsoft BizTalk Server but over time we've been writing apps built on messaging in Azure as well.
+
+We've seen that for a lot of customers we have to write the same boilerplate for processing message queues over and over again and it is not a trivial thing to do.
+
+That's why we've decided to use our experience and start Arcus Messaging and Arcus Background Jobs which provides all of the boilerplate allowing you to focus on the application that you are building!
+
 Recently we released v0.1.0 of the [`Arcus.Messaging`](https://github.com/arcus-azure/arcus.messaging/releases/tag/v0.1.0) and [`Arcus.BackgroundJobs`](https://github.com/arcus-azure/arcus.backgroundjobs/releases/tag/v0.1.0) and are now available on NuGet.
 Both help with writing repeating jobs that securely receive external events and process them any way you want.
 

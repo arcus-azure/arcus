@@ -95,3 +95,23 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 See the [docs](https://background-jobs.arcus-azure.net/features/security/auto-invalidate-secrets) for more info.
+
+# What's next?
+
+We are just getting started and looking forward to rolling out more features.
+
+There's a lot of things we'd like to tackle, such as:
+
+- A background job to report Databricks job outcome as a metric allowing you to create alerts on them ([Background Jobs #26](https://github.com/arcus-azure/arcus.backgroundjobs/issues/26))
+- Provide support for using message pump for Azure Event Hubs ([Messaging #24](https://github.com/arcus-azure/arcus.messaging/issues/24))
+- Provide capability to support multiple message handlers based on message context ([Messaging #26](https://github.com/arcus-azure/arcus.messaging/issues/26))
+- Provide capability to support multiple message handlers based on message body ([Messaging #27](https://github.com/arcus-azure/arcus.messaging/issues/27))
+- Provide support for multi-staged message processing ([Messaging #25](https://github.com/arcus-azure/arcus.messaging/issues/25))
+- Provide support for key rolling for Service Bus message pump ([Messaging #37](https://github.com/arcus-azure/arcus.messaging/issues/37))
+- Provide health check for Azure Service Bus message pump ([Messaging #38](https://github.com/arcus-azure/arcus.messaging/issues/38))
+
+However, that's not it and we are always open for feedback! What do you think is painful or what would you like to see? [Let us know](https://github.com/arcus-azure/arcus.messaging/issues/new).
+
+Thanks for reading,
+
+Stijn

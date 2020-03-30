@@ -8,7 +8,7 @@ Take a look what theses templates have to offer!
 ## Web API Template
 
 Version v0.1.0 only contained some basic functionality, exception handling, and an option to add a shared key authentication mechanism.
-What version v0.2.0 provides is a lot more than that! 
+What version [v0.2.0](https://www.nuget.org/packages/Arcus.Templates.WebApi/) provides is a lot more than that! 
 
 Here's what the default template contains without any additional configurations:
 
@@ -38,7 +38,7 @@ For more info see the [docs](https://templates.arcus-azure.net/features/web-api-
 
 ## Azure Service Bus Queue/Topic Templates
 
-Starting from version v0.2.0, we also provide two project templates that create a .NET worker project with a [message pump](https://messaging.arcus-azure.net/features/message-pumps/service-bus) that is either listening on a Azure Service Bus Queue or Topic.
+Starting from version v0.2.0, we also provide two project templates that create a .NET worker project with a [message pump](https://messaging.arcus-azure.net/features/message-pumps/service-bus) that is either listening on a Azure Service Bus Queue or Topic. Both templates are available on NuGet: [Queue template](https://www.nuget.org/packages/Arcus.Templates.ServiceBus.Queue/), [Topic template](https://www.nuget.org/packages/Arcus.Templates.ServiceBus.Topic/).
 
 Here's what default available in the template without any additional configurations:
 

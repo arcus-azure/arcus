@@ -8,7 +8,7 @@ Take a look what theses templates have to offer!
 ## Web API Template
 
 Version v0.1.0 only contained some basic functionality, exception handling, and an option to add a shared key authentication mechanism.
-What version [v0.2.0](https://www.nuget.org/packages/Arcus.Templates.WebApi/) provides is a lot more than that! 
+With version [v0.2.0](https://www.nuget.org/packages/Arcus.Templates.WebApi/) we provide a lot more! 
 
 Here's what the default template contains without any additional configurations:
 

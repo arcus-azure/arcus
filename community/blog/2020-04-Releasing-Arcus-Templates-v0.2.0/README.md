@@ -31,7 +31,9 @@ For more info see the [docs](https://templates.arcus-azure.net/features/web-api-
 
 ## Azure Service Bus Queue/Topic Templates
 
-Starting from version v0.2.0, we also provide two project templates that create a .NET worker project with a [message pump](https://messaging.arcus-azure.net/features/message-pumps/service-bus) that is either listening on a Azure Service Bus Queue or Topic. Both templates are available on NuGet: [Queue template](https://www.nuget.org/packages/Arcus.Templates.ServiceBus.Queue/), [Topic template](https://www.nuget.org/packages/Arcus.Templates.ServiceBus.Topic/).
+As of v0.2.0, we've introduced two new templates for creating .NET workers a [message pump](https://messaging.arcus-azure.net/features/message-pumps/service-bus) that is either listening on a Azure Service Bus Queue or Topic.
+
+Both templates are available on NuGet - [Queue message pump template](https://www.nuget.org/packages/Arcus.Templates.ServiceBus.Queue/) & [Topic message pump template](https://www.nuget.org/packages/Arcus.Templates.ServiceBus.Topic/).
 
 Here's what default available in the template without any additional configurations:
 
@@ -43,4 +45,3 @@ Besides that, each template provides an option to exclude the [Serilog](https://
 
 For more info on the Azure Service Bus Queue template, see the [docs](https://templates.arcus-azure.net/features/servicebus-queue-worker-template).
 For more info on the Azure Serivce Bus Topic template, see the [docs](https://templates.arcus-azure.net/features/servicebus-topic-worker-template).
-

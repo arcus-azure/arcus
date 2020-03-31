@@ -24,7 +24,7 @@ Besides that, we have provided a whole range of additional functionality that ca
 * We improved the authentication in our API by adding [JWT](https://webapi.arcus-azure.net/features/security/auth/certificate) and [client certificate](https://webapi.arcus-azure.net/features/security/auth/certificate) authentication.
 * The template now allows you to include a `appsettings.json` file in the project.
 * [Correlation](https://webapi.arcus-azure.net/features/correlation) between HTTP requests/responses is by default included in the project but can be option-out.
-* The project includes [ASP.NET OpenAPI docs generation and UI](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio) by default but can be excluded.
+* Our built-in OpenAPI docs generation and UI can be excluded with opt-out.
 * If you prefer [Serilog](https://serilog.net/) instead of default console, you can opt-in for that.
 
 For more info see the [docs](https://templates.arcus-azure.net/features/web-api-template).

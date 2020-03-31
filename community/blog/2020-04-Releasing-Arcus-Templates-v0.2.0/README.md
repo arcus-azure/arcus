@@ -38,7 +38,7 @@ Both templates are available on NuGet - [Queue message pump template](https://ww
 Here's what default available in the template without any additional configurations:
 
 * TCP health check probe ([official docs](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-2.2) & [Arcus docs](https://messaging.arcus-azure.net/features/tcp-health-probe)).
-* Empty message pump on Azure Service Bus Queue ([official docs](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues))
+* Empty message pump on Azure Service Bus Queue or Topic ([official docs](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues))
 * Dockerfile.
 
 Besides that, each template provides an option to exclude the [Serilog](https://serilog.net/) logging infrastructure in the worker project.

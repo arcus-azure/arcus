@@ -21,18 +21,11 @@ Here's what the default template contains without any additional configurations:
 
 Besides that, we have provided a whole range of additional functionality that can be optioned-in/out during the creation of the template:
 
-* `-au|--authentication` (default `None`)
-  * `SharedAccessKey`: adds [shared access key authentication](https://webapi.arcus-azure.net/features/security/auth/shared-access-key) mechanism to the API project
-  * `Certificate`: adds [client certificate authentication](https://webapi.arcus-azure.net/features/security/auth/certificate) mechanism to the API project
-  * `JWT`: adds JWT (JSON Web Token) authentication mechanism to the API project
-  * `None`: no authentication configured on the API project.
-* `-ia|--include-appsettings` (default `false`): includes a `appsettings.json` file to the web API project.
-* `-ec|--exclude-correlation` (default `false`): excludes the [capability to correlate](https://webapi.arcus-azure.net/features/correlation) between HTTP requests/responses from the API project.
-* `-eo|--exclude-openApi` (default `false`): exclude the [ASP.NET OpenAPI docs generation and UI](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio) from API project.
-* `-lo|--logging` (default `Console`)
-  * `Console`: no extra logging mechanism except for the default console logging will be added to the web API project.
-  * `Serilog`: adds [Serilog](https://serilog.net/) as logging mechanism with request logging to the web API project.
-
+* We improved the authentication in our API by adding [JWT](https://webapi.arcus-azure.net/features/security/auth/certificate) and [client certificate](https://webapi.arcus-azure.net/features/security/auth/certificate) authentication.
+* The template now allows you to include a `appsettings.json` file in the project.
+* [Correlation](https://webapi.arcus-azure.net/features/correlation) between HTTP requests/responses is by default included in the project but can be option-out.
+* The project includes [ASP.NET OpenAPI docs generation and UI](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio) by default but can be excluded.
+* The logging capabilities are also expanded by adding a default console and [Serilog](https://serilog.net/) option.
 
 For more info see the [docs](https://templates.arcus-azure.net/features/web-api-template).
 
@@ -46,8 +39,7 @@ Here's what default available in the template without any additional configurati
 * Empty message pump on Azure Service Bus Queue ([official docs](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues))
 * Dockerfile.
 
-Besides that, each template provides an additional option-out for loggin:
-* `-es|--exclude-serilog`: Exclude the [Serilog](https://serilog.net/) logging infrastructure in the worker project.
+Besides that, each template provides an option to exclude the [Serilog](https://serilog.net/) logging infrastructure in the worker project.
 
 For more info on the Azure Service Bus Queue template, see the [docs](https://templates.arcus-azure.net/features/servicebus-queue-worker-template).
 For more info on the Azure Serivce Bus Topic template, see the [docs](https://templates.arcus-azure.net/features/servicebus-topic-worker-template).

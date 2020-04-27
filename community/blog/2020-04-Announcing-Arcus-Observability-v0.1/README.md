@@ -47,14 +47,18 @@ For more examples about the other types, have a look [at our documentation](http
 
 Providing context around your telemetry is super powerful! You do not only provide information about what happend, but gives more information about the what & why.
 
-Let's use an example - When measuring a metric you get an understanding of the count, in our case the amount of invoices received:
+Let's use an example - When measuring a metric you get an understanding of the count, in our case the amount of orders received:
 
 ```csharp
 logger.LogMetric("Orders Received", 133);
-// Log output: "Metric Invoice Received: 133 (Context: )"
+// Log output: "Metric Orders Received: 133 (Context: )"
 ```
 
-However, you can very easily provide additional context allowing you get an understanding of the amount of invoices received and annotate it with the vendor information.
+If we output this to Azure Application Insights as a metric similar to our example:
+
+![Single-Dimension metric](./media/single-dimensional-metric.png)
+
+However, you can very easily provide additional context allowing you get an understanding of the amount of orders received and annotate it with the vendor information.
 
 ```csharp
 var telemetryContext = new Dictionary<string, object>
@@ -68,7 +72,11 @@ logger.LogMetric("Orders Received", 133, telemetryContext);
 
 The outputted telemetry will contain that information and depending on the sink that you are using it's even going to be more powerful.
 
-For example, when using Azure Application Insights you're metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get a total number of invoices, get number of invoices per vendor or filter the metric to one specific vendor.
+For example, when using Azure Application Insights you're metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get a total number of orders, get number of orders per vendor or filter the metric to one specific vendor.
+
+Here we are using our multi-dimensional metric and splitting it per customer to get more detailed insights:
+
+![Multi-Dimension metric](./media/multi-dimensional-metrics.png)
 
 ### Making it easier to measure dependencies
 

@@ -6,14 +6,14 @@ Over the past couple of years, we've seen more and more focus on that front and 
 
 We are happy to announce that we are **introducing Arcus Observability allowing you to empower your applications with a variety of essential features to run operable platforms**!
 
-- **Go beyond traces, use telemetry types that are most suited!**
+- **Go beyond traces, use most suited telemetry types!**
 - **Correlate your telemetry out-of-the-box**
 - **Empower your telemetry** with automatic enrichment and contextual information
 - **Support for structured logging**
 
 ## Extend instead of reinvent
 
-There are a variety of libraries out in the wild which try to fix one or more of the goals we have but we've decided not to go that route and heavily invest on extending what is in the community already!
+There are a variety of libraries out in the wild which try to fix one or more of the goals we have but we've decided not to go that route and heavily invest in extending what is in the community already!
 
 That's why we've decided to:
 
@@ -32,7 +32,7 @@ Take a look at what it has to offer!
 
 Our [Arcus.Observability.Telemetry.Core](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Core/) package provides a whole bunch of extensions on the `ILogger` type that makes it a piece of cake to write a variety of telemetry types that fit your needs!
 
-By using Arcus Observability; you can write custom events, requests, dependencies and (multi-dimensional) metrics in your applications and we'll nicely output them with [structured logging](https://github.com/serilog/serilog/wiki/Structured-Data)!
+By using Arcus Observability; you can write custom events, requests, dependencies, and (multi-dimensional) metrics in your applications and we'll nicely output them with [structured logging](https://github.com/serilog/serilog/wiki/Structured-Data)!
 
 You can very easily write a custom/business event as following:
 
@@ -45,9 +45,9 @@ For more examples about the other types, have a look [at our documentation](http
 
 ### Making it easier to provide contextual information
 
-Providing context around your telemetry is super powerful! You do not only provide information about what happened, but give more information about the why.
+Providing context around your telemetry is super powerful! You do not only provide information about what happened but give more information about the why.
 
-Let's use an example - When measuring a metric you get an understanding of the count, in our case the amount of orders received:
+Let's use an example - When measuring a metric you get an understanding of the count, in our case the number of orders received:
 
 ```csharp
 logger.LogMetric("Orders Received", 133);
@@ -58,7 +58,7 @@ If we output this to Azure Application Insights as a metric similar to our examp
 
 ![Single-Dimension metric](./media/single-dimensional-metric.png)
 
-However, you can very easily provide additional context, allowing you to get an understanding of the amount of orders received and annotate it with the vendor information.
+However, you can very easily provide additional context, allowing you to get an understanding of the number of orders received and annotate it with the vendor information.
 
 ```csharp
 var telemetryContext = new Dictionary<string, object>
@@ -72,7 +72,7 @@ logger.LogMetric("Orders Received", 133, telemetryContext);
 
 The outputted telemetry will contain that information and depending on the sink that you are using it's even going to be more powerful.
 
-For example, when using Azure Application Insights your metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get the total number of orders, get number of orders per vendor or filter the metric to one specific vendor.
+For example, when using Azure Application Insights your metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get the total number of orders, get the number of orders per vendor or filter the metric to one specific vendor.
 
 Here we are using our multi-dimensional metric and splitting it per customer to get more detailed insights:
 
@@ -80,7 +80,7 @@ Here we are using our multi-dimensional metric and splitting it per customer to 
 
 ### Making it easier to measure dependencies
 
-For dependency telemetry we provide an easy way to measure duration of actions by using `DependencyMeasurement`.
+For dependency telemetry, we provide an easy way to measure the duration of actions by using `DependencyMeasurement`.
 
 You can simply start a new measurement and pass that information to our extension:
 
@@ -104,7 +104,7 @@ using (var measurement = DependencyMeasurement.Start())
 
 ## A Conventional Way to Correlate
 
-With our [Arcus.Observability.Correlation](https://www.nuget.org/packages/Arcus.Observability.Correlation/) package we provide a conventional way to correlate all telemetry in your applications.
+With our [Arcus.Observability.Correlation](https://www.nuget.org/packages/Arcus.Observability.Correlation/) package we provide a convenient way to correlate all telemetry in your applications.
 
 It provides a minimal model called `CorrelationInfo` which uses correlation on two levels:
 
@@ -121,7 +121,7 @@ The correlation info can be accessed throughout the application via an `ICorrela
 
 The purpose of our correlation is to provide a basic setup in the most general way but what it doesn't include is how this correlation is initially retrieved because this is application-specific. It's up to the consumer to call the `ICorrelationInfoAccessor.SetCorrelation` at the right moment.
 
-For example, in [Arcus Web API we use a `HttpCorrelationInfoAccessor` under the hood](https://webapi.arcus-azure.net/features/correlation) that uses the HTTP request features to access this correlation information for each incoming HTTP request. This will then be used to automatically correlate all telemetry in the application all the way back to the individual request that was made.
+For example, in [Arcus Web API we use a `HttpCorrelationInfoAccessor` under the hood](https://webapi.arcus-azure.net/features/correlation) that uses the HTTP request features to access this correlation information for each incoming HTTP request. This will then be used to automatically correlate all telemetry in the application back to the individual request that was made.
 
 While in Arcus Messaging we will even take it a step further and provide a 3rd level of correlation - Message Processing Cycle Id. This is a unique identifier that will be assigned to every attempt when processing an inbound message.
 
@@ -159,7 +159,7 @@ Our Serilog sink is available in [Arcus.Observability.Telemetry.Serilog.Sinks.Ap
     - Traces were already supported out-of-the-box
 - **Correlation information is automatically annotated** on Application Insights telemetry to be fully optimized
 - **Automatically provide cloud context** by assigning role name & instance information to provide better integration with application map
-    - For this to work properly, we highly suggest to use our application enricher as this is based on `ComponentName` information
+    - For this to work properly, we highly suggest using our application enricher as this is based on `ComponentName` information
 
 Following example shows how this sink can be configured in your Serilog setup:
 

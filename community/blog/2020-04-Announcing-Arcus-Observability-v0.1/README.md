@@ -26,7 +26,7 @@ We even took it a step further by not only building on top of Serilog but also e
 
 Once our library is more stable we will collaborate with the owners to see if we can contribute some of it more upstream.
 
-Take a look what it has to offer!
+Take a look at what it has to offer!
 
 ## Writing Different Types of Telemetry
 
@@ -45,7 +45,7 @@ For more examples about the other types, have a look [at our documentation](http
 
 ### Making it easier to provide contextual information
 
-Providing context around your telemetry is super powerful! You do not only provide information about what happend, but gives more information about the what & why.
+Providing context around your telemetry is super powerful! You do not only provide information about what happened, but give more information about the why.
 
 Let's use an example - When measuring a metric you get an understanding of the count, in our case the amount of orders received:
 
@@ -58,7 +58,7 @@ If we output this to Azure Application Insights as a metric similar to our examp
 
 ![Single-Dimension metric](./media/single-dimensional-metric.png)
 
-However, you can very easily provide additional context allowing you get an understanding of the amount of orders received and annotate it with the vendor information.
+However, you can very easily provide additional context, allowing you to get an understanding of the amount of orders received and annotate it with the vendor information.
 
 ```csharp
 var telemetryContext = new Dictionary<string, object>
@@ -72,7 +72,7 @@ logger.LogMetric("Orders Received", 133, telemetryContext);
 
 The outputted telemetry will contain that information and depending on the sink that you are using it's even going to be more powerful.
 
-For example, when using Azure Application Insights you're metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get a total number of orders, get number of orders per vendor or filter the metric to one specific vendor.
+For example, when using Azure Application Insights your metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get the total number of orders, get number of orders per vendor or filter the metric to one specific vendor.
 
 Here we are using our multi-dimensional metric and splitting it per customer to get more detailed insights:
 
@@ -115,19 +115,19 @@ Here is what it looks like in an example:
 
 ![Basic Correlation](./media/basic-correlation.png)
 
-The correlation info can be accessed through throughout the application via an `ICorrelationInfoAccessor` implementation. We are using this under the hood for our correlation Serilog enricher which automatically adds this information to your telemetry as well!
+The correlation info can be accessed throughout the application via an `ICorrelationInfoAccessor` implementation. We are using this under the hood for our correlation Serilog enricher which automatically adds this information to your telemetry as well!
 
 ### Laying the foundation for other components and apps
 
 The purpose of our correlation is to provide a basic setup in the most general way but what it doesn't include is how this correlation is initially retrieved because this is application-specific. It's up to the consumer to call the `ICorrelationInfoAccessor.SetCorrelation` at the right moment.
 
-For example, in [Arcus Web API we use a `HttpCorrelationInfoAccessor` under the hood](https://webapi.arcus-azure.net/features/correlation) that uses the HTTP request features to access this correlation information for each incoming HTTP request. This will then be used to automatically correlate all telemtry in the application all the way back to the individual request that was made.
+For example, in [Arcus Web API we use a `HttpCorrelationInfoAccessor` under the hood](https://webapi.arcus-azure.net/features/correlation) that uses the HTTP request features to access this correlation information for each incoming HTTP request. This will then be used to automatically correlate all telemetry in the application all the way back to the individual request that was made.
 
 While in Arcus Messaging we will even take it a step further and provide a 3rd level of correlation - Message Processing Cycle Id. This is a unique identifier that will be assigned to every attempt when processing an inbound message.
 
 ![Extended Correlation](./media/extended-correlation.png)
 
-This allows you to scope the telemetry to just a given processing attempt which helps you troubleshoot poison messages or transient issues.
+This allows you to scope the telemetry to just a given processing attempt, which helps you troubleshoot poison messages or transient issues.
 
 For more information on how the correlation in this library can be configured and how customization can be done, see the [docs](https://observability.arcus-azure.net/features/correlation).
 
@@ -137,15 +137,11 @@ To improve writing telemetry information via Serilog, we have added some extra f
 
 Let's have a closer look.
 
-
-
-split into enriching existing telemetry logs, filtering telemetry logs based on the type of the telemetry, and updating the Application Insights sink for Serilog so it uses the full capabilities of telemetry information.
-
 ### Enrichment
 
 The [Arcus.Observability.Telemetry.Serilog.Enrichers](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Enrichers/) package provides several [Serilog Enrichers](https://github.com/serilog/serilog/wiki/Enrichment) to automatically add information to your telemetry:
 
-- **[Application enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#application-enricher)** adds a `ComponentName` to the logs which can be for dependency tracking in Application Insights.
+- **[Application enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#application-enricher)** adds a `ComponentName` to the logs which can be used for dependency tracking in Application Insights.
 - **[Correlation enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#correlation-enricher)** adds the correlation information based on `ICorrelationInfoAccessor`.
 - **[Kubernetes enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#kubernetes-enricher)** adds machine information of the environment related to Kubernetes.
 - **[Version enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#version-enricher)** adds the current runtime assembly version of the product.
@@ -156,10 +152,7 @@ For more information, see [docs](https://observability.arcus-azure.net/features/
 
 ### Sinking to Application Insights
 
-
 As mentioned before, we decided to extend the official [Azure Application Insights sink](https://github.com/serilog/serilog-sinks-applicationinsights) with a lot more functionality!
-
-When using our Serilog sink which
 
 Our Serilog sink is available in [Arcus.Observability.Telemetry.Serilog.Sinks.ApplicationInsights](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Sinks.ApplicationInsights/) package and provides even better integration with Azure Application Insights on top of the official one:
 - When using our new `ILogger` extensions, we will **report telemetry using Application Insights native telemetry types** (events, metrics, requests, dependencies)
@@ -181,7 +174,7 @@ For more information, see [docs](https://observability.arcus-azure.net/features/
 
 ### Filtering
 
-When writing to a lot of telemetry, some telemetry types can be filtered-out using the the available Serilog filter.
+When writing to a lot of telemetry, some telemetry types can be filtered-out using the available Serilog filter.
 
 This allows you to use the different flavors of telemetry types according to your needs and use filters to reduce the information stream to your sinks based on configuration.
 

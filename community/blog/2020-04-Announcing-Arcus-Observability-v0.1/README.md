@@ -1,45 +1,90 @@
-# Announcing Arcus.Observability v0.1
+# Announcing Arcus Observability
 
-Recently we released v0.1 of the [Arcus.Observability](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.1.0) project and is available on NuGet.
-This new library will boost setup and usage of telemetry for new and existing projects.
+While building applications it's important that they give enough insights on what is going on and provide enough information to diagnose in case of issues - This is not a trivial thing to do.
 
-The library takes two things in mind:
-- Application Insights could/should be used to send the telemetry information to
-- Serilog via the abstracted Microsoft logging functionality is the recommanded approach when writing telemetry information
+Over the past couple of years, we've seen more and more focus on that front and decided to bring some of that experience to Arcus as we believe everybody benefits from it!
 
-Take a look what it has to offer!
+We are happy to announce that we are **introducing Arcus Observability allowing you to empower your applications with a variety of essential features to run operable platforms**!
+
+- **Go beyond traces, use most suited telemetry types!**
+- **Correlate your telemetry out-of-the-box**
+- **Empower your telemetry** with automatic enrichment and contextual information
+- **Support for structured logging**
+
+## Extend instead of reinvent
+
+There are a variety of libraries out in the wild which try to fix one or more of the goals we have but we've decided not to go that route and heavily invest in extending what is in the community already!
+
+That's why we've decided to:
+
+- Make Microsoft logging functionality more powerful by extending `ILogger`
+- Build on top of Serilog, a powerful framework that allows you to write telemetry once and flow it to a variety of sinks
+
+While we mainly use application insights and plain logs (containers 👋) on our projects, we want to be open for any platform and that's why we believe Serilog is the best fit!
+
+We even took it a step further by not only building on top of Serilog but also extending [Serilogs Application Insight sink](https://github.com/serilog/serilog-sinks-applicationinsights) to support all telemetry types.
+
+Once our library is more stable we will collaborate with the owners to see if we can contribute some of it more upstream.
+
+Take a look at what it has to offer!
 
 ## Writing Different Types of Telemetry
 
-The [Arcus.Observability.Telemetry.Core](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Core/) library provides a whole bunch of extensions on the abstracted `ILogger` Microsoft type that makes logging all the Application Insights telemetry types (Events, Traces, Metrics, Dependencies, ...) a piece of cake.
+Our [Arcus.Observability.Telemetry.Core](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Core/) package provides a whole bunch of extensions on the `ILogger` type that makes it a piece of cake to write a variety of telemetry types that fit your needs!
+
+By using Arcus Observability; you can write custom events, requests, dependencies, and (multi-dimensional) metrics in your applications and we'll nicely output them with [structured logging](https://github.com/serilog/serilog/wiki/Structured-Data)!
+
+You can very easily write a custom/business event as following:
 
 ```csharp
 logger.LogEvent("Order Created");
-// Output: "Events Order Created (Context: )"
-
-var telemetryContext = new Dictionary<string, object>
-{
-    { "InvoiceId", "ABC"},
-    { "Vendor", "Contoso"},
-};
-
-logger.LogMetric("Invoice Received", 133.37, telemetryContext);
-// Output: "Metric Invoice Received: 133.37 (Context: [InvoiceId, ABC], [Vendor, Contoso])"
+// Log output: "Events Order Created (Context: )"
 ```
 
-**Dependencies**
+For more examples about the other types, have a look [at our documentation](https://observability.arcus-azure.net/features/writing-different-telemetry-types).
 
-For the dependency telemetry (HTTP, SQL, ... and custom ones) that has to be measured when logging, we provide an easy way.
-By using the `DependencyMeasurement` type, we handle the start/duration for you.
+### Making it easier to provide contextual information
 
-Following example shows how a HTTP dependency is logged:
+Providing context around your telemetry is super powerful! You do not only provide information about what happened but give more information about the why.
+
+Let's use an example - When measuring a metric you get an understanding of the count, in our case the number of orders received:
+
+```csharp
+logger.LogMetric("Orders Received", 133);
+// Log output: "Metric Orders Received: 133 (Context: )"
+```
+
+If we output this to Azure Application Insights as a metric similar to our example:
+
+![Single-Dimension metric](./media/single-dimensional-metric.png)
+
+However, you can very easily provide additional context, allowing you to get an understanding of the number of orders received and annotate it with the vendor information.
 
 ```csharp
 var telemetryContext = new Dictionary<string, object>
 {
-    { "Tenant", "Contoso"},
+    { "Customer", "Contoso"},
 };
 
+logger.LogMetric("Orders Received", 133, telemetryContext);
+// Log output: "Metric Orders Received: 133 (Context: [Customer, Contoso])"
+```
+
+The outputted telemetry will contain that information and depending on the sink that you are using it's even going to be more powerful.
+
+For example, when using Azure Application Insights your metric will evolve from a single-dimensional metric to multi-dimensional metrics allowing you to get the total number of orders, get the number of orders per vendor or filter the metric to one specific vendor.
+
+Here we are using our multi-dimensional metric and splitting it per customer to get more detailed insights:
+
+![Multi-Dimension metric](./media/multi-dimensional-metrics.png)
+
+### Making it easier to measure dependencies
+
+For dependency telemetry, we provide an easy way to measure the duration of actions by using `DependencyMeasurement`.
+
+You can simply start a new measurement and pass that information to our extension:
+
+```csharp
 // Create request
 var request = new HttpRequestMessage(HttpMethod.Post, "http://requestbin.net/r/ujxglouj")
 {
@@ -51,49 +96,70 @@ using (var measurement = DependencyMeasurement.Start())
 {
     // Send request to dependant service
     var response = await httpClient.SendAsync(request);
-    
-    _logger.LogHttpDependency(request, response.StatusCode, measurement, telemetryContext);
-    // Output: "HTTP Dependency requestbin.net for POST /r/ujxglouj completed with 200 in 00:00:00.2521801 at 03/23/2020 09:56:31 +00:00 (Successful: True - Context: [Tenant, Contoso])"
+
+    _logger.LogHttpDependency(request, response.StatusCode, measurement);
+    // Output: "HTTP Dependency requestbin.net for POST /r/ujxglouj completed with 200 in 00:00:00.2521801 at 03/23/2020 09:56:31 +00:00 (Successful: True - Context: )"
 }
 ```
 
-For more information, see [docs](https://observability.arcus-azure.net/features/writing-different-telemetry-types).
-
 ## A Conventional Way to Correlate
 
-The [Arcus.Observability.Correlation](https://www.nuget.org/packages/Arcus.Observability.Correlation/) library provides a conventional way to use correlation in applications.
-It provides a 'basic' model called `CorrelationInfo` with two properties:
-- Transaction Id - ID that relates different requests together into a functional transaction.
-- Operation Id - Unique ID information for a single request.
+With our [Arcus.Observability.Correlation](https://www.nuget.org/packages/Arcus.Observability.Correlation/) package we provide a convenient way to correlate all telemetry in your applications.
 
-The correlation can be accessed through throughout the application via an `ICorrelationInfoAccessor` implementation.
+It provides a minimal model called `CorrelationInfo` which uses correlation on two levels:
 
-The purpose of this library is to provide a basic setup in the most general way but what it doesn't include is how this correlation is initially retrieved because this is application-specific. It's up to the consumer to call the `ICorrelationInfoAccessor.SetCorrelation` at the right moment.
+- **Transaction Id** - ID that relates different requests together into a functional transaction.
+- **Operation Id** - Unique ID information for a single request.
 
-For an example of a specific implementation, we recommand to look at the [Web Api](https://webapi.arcus-azure.net/features/correlation) version and how it contains a [`HttpCorrelationInfoAccessor`](https://github.com/arcus-azure/arcus.webapi/search?q=httpcorrelationinfoaccessor&unscoped_q=httpcorrelationinfoaccessor) that uses the HTTP request features to access this correlation information for each incoming HTTP request.
+Here is what it looks like in an example:
+
+![Basic Correlation](./media/basic-correlation.png)
+
+The correlation info can be accessed throughout the application via an `ICorrelationInfoAccessor` implementation. We are using this under the hood for our correlation Serilog enricher which automatically adds this information to your telemetry as well!
+
+### Laying the foundation for other components and apps
+
+The purpose of our correlation is to provide a basic setup in the most general way but what it doesn't include is how this correlation is initially retrieved because this is application-specific. It's up to the consumer to call the `ICorrelationInfoAccessor.SetCorrelation` at the right moment.
+
+For example, in [Arcus Web API we use a `HttpCorrelationInfoAccessor` under the hood](https://webapi.arcus-azure.net/features/correlation) that uses the HTTP request features to access this correlation information for each incoming HTTP request. This will then be used to automatically correlate all telemetry in the application back to the individual request that was made.
+
+While in Arcus Messaging we will even take it a step further and provide a 3rd level of correlation - Message Processing Cycle Id. This is a unique identifier that will be assigned to every attempt when processing an inbound message.
+
+![Extended Correlation](./media/extended-correlation.png)
+
+This allows you to scope the telemetry to just a given processing attempt, which helps you troubleshoot poison messages or transient issues.
 
 For more information on how the correlation in this library can be configured and how customization can be done, see the [docs](https://observability.arcus-azure.net/features/correlation).
 
 ## Boosted Serilog Functionality
 
-To improve writing telemetry information via Serilog, we added some extra functionality, split into enriching existing telemetry logs, filtering telemetry logs based on the type of the telemetry, and updating the Application Insights sink for Serilog so it uses the full capabilities of telemetry information.
+To improve writing telemetry information via Serilog, we have added some extra functionality!
+
+Let's have a closer look.
 
 ### Enrichment
 
-The [Arcus.Observability.Telemetry.Serilog.Enrichers](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Enrichers/) library provides several [Serilog Enrichers](https://github.com/serilog/serilog/wiki/Enrichment) to add commonly added information to the telemetry logs:
+The [Arcus.Observability.Telemetry.Serilog.Enrichers](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Enrichers/) package provides several [Serilog Enrichers](https://github.com/serilog/serilog/wiki/Enrichment) to automatically add information to your telemetry:
 
-- [Application enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#application-enricher) adds a 'ComponentName' to the logs which can be for dependency tracking in Application Insights.
-- [Correlation enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#correlation-enricher) adds the information of the current `CorrelationInfo` instance and is customizable to use your own `ICorrelationInfoAccessor`.
-- [Kubernetes enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#kubernetes-enricher) adds machine information of the environment related to Kubernetes.
-- [Version enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#version-enricher) adds the current runtime assembly version of the product.
+- **[Application enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#application-enricher)** adds a `ComponentName` to the logs which can be used for dependency tracking in Application Insights.
+- **[Correlation enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#correlation-enricher)** adds the correlation information based on `ICorrelationInfoAccessor`.
+- **[Kubernetes enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#kubernetes-enricher)** adds machine information of the environment related to Kubernetes.
+- **[Version enricher](https://observability.arcus-azure.net/features/telemetry-enrichment#version-enricher)** adds the current runtime assembly version of the product.
+
+By using these, you don't have to specify them every time you write telemetry; we've got this!
 
 For more information, see [docs](https://observability.arcus-azure.net/features/telemetry-enrichment).
 
 ### Sinking to Application Insights
 
-It may seem strange to provide a [Serilog sink](https://github.com/serilog/serilog/wiki/Configuration-Basics#sinks) for Application Insights, when [there already exists one](https://github.com/serilog/serilog-sinks-applicationinsights). The reason for this, is because the already available sink only provides support for traces and events while Application Insights provides support for a lot more.
+As mentioned before, we decided to extend the official [Azure Application Insights sink](https://github.com/serilog/serilog-sinks-applicationinsights) with a lot more functionality!
 
-The Serilog sink available in [Arcus.Observability.Telemetry.Serilog.Sinks.ApplicationInsights](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Sinks.ApplicationInsights/) builds upon the already available sink but provides the additional functioality to support all the different telemetry types in Application Insights (requests, dependencies, metrics...).
+Our Serilog sink is available in [Arcus.Observability.Telemetry.Serilog.Sinks.ApplicationInsights](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Sinks.ApplicationInsights/) package and provides even better integration with Azure Application Insights on top of the official one:
+- When using our new `ILogger` extensions, we will **report telemetry using Application Insights native telemetry types** (events, metrics, requests, dependencies)
+    - Traces were already supported out-of-the-box
+- **Correlation information is automatically annotated** on Application Insights telemetry to be fully optimized
+- **Automatically provide cloud context** by assigning role name & instance information to provide better integration with application map
+    - For this to work properly, we highly suggest using our application enricher as this is based on `ComponentName` information
 
 Following example shows how this sink can be configured in your Serilog setup:
 
@@ -108,16 +174,36 @@ For more information, see [docs](https://observability.arcus-azure.net/features/
 
 ### Filtering
 
-When writing to Application Insights, some telemetry types can be filtered-out using the the available Serilog filter.
-This functionality is available in the [Arcus.Observability.Telemetry.Serilog.Filters](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Filters/) library.
+When writing to a lot of telemetry, some telemetry types can be filtered-out using the available Serilog filter.
+
+This allows you to use the different flavors of telemetry types according to your needs and use filters to reduce the information stream to your sinks based on configuration.
+
+You can get started by using our [Arcus.Observability.Telemetry.Serilog.Filters](https://www.nuget.org/packages/Arcus.Observability.Telemetry.Serilog.Filters/) package.
 
 The following example shows how telemetry events can be filtered out:
 
 ```csharp
 ILogger logger = new LoggerConfiguration()
     .WriteTo.AzureApplicationInsights("<key>")
+    .WriteTo.Console()
     .Filter.With(TelemetryTypeFilter.On(TelemetryType.Events))
     .CreateLogger();
 ```
 
-For more information, see [docs](https://observability.arcus-azure.net/features/telemetry-filter).
+You can use this for all Serilog telemetry sinks, not just Azure Application Insights. For more information, see [docs](https://observability.arcus-azure.net/features/telemetry-filter).
+
+## Roadmap
+
+While we have introduced a lot of powerful features in this first release, we have a lot of ideas on making it even more powerful!
+
+We want to:
+- **Provide more dependency types out-of-the-box**, making it easier for you to provide the data and we'll make sure it's optimized for systems such as Azure Application Insights ([list of upcoming types](https://github.com/arcus-azure/arcus.observability/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Adependencies))
+- **Provide native support for cross-component correlation** allowing you to have more powerful information and optimized Azure Application Insights App Map.
+- **Integrating observability in all Arcus components** such as Web API, Messaging, Templates, Background Jobs, etc.
+- **Improve our documentation**
+
+What do you like to see in Arcus Observability? Let us know [on GitHub](https://github.com/arcus-azure/arcus.observability/issues/new?template=Feature_request.md)!
+
+Thanks for reading,
+
+Stijn & Tom

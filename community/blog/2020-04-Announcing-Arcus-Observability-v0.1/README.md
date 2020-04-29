@@ -107,11 +107,13 @@ By measuring your dependencies you will gain insights on what is going on and be
 When using Azure Application Insights, it will automatically start drawing your **Application Map giving you insights of the general performance of all your components**. Every circle represents a ["Component"](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map?tabs=net#what-is-a-component) and if you use our *Application enricher* we will use the name for them that you provide. *(more later)*
 
 ![Application Map](./media/app-map.png)
+
 *Source: ["Application Map: Triage Distributed Applications"](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map)*
 
 As you provide more dependency information for all your components you'll start to **build living documentation of your Azure landscape** of how every piece works together:
 
 ![Extended Application Map](./media/extended-app-map.png)
+
 *Source: ["Application Map: Triage Distributed Applications"](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map)*
 
 We've seen that, when done right, Application Map is super powerful and an essential tool in your operational toolbelt to monitor but also more easily onboard new people as they'll easily grasp how all components work together.

@@ -34,5 +34,8 @@ We track issues in a variety of places for Arcus. If you have found an issue or 
 
 We have a variety of Azure DevOps YAML templates which you can re-use and are open for suggestion!
 
+## Customers
+Are you an Arcus user? Let us know and [get listed](https://bit.ly/become-a-listed-arcus-user)!
+
 ## Contributing
 We are open for all contributions, learn more about our coding conventions in our ["Developer Guide"](DEVELOPER-GUIDE.md).

@@ -4,7 +4,7 @@ GitHub Repo Configurator configures a GitHub repository according to a defined r
 ## Building the tool
 You can easily build the tool with the .NET Core commands:
 ```shell
-$ cd tools\github-repconfigurator
+$ cd tools\github-repo-configurator
 $ dotnet build .\src
 ```
 

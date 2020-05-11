@@ -14,7 +14,7 @@ Tracking this dependency, shows on the application map:
 
 ## Azure Blob storage dependency tracking
 
-We allow you to measure Azure Blob Storage dependencies using the `LogBlobStorageDependency` overload.
+We allow you to measure Azure Blob storage dependencies using the `LogBlobStorageDependency` overload.
 Tracking this depedency, shows on the application map:
 
 ![blob storage application map](media/blob-storage-application-map.png)

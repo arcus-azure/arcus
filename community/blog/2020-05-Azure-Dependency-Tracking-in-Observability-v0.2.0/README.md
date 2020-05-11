@@ -40,7 +40,7 @@ Tracking this dependency, shows on the application map:
 
 ![table storage application map](media/table-storage-application-map.png)
 
-## Azure SQL dependency tracking
+## SQL dependency tracking
 
 Tracking SQL dependencies was already available starting from [version v0.1.0](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.1.0), but this version also provides an additional feature to make tracking these kind of dependencies more consumer friendly.
 

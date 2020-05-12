@@ -1,0 +1,75 @@
+# New authorization & enhanced logging in WebApi v1.0.1
+
+With the release of version [`Arcus.WebApi v1.0.1`](https://github.com/arcus-azure/arcus.webapi/releases/tag/v1.0.1), the logging functionality is greatly enhanced for better tracing in your current and future applications.
+
+Come and take a look at what it has to offer!
+
+## JWT authorization in merged security
+
+Starting from this version, the different packages `Arcus.WebApi.Security.Authentication` and `Arcus.WebApi.Security.Authorization` have been merged together in `Arcus.WebApi.Security`.
+The reason for this was that the functionality in both packages is mostly all the time used togehter and doesn't have much meaning on its own.
+
+This version has so a [renamed component](https://github.com/arcus-azure/arcus.webapi/issues/149) in the new `Arcus.WebApi.Security` package called: JWT authorization.
+This component provides a mechanism that uses JWT (JSON Web Tokens) to authorize requests access to the web application.
+
+This authorization process consists of the following parts:
+* Find the OpenID server endpoint to request the correct access token
+* Determine the request header name you want to use where the access token should be available
+
+```csharp
+public void ConfigureServices()
+{
+    services.AddMvc(mvcOptions => mvcOptions.Filters.AddJwtTokenAuthorization());
+}
+```
+
+For more information, see the [docs](https://webapi.arcus-azure.net/features/security/auth/jwt).
+
+## Request tracking
+
+Starting from this version, the library allows to track incoming requests with the use of a new middleware component to add to pipeline.
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEvironment env)
+{
+    app.UseRequestTracking();
+
+    ...
+    app.UseMvc();
+}
+```
+
+By default the request body is ignored and the headers are logged (except for some default security headers that can be altered).
+
+Example:
+
+`HTTP Request POST http://localhost:5000/weatherforecast completed with 200 in 00:00:00.0191554 at 03/23/2020 10:12:55 +00:00 - (Context: [Content-Type, application/json], [Body, {"today":"cloudy"}])`
+
+A lot more custom configuration and alterations can be made on this component.
+For more information, see the [docs](https://webapi.arcus-azure.net/features/logging#logging-incoming-requests).
+
+## Correlation merging
+
+Starting from this version, we have decided to merge the correlation and logging functionality into a single package: `Arcus.WebApi.Logging`.
+This for the very reason that both the functionality present in the correlation and logging packages is mostly all the time used together.
+
+Besides this change, we have also made HTTP correlation with Serilog easier with the following extensions:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddHttpCorrelation();
+}
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    app.UseHttpCorrelation();
+    
+    Log.Logger = new LoggerConfiguration()
+        .Enrich.WithHttpCorrelationInfo()
+        .WriteTo.Console()
+        .CreateLogger();
+}
+```
+
+For more information on correlation, see the [docs](https://webapi.arcus-azure.net/features/correlation).

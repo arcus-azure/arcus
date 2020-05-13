@@ -44,7 +44,7 @@ Tracking this dependency, shows on the application map:
 
 Tracking SQL dependencies was already available starting from [version v0.1](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.1.0), but this version also provides an additional feature to make tracking these kind of dependencies more consumer friendly.
 
-Instead of providing the server, database, ... separatly, this version allows you to pass along the SQL connection string and extract the required information from it.
+Instead of providing all the connection information by hand, we now allow you to pass the SQL connection string and we'll extract the required information from it.
 
 ```csharp
 string connectionString = "Server=sample-server;Database=sample-database;User=admin;Password=123";

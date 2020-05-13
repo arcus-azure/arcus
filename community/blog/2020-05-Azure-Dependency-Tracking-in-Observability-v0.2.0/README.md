@@ -42,7 +42,7 @@ Tracking this dependency, shows on the application map:
 
 ## SQL dependency tracking
 
-Tracking SQL dependencies was already available starting from [version v0.1.0](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.1.0), but this version also provides an additional feature to make tracking these kind of dependencies more consumer friendly.
+Tracking SQL dependencies was already available starting from [version v0.1](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.1.0), but this version also provides an additional feature to make tracking these kind of dependencies more consumer friendly.
 
 Instead of providing the server, database, ... separatly, this version allows you to pass along the SQL connection string and extract the required information from it.
 

@@ -1,6 +1,6 @@
 # New authorization & enhanced logging in WebApi v1.0
 
-With the release of version [`Arcus.WebApi v1.0.1`](https://github.com/arcus-azure/arcus.webapi/releases/tag/v1.0.1), the logging functionality is greatly enhanced for better tracing in your current and future applications.
+With the release of version [Arcus WebApi v1.0](https://github.com/arcus-azure/arcus.webapi/releases/tag/v1.0.1), the logging functionality is greatly enhanced for better tracing in your current and future applications.
 
 Come and take a look at what it has to offer!
 

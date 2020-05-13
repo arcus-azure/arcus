@@ -1,6 +1,6 @@
 # Measure a variety of Azure dependencies with Observability v0.2
 
-In a [previous post](https://www.codit.eu/blog/announcing-arcus-observability/) we announced the Arcus Observability library as a way to empower your applications with a variety of observability essentials.
+In a [previous post](https://www.codit.eu/blog/announcing-arcus-observability/) we announced the Arcus Observability library as a way to empower your applications with a variety of observability essentials such as correlation, empowering telemetry and dependency tracking.
 With the release of the next version of [Arcus Observability v0.2](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.2.0) the support for dependency tracking of Azure resources is greatly expanded.
 
 Come see what this new version has to offer!

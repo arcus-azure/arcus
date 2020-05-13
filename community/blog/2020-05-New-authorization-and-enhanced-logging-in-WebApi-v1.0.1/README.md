@@ -4,10 +4,7 @@ With the release of version [Arcus WebApi v1.0](https://github.com/arcus-azure/a
 
 Come and take a look at what it has to offer!
 
-## JWT authorization in merged security
-
-Starting from this version, the different packages `Arcus.WebApi.Security.Authentication` and `Arcus.WebApi.Security.Authorization` have been merged together in `Arcus.WebApi.Security`.
-The reason for this was that the functionality in both packages is mostly all the time used togehter and doesn't have much meaning on its own.
+## JWT authorization
 
 This version has so a [renamed component](https://github.com/arcus-azure/arcus.webapi/issues/149) in the new `Arcus.WebApi.Security` package called: JWT authorization.
 This component provides a mechanism that uses JWT (JSON Web Tokens) to authorize requests access to the web application.
@@ -50,10 +47,7 @@ For more information, see the [docs](https://webapi.arcus-azure.net/features/log
 
 ## Correlation merging
 
-Starting from this version, we have decided to merge the correlation and logging functionality into a single package: `Arcus.WebApi.Logging`.
-This for the very reason that both the functionality present in the correlation and logging packages is mostly all the time used together.
-
-Besides this change, we have also made HTTP correlation with Serilog easier with the following extensions:
+We have also made HTTP correlation with Serilog easier with the following extensions:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -73,3 +67,10 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 ```
 
 For more information on correlation, see the [docs](https://webapi.arcus-azure.net/features/correlation).
+
+## Breaking changes
+
+* Starting from this version, the different packages `Arcus.WebApi.Security.Authentication` and `Arcus.WebApi.Security.Authorization` have been merged together in `Arcus.WebApi.Security`.
+The reason for this was that the functionality in both packages is mostly all the time used togehter and doesn't have much meaning on its own.
+* Starting from this version, we have decided to merge the correlation and logging functionality into a single package: `Arcus.WebApi.Logging`.
+This for the very reason that both the functionality present in the correlation and logging packages is mostly all the time used together.

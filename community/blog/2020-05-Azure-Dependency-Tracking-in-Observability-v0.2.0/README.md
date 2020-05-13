@@ -1,4 +1,4 @@
-# Azure dependency tracking in Observability v0.2.0
+# Measure a variety of Azure dependencies with Observability v0.2
 
 With the release of the next version of [Arcus Observability v0.2](https://github.com/arcus-azure/arcus.observability/releases/tag/v0.2.0) the support for dependency tracking of Azure resources is greatly expanded.
 

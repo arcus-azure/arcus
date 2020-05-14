@@ -51,7 +51,7 @@ As always, we allow you to fully configure it to how you want it to behave by us
 <example>
 For more information, see the [docs](https://webapi.arcus-azure.net/features/logging#logging-incoming-requests).
 
-## Correlation merging
+## Making it easier to use HTTP correlation
 
 We have also made HTTP correlation with Serilog easier with the following extensions:
 

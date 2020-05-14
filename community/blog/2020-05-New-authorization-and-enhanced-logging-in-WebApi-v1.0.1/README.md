@@ -42,7 +42,9 @@ Example:
 
 `HTTP Request POST http://localhost:5000/weatherforecast completed with 200 in 00:00:00.0191554 at 03/23/2020 10:12:55 +00:00 - (Context: [Content-Type, application/json], [Body, {"today":"cloudy"}])`
 
-A lot more custom configuration and alterations can be made on this component.
+As always, we allow you to fully configure it to how you want it to behave by using our fluent options API for `UseRequestTracking`:
+
+<example>
 For more information, see the [docs](https://webapi.arcus-azure.net/features/logging#logging-incoming-requests).
 
 ## Correlation merging

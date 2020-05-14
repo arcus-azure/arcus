@@ -1,6 +1,10 @@
 # Out-of-the-box request tracking, simplified HTTP correlation & JWT authorization in Arcus Web API v1.0
 
-With the release of version [Arcus WebApi v1.0](https://github.com/arcus-azure/arcus.webapi/releases/tag/v1.0.1), the logging functionality is greatly enhanced for better tracing in your current and future applications.
+We've shipped [Arcus Web API v1.0](https://github.com/arcus-azure/arcus.webapi/releases/tag/v1.0.1) which brings a couple of new features:
+- Out-of-the-box Request tracking
+- Making it easier to use HTTP correlation
+- JWT Authorization
+- Simplified NuGet package structure
 
 Come and take a look at what it has to offer!
 

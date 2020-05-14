@@ -40,7 +40,7 @@ public void Configure(IApplicationBuilder app, IWebHostEvironment env)
 }
 ```
 
-By default the request body is ignored and the headers are logged (except for some default security headers that can be altered).
+By default, we do not track the request body but do include most HTTP headers. However, for security reasons we have a default set of headers to omit or obfuscate.
 
 Example:
 

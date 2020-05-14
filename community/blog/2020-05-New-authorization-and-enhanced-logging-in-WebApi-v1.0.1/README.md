@@ -22,7 +22,7 @@ public void ConfigureServices()
 
 For more information, see the [docs](https://webapi.arcus-azure.net/features/security/auth/jwt).
 
-## Request tracking
+## Out-of-the-box Request tracking
 
 Starting from this version, we allow you to track incoming requests by using a new middleware component building on top of `ILogger.LogRequest` (👋 Arcus Observability).
 

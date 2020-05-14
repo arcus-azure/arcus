@@ -10,7 +10,7 @@ Come and take a look at what it has to offer!
 
 ## JWT authorization
 
-This version has so a [renamed component](https://github.com/arcus-azure/arcus.webapi/issues/149) in the new `Arcus.WebApi.Security` package called: JWT authorization.
+As of v1.0, we have renamed our existing `<name>` into `<>` because [we feel it's broader than just Managed Identity](https://github.com/arcus-azure/arcus.webapi/issues/149).
 This component provides a mechanism that uses JWT (JSON Web Tokens) to authorize requests access to the web application.
 
 This authorization process consists of the following parts:

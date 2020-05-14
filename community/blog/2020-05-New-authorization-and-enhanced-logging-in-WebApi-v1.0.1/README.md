@@ -24,7 +24,7 @@ For more information, see the [docs](https://webapi.arcus-azure.net/features/sec
 
 ## Request tracking
 
-Starting from this version, the library allows to track incoming requests with the use of a new middleware component to add to pipeline.
+Starting from this version, we allow you to track incoming requests by using a new middleware component building on top of `ILogger.LogRequest` (👋 Arcus Observability).
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEvironment env)

@@ -76,6 +76,11 @@ For more information on correlation, see the [docs](https://webapi.arcus-azure.n
 
 ## Breaking changes
 
+Last but not least, we have simplified our package structure to make it easier to keep track of dependencies.
+
+Here is an overview:
+- `Arcus.WebApi.Security.Authentication` and `Arcus.WebApi.Security.Authorization` are now consolidated into `Arcus.WebApi.Security`
+- `Arcus.WebApi.Correlation` has been moved into `Arcus.WebApi.Logging`
 * Starting from this version, the different packages `Arcus.WebApi.Security.Authentication` and `Arcus.WebApi.Security.Authorization` have been merged together in `Arcus.WebApi.Security`.
 The reason for this was that the functionality in both packages is mostly all the time used togehter and doesn't have much meaning on its own.
 * Starting from this version, we have decided to merge the correlation and logging functionality into a single package: `Arcus.WebApi.Logging`.

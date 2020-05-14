@@ -53,7 +53,7 @@ For more information, see the [docs](https://webapi.arcus-azure.net/features/log
 
 ## Making it easier to use HTTP correlation
 
-We have also made HTTP correlation with Serilog easier with the following extensions:
+Up until now it was a bit cumbersome to start using HTTP correlation. We have added a more convenient way to start using HTTP correlation with Serilog with the following extensions:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)

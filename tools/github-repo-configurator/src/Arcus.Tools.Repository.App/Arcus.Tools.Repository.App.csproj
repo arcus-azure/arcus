@@ -9,8 +9,8 @@
   <ItemGroup>
     <PackageReference Include="CommandLineArgumentsParser" Version="3.0.20" />
     <PackageReference Include="Guard.Net" Version="1.2.0" />
-    <PackageReference Include="Octokit" Version="0.47.0" />
-    <PackageReference Include="YamlDotNet" Version="8.1.1" />
+    <PackageReference Include="Octokit" Version="0.48.0" />
+    <PackageReference Include="YamlDotNet" Version="8.1.2" />
   </ItemGroup>
 
 </Project>

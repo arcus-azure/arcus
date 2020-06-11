@@ -8,24 +8,6 @@ We've shipped [Arcus Web API v1.0](https://github.com/arcus-azure/arcus.webapi/r
 
 Come and take a look at what it has to offer!
 
-## JWT authorization
-
-As of v1.0, we have renamed our existing `<name>` into `<>` because [we feel it's broader than just Managed Identity](https://github.com/arcus-azure/arcus.webapi/issues/149).
-This component provides a mechanism that uses JWT (JSON Web Tokens) to authorize requests access to the web application.
-
-This authorization process consists of the following parts:
-* Find the OpenID server endpoint to request the correct access token
-* Determine the request header name you want to use where the access token should be available
-
-```csharp
-public void ConfigureServices()
-{
-    services.AddMvc(mvcOptions => mvcOptions.Filters.AddJwtTokenAuthorization());
-}
-```
-
-For more information, see the [docs](https://webapi.arcus-azure.net/features/security/auth/jwt).
-
 ## Out-of-the-box Request tracking
 
 Starting from this version, we allow you to track incoming requests by using a new middleware component building on top of `ILogger.LogRequest` (👋 Arcus Observability).
@@ -73,6 +55,24 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 ```
 
 For more information on correlation, see the [docs](https://webapi.arcus-azure.net/features/correlation).
+
+## JWT authorization
+
+As of v1.0, we have renamed our existing `<name>` into `<>` because [we feel it's broader than just Managed Identity](https://github.com/arcus-azure/arcus.webapi/issues/149).
+This component provides a mechanism that uses JWT (JSON Web Tokens) to authorize requests access to the web application.
+
+This authorization process consists of the following parts:
+* Find the OpenID server endpoint to request the correct access token
+* Determine the request header name you want to use where the access token should be available
+
+```csharp
+public void ConfigureServices()
+{
+    services.AddMvc(mvcOptions => mvcOptions.Filters.AddJwtTokenAuthorization());
+}
+```
+
+For more information, see the [docs](https://webapi.arcus-azure.net/features/security/auth/jwt).
 
 ## Breaking changes
 

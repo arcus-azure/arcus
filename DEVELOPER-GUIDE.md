@@ -62,3 +62,4 @@ When this version is finally released, the docs should be updated by following t
        - /index.html
     ```
    And remove these two lines from the 'old' `./docs/vX.X.X/index.md` you just cut.
+* Add a new 'older version' link to the preview index file `./docs/preview/index.md`, refering to the released `./docs/vX.X.X/`. 

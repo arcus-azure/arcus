@@ -2,10 +2,12 @@ Developer Guide
 ===
 
 - [1. Coding Guidelines](#1-coding-guidelines)
-    - [1.1. General](#11-general)
-    - [1.2. Usage of `var`](#12-usage-of-var)
-    - [1.3. Working with `async` methods](#13-working-with-async-methods)
-    - [1.4. Testing](#14-testing)
+  - [1.1. General](#11-general)
+  - [1.2. Usage of `var`](#12-usage-of-var)
+  - [1.3. Working with `async` methods](#13-working-with-async-methods)
+  - [1.4. Testing](#14-testing)
+- [2. Releasing](#2-releasing)
+  - [2.1 Updating documentation to new version](#21-updating-documentation-to-new-version)
 
 # 1. Coding Guidelines
 
@@ -45,3 +47,19 @@ var value = GetValue();
     - Example `SecretKeyHandlerTests` contains all tests for the `SecretKeyHandler` class
 - Every test method should have the following naming convention `{Method To Test}_{Scenario}_{Expected Outcome}`
     - Example: `Validate_WithValidSecretName_ShouldPass`
+
+# 2. Releasing
+
+## 2.1 Updating documentation to new version
+When a future version is being developed, preview docs are located at the `./docs/preview/features` folder.
+When this version is finally released, the docs should be updated by following these steps:
+* Cut both the `./docs/index.md` file and `./docs/features` folder to a new folder `./docs/vX.X.X` with the name of the new version
+* Copy both the `./docs/preview/index.md` file and `./docs/preview/features` folder to the root `./docs` folder so they act as the current features
+* Add redirection and permalink the `./docs/index.md` file
+  * ```
+    permalink: /
+    redirect_from:
+       - /index.html
+    ```
+   And remove these two lines from the 'old' `./docs/vX.X.X/index.md` you just cut.
+* Add a new 'older version' link to the preview index file `./docs/preview/index.md`, refering to the released `./docs/vX.X.X/`. 

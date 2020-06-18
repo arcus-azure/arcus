@@ -19,7 +19,8 @@ We track issues in a variety of places for Arcus. If you have found an issue or 
 | **Background Jobs** | Requests & suggestions for reusable jobs & development of background jobs | [Features](https://background-jobs.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.backgroundjobs/issues)
 | **Observability** | Requests & suggestions for adding observability to applications | [Features](https://observability.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.observability/issues)
 | **.NET Templates** | Requests & suggestions for .NET templates to get started | [Features](https://templates.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.templates/issues)
-| **Machine Learning** | Requests & suggestions for machine learning in Azure | [Features](https://machine-learning.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.azureml/issues)
+| **Machine Learning** | Requests & suggestions for machine learning | [Features](https://machine-learning.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.ml/issues)
+| **Azure Machine Learning** | Requests & suggestions for machine learning in Azure | [Features](https://azure-ml.arcus-azure.net/#features) - [File an Issue](https://github.com/arcus-azure/arcus.azureml/issues)
 
  ## Starting a new components
  

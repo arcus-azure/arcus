@@ -3,33 +3,7 @@ Introducing Secret Store - Making secrets a first-class citizen in .NET Core
 
 .NET Core provides a convenient way to read configuration from a variety of providers, without the application having to worry where they come from!
 
-Here's a small example from the documentation:
-
-```csharp
-public static IHostBuilder CreateHostBuilder(string[] args) =>
-    Host.CreateDefaultBuilder(args)
-        .ConfigureAppConfiguration((hostingContext, config) =>
-        {
-            var environment = hostingContext.HostingEnvironment;
-            var config = config.Build();
-            
-            // Create an Azure Key Vault client with Managed Identity authentication
-            var azureServiceTokenProvider = new AzureServiceTokenProvider();
-            var keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-
-            // Lookup the configuration from JSON
-            config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                  .AddJsonFile($"appsettings.{environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
-                  // Lookup the configuration from Azure App Configuration - https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview
-                  .AddAzureAppConfiguration(settings["ConnectionStrings:AppConfig"]);
-                  // Lookup secrets from Azure Key Vault client with Managed Identity authentication
-                  .AddAzureKeyVault($"https://{config["KeyVaultName"]}.vault.azure.net/", keyVaultClient, new DefaultKeyVaultSecretManager());
-                  // Lookup configuration from environment variables as a last resort
-                  .AddEnvironmentVariables();
-        })
-```
-
-.NET has a rich ecosystem of configuration providers that you can use, either provided by Microsoft or as part of the (open-source) community. One of my favorite ones is [Andrew Lock's YAML configuration provider](https://github.com/andrewlock/NetEscapades.Configuration) which I use extensively for Promitor.
+It has a rich ecosystem of configuration providers that you can use, either provided by Microsoft or as part of the (open-source) community. One of my favorite ones is [Andrew Lock's YAML configuration provider](https://github.com/andrewlock/NetEscapades.Configuration) which I use extensively for Promitor.
 
 ## So, what's the problem?
 

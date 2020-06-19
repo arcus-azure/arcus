@@ -35,32 +35,31 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 There are a variety of providers that give you access to secrets as well, such as Azure Key Vault or HashiCorp Vault - And this is where the problem lies.
 
-Unfortunately, it's easy to fall in the configuration trap where secrets are not handled as they should or 
+Unfortunately, it's not easy to work with secrets; you have to keep these things in mind:
 
-Unfortunately, it's not easy to work with secrets; for example:
-
+- Secrets stores are typically hosted remotely (which means network interactions), require authentication and apply rate limiting
+- Secrets should be cached in memory for a short period to avoid too chatty apps & rate limiting
+- Secrets can be rotated so your app needs to be aware of this
 - Secrets should never be logged
-- Secrets can be rotated so applications need to work with this (emphasize caching)
-- Secrets are typically stored externally and require authentication
-- Secret stores, such as Azure Key Vault, are designed for secrets only and tend to be used as secret stores
+- Secret stores are for secrets only, so they should not be used as configuration stores
 
+In order to really handle these aspects well, you have to know that you are interacting with either a config value or a secret but there is no seperation in .NET Core. It's too easy to fall in the configuration trap where secrets are not handled how they should.
 
-Unfortunately, using the built-in configuration approach is not ideal for working with secrets.
+You could make the argument that  developers know they are working with secrets when they are looking them up but their future colleagues might not give it enough attention.
 
-- There is no clear indication when our app is working with secrets or configuration
-- Security is important
-- Easy to fall in the configuration trap
-- .NET Core has no concept of secrets similar to IConfiguration
-    - https://github.com/dotnet/runtime/issues/36035
-- Arcus to the rescue
-    - We allow you to register all secret providers during startup
-    - We have an open model allowing you to easily add more providers
+Another problem is that with the current configuration model it will check every provider until it has found a match for the configuration key, this could result in a lot of unrequired calls to your secret stores which will end up in throttling.
+
+In March, [I've suggested to introduce a secret store concept in .NET](https://github.com/dotnet/runtime/issues/36035) but the team is not convinced that there are enough benefits for it and will stick with configuration concept for now.
+
+That's where Arcus comes in.
 
 ## Introducing Secret Store
 
 With Arcus, we've decided that it's time to make secrets as a first-class citizen in .NET Core - We are happy to introduce Secret Store!
 
 Secret store is built on the same constructs of .NET Core's configuration allowing you to define the secret providers you want to use and consume them very easily in your application later on. We give you full separation between interacting with configuration & secrets.
+
+With Secret Store, we are building on our current `ISecretProvider` & `ICachedSecretProvider` but we've made it a lot simpler to use them across multiple stores!
 
 Let's have a look!
 

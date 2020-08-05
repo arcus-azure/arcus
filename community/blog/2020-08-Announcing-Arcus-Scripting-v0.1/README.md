@@ -27,6 +27,14 @@ Another module we created, was specifically designed to collect functionality re
 We figured there's a lot of extra functionality that can be useful during interacting with this Azure resource.
 
 The `Arcus.Scripting.KeyVault` PowerShell module contains now only two functions: `Get-AzKeyVaultAccessPolicies` and `Set-AzKeyVaultSecretFromFile` but is for sure going to expand in more functionality.
+
+Following example shows how we can get all the access policies on the Azure Key Vault into a PowerShell object.
+
+```powershell
+PS> $accessPolicies = Get-AzKeyVaultAccessPolicies -KeyVaultName "arcus-key-vault"
+# accessPolicies: {list: [{tenantId: ...,permissions: ...}]}
+```
+
 See the dedicated [docs](https://scripting.arcus-azure.net/features/powershell/azure-key-vault) pages for more info on this subject.
 
 ## Azure Data Factory
@@ -35,12 +43,24 @@ One of the approaches we would like to make for better user-friendliness, is spl
 
 A good example of this, is how we created the `Arcus.Scripting.DataFactory` PowerShell module. This module has two functions to enable and disable a trigger of an Azure Data Factory pipeline: `Enable-AzDataFactoryTrigger` and `Disable-AzDataFactoryTrigger` instead of the original `EnableDisableDataFactoryTrigger`.
 
+Following example shows how we can enable the Azure Data Factory trigger:
+
+```powershell
+PS> Enable-AzDataFactoryTrigger -ResourceGroupName "arcus-resource-group" -DataFactoryName "arcus-data-factory-name" -DataFactoryTriggerName "arcus-data-factory-trigger-name"
+# The trigger 'my-data-factory-trigger-name' has been enabled.
+```
+
 See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-data-factory) for more information on these two functions.
 
 ## Azure (Table) Storage
 
 The `Arcus.Scripting.Storage.Table` PowerShell module is the start of a whole bunch of storage-related scripts that will in the future be collected in a `Arcus.Scripting.Storage` PowerShell module. For now, we only have the Azure Table Storage module which already contains the funcctionality to create a new table inside an Azure Storage Account.
 The `Create-AzStorageTable` also has the ability to re-create an existing table if that is required.
+
+```powershell
+PS> Create-AzStorageTable -ResourceGroupName "stock" -StorageAccountName "admin" -TableName "products"
+# Creating table 'products' in the storage account 'admin'..."
+```
 
 See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-storage) for more information on this function.
 
@@ -56,6 +76,11 @@ The [docs](https://github.com/arcus-azure/arcus.scripting/blob/master/docs/previ
 Something that coming up several times but was never actually seen as a separate functionality, was setting Azure pipeline variables. This functionality was scattered across scripts and was making the functions itself unnecessary complex. By separating this functionality in a dedicated module only for Azure DevOps related functionality, we have made using these functions a lot more user-friendly.
 
 The `Set-AzDevOpsVariable` takes in the name and the value of the variable. It's as simple as that!
+
+```powershell
+PS> Set-AzDevOpsVariable -Name "Arcus.KeyVault.VaultUri" -Value "https://arcus.azure.vault.com"
+```
+
 See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-devops) for more information on this function.
 
 ## What's on the Horizon
@@ -67,8 +92,6 @@ Here are some features that are on the horizon, but please don't heasitate to [m
   * [Provide script for restoring an Azure API Management service](https://github.com/arcus-azure/arcus.scripting/issues/76)
   * [Provide script to backup an Azure API Management service](https://github.com/arcus-azure/arcus.scripting/issues/75)
   * [Provide script to set the subscriptionKey on an Azure API Management service](https://github.com/arcus-azure/arcus.scripting/issues/39)
-* [Azure Cognitive Services](https://github.com/arcus-azure/arcus.scripting/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%3Acognitive-services)
-  * [Provide script set to build Azure Cognitive Search & Form Recognizer](https://github.com/arcus-azure/arcus.scripting/issues/22)
 * [Azure Key Vault](https://github.com/arcus-azure/arcus.scripting/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%3Akey-vault)
   * [Provide script for importing certificate as base64-string into Azure Key Vault](https://github.com/arcus-azure/arcus.scripting/issues/71)
 

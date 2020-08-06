@@ -66,7 +66,8 @@ See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-stora
 
 ## Azure Resource Manager (ARM)
 
-The `Arcus.Scripting.ARM` PowerShell module contains the capability to inject content into a ARM template, controling the formatting of the injected content.
+The `Arcus.Scripting.ARM` PowerShell module has been built to help you in manipulating ARM templates before triggering a deployment, allowing you to reduce the complexity of these templates.  
+Currently, this module contains the capability to inject content into an ARM template, controling the formatting of the injected content.
 After importing the module, the `Inject-ArmContent` function is available to you.
 
 The [docs](https://github.com/arcus-azure/arcus.scripting/blob/master/docs/preview/features/powershell/arm.md) has an example of an OpenAPI specifications you'd want to deploy.

@@ -1,12 +1,12 @@
 # Announcing Arcus Scripting
 
 During DevOps development, interacting with Azure resources was done with PowerShell scripts using the [AzureRM](https://www.powershellgallery.com/packages/AzureRM/6.13.1) modules.
-New projects with simular needs were forced to copy the script files into the source control of the new project, resulting in a lot of duplication across projects and no management system when changes to the script were made. In the last case, one was forced to manually change all the scripts spread across all the projects.
+New projects with similar needs were forced to copy the script files into the source control of the new project, resulting in a lot of duplication across projects and no management system when changes to the script were made. In the last case, one was forced to manually change all the scripts spread across all the projects.
 
-This problem lead us to introducing the [Arcus.Scripting](https://github.com/arcus-azure/arcus.scripting) repository where we define, test and manage the PowerShell scripts that can help you interact with Azure resources during DevOps development. During this migration to a seperate repository, we also decided to use the cross-platform [Az](https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-4.5.0) Azure PowerShell library instead of the 'old' [AzureRM](https://azure.microsoft.com/en-us/blog/azure-powershell-cross-platform-az-module-replacing-azurerm/); making our scripts even more relevant.
+This problem lead us to introducing the [Arcus.Scripting](https://github.com/arcus-azure/arcus.scripting) repository where we define, test and manage the PowerShell scripts that can help you interact with Azure resources during DevOps development. During this migration to a separate repository, we also decided to use the cross-platform [Az](https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-4.5.0) Azure PowerShell library instead of the 'old' [AzureRM](https://azure.microsoft.com/en-us/blog/azure-powershell-cross-platform-az-module-replacing-azurerm/); making our scripts even more relevant.
 
 Come and take a look at what this first version [v0.1](https://github.com/arcus-azure/arcus.scripting/releases/tag/v0.1) has to offer!
-All features described below are published in sepearate PowerShell modules, published at the [PowerShell Gallery](https://www.powershellgallery.com/packages?q=Arcus.Scripting).
+All features described below are published in separate PowerShell modules, published at the [PowerShell Gallery](https://www.powershellgallery.com/packages?q=Arcus.Scripting).
 
 ## Azure API Management
 
@@ -39,7 +39,7 @@ See the dedicated [docs](https://scripting.arcus-azure.net/features/powershell/a
 
 ## Azure Data Factory
 
-One of the approaches we would like to make for better user-friendliness, is splitting enable/disable, setting/getting, start/stop... functionality each time in 2 different functions instead of a single function that does both accourding to given arguments. This will make things much clearer and simpler.
+One of the approaches we would like to make for better user-friendliness, is splitting enable/disable, setting/getting, start/stop... functionality each time in 2 different functions instead of a single function that does both according to given arguments. This will make things much clearer and simpler.
 
 A good example of this, is how we created the `Arcus.Scripting.DataFactory` PowerShell module. This module has two functions to enable and disable a trigger of an Azure Data Factory pipeline: `Enable-AzDataFactoryTrigger` and `Disable-AzDataFactoryTrigger` instead of the original `EnableDisableDataFactoryTrigger`.
 
@@ -54,7 +54,7 @@ See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-data-
 
 ## Azure (Table) Storage
 
-The `Arcus.Scripting.Storage.Table` PowerShell module is the start of a whole bunch of storage-related scripts that will in the future be collected in a `Arcus.Scripting.Storage` PowerShell module. For now, we only have the Azure Table Storage module which already contains the funcctionality to create a new table inside an Azure Storage Account.
+The `Arcus.Scripting.Storage.Table` PowerShell module is the start of a whole bunch of storage-related scripts that will in the future be collected in a `Arcus.Scripting.Storage` PowerShell module. For now, we only have the Azure Table Storage module which already contains the functionality to create a new table inside an Azure Storage Account.
 The `Create-AzStorageTable` also has the ability to re-create an existing table if that is required.
 
 ```powershell
@@ -67,7 +67,7 @@ See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-stora
 ## Azure Resource Manager (ARM)
 
 The `Arcus.Scripting.ARM` PowerShell module has been built to help you in manipulating ARM templates before triggering a deployment, allowing you to reduce the complexity of these templates.  
-Currently, this module contains the capability to inject content into an ARM template, controling the formatting of the injected content.
+Currently, this module contains the capability to inject content into an ARM template, controlling the formatting of the injected content.
 After importing the module, the `Inject-ArmContent` function is available to you.
 
 The [docs](https://github.com/arcus-azure/arcus.scripting/blob/master/docs/preview/features/powershell/arm.md) has an example of an OpenAPI specifications you'd want to deploy.

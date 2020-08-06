@@ -86,7 +86,7 @@ See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-devop
 
 ## What's on the Horizon
 
-This summary of all the features in this first version is only the beginning of a great scripting story.
+But this is only the beginning of a great scripting story!
 Here are some features that are on the horizon, but please don't heasitate to [make a suggestion](https://github.com/arcus-azure/arcus.scripting/issues/new?template=Feature_request.md) and we're happy to help where we can!
 
 * [Azure API Management](https://github.com/arcus-azure/arcus.scripting/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%3Aapi-management)

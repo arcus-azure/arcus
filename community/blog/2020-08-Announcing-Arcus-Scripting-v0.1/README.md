@@ -99,4 +99,4 @@ Here are some features that are on the horizon, but please don't heasitate to [m
   * Provide scripts to [enable](https://github.com/arcus-azure/arcus.scripting/issues/19) or [disable](https://github.com/arcus-azure/arcus.scripting/issues/20) logic apps in a fixed order, preventing data-loss during an upgrade
 
 Thanks for reading!
-Stijn
+Arcus team

@@ -39,7 +39,7 @@ See the dedicated [docs](https://scripting.arcus-azure.net/features/powershell/a
 
 ## Azure Data Factory
 
-One of the approaches we would like to make for better user-friendliness, is splitting enable/disable, setting/getting, start/stop... functionality each time in 2 different functions instead of a single function that does both according to given arguments. This will make things much clearer and simpler.
+One of the approaches we would like to use to improve user-friendliness, is splitting up enable/disable, setting/getting, start/stop... functionality in 2 different functions instead of a single function that does both according to given arguments, making things much more straight-forward.
 
 A good example of this, is how we created the `Arcus.Scripting.DataFactory` PowerShell module. This module has two functions to enable and disable a trigger of an Azure Data Factory pipeline: `Enable-AzDataFactoryTrigger` and `Disable-AzDataFactoryTrigger` instead of the original `EnableDisableDataFactoryTrigger`.
 

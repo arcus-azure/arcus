@@ -23,7 +23,7 @@ See the [docs](https://scripting.arcus-azure.net/preview/features/powershell/azu
 
 ## Azure Key Vault
 
-Another module we created, was specifically designed to collect functionality related to the Azure Key Vault.
+The next module has been specifically designed to gather functionality related to the Azure Key Vault.
 We figured there's a lot of extra functionality that can be useful during interacting with this Azure resource.
 
 The `Arcus.Scripting.KeyVault` PowerShell module contains now only two functions: `Get-AzKeyVaultAccessPolicies` and `Set-AzKeyVaultSecretFromFile` but is for sure going to expand in more functionality.

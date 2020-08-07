@@ -54,8 +54,9 @@ See the [docs](https://scripting.arcus-azure.net/features/powershell/azure-data-
 
 ## Azure (Table) Storage
 
-The `Arcus.Scripting.Storage.Table` PowerShell module is the start of a whole bunch of storage-related scripts that will in the future be collected in a `Arcus.Scripting.Storage` PowerShell module. For now, we only have the Azure Table Storage module which already contains the functionality to create a new table inside an Azure Storage Account.
-The `Create-AzStorageTable` also has the ability to re-create an existing table if that is required.
+The `Arcus.Scripting.Storage.Table` PowerShell module is the start of a set of Azure Storage Account-related scripts that will become part of the `Arcus.Scripting.Storage` PowerShell module.  
+For now, we only have the Azure Table Storage module which contains functionality to (re-)create a table within an Azure Storage Account:
+- `Create-AzStorageTable`
 
 ```powershell
 PS> Create-AzStorageTable -ResourceGroupName "stock" -StorageAccountName "admin" -TableName "products"

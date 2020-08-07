@@ -1,7 +1,7 @@
 # Announcing Arcus Scripting
 
 During DevOps development, interacting with Azure resources was done with PowerShell scripts using the [AzureRM](https://www.powershellgallery.com/packages/AzureRM/6.13.1) modules.
-New projects with similar needs were forced to copy the script files into the source control of the new project, resulting in a lot of duplication across projects and no management system when changes to the script were made. In the last case, one was forced to manually change all the scripts spread across all the projects.
+Setting up new projects with similar needs, often meant that we were forced to copy the scripts into the source control of this new project, resulting in a lot of duplications, and due to the lack of a real management system, there was no way to follow up on any changes. In the last case, one was forced to manually change all the scripts spread across all the projects.
 
 This problem lead us to introducing the [Arcus.Scripting](https://github.com/arcus-azure/arcus.scripting) repository where we define, test and manage the PowerShell scripts that can help you interact with Azure resources during DevOps development. During this migration to a separate repository, we also decided to use the cross-platform [Az](https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-4.5.0) Azure PowerShell library instead of the 'old' [AzureRM](https://azure.microsoft.com/en-us/blog/azure-powershell-cross-platform-az-module-replacing-azurerm/); making our scripts even more relevant.
 

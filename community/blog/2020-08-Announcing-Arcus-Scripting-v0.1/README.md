@@ -45,7 +45,7 @@ A good example of this approach is the creation of the `Arcus.Scripting.DataFact
 - `Enable-AzDataFactoryTrigger` 
 - `Disable-AzDataFactoryTrigger`.
 
-Following example shows how we can enable the Azure Data Factory trigger:
+The following example shows how we can enable the Azure Data Factory trigger:
 
 ```powershell
 PS> Enable-AzDataFactoryTrigger -ResourceGroupName "arcus-resource-group" -DataFactoryName "arcus-data-factory-name" -DataFactoryTriggerName "arcus-data-factory-trigger-name"

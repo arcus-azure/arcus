@@ -95,7 +95,7 @@ Here are some features that are on the horizon:
   * [Provide script to backup an Azure API Management service](https://github.com/arcus-azure/arcus.scripting/issues/75)
   * [Provide script to set the subscriptionKey on an Azure API Management service](https://github.com/arcus-azure/arcus.scripting/issues/39)
 * [Azure Key Vault](https://github.com/arcus-azure/arcus.scripting/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%3Akey-vault)
-  * [Provide script for importing certificate as base64-string into Azure Key Vault](https://github.com/arcus-azure/arcus.scripting/issues/71)
+  * [Provide script for importing a certificate as a base64-string into Azure Key Vault](https://github.com/arcus-azure/arcus.scripting/issues/71)
 * [Azure Logic Apps](https://github.com/arcus-azure/arcus.scripting/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%3Alogic-apps)
   * Provide scripts to [enable](https://github.com/arcus-azure/arcus.scripting/issues/19) or [disable](https://github.com/arcus-azure/arcus.scripting/issues/20) logic apps in a fixed order, preventing data-loss during an upgrade
 

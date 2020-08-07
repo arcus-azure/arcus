@@ -10,7 +10,7 @@ All features described below are published in separate PowerShell modules, publi
 
 ## Azure API Management
 
-The `Arcus.Scripting.ApiManagement` PowerShell module has already a lot of functionality and is even the most populated module in this first version.
+The `Arcus.Scripting.ApiManagement` PowerShell module already has a lot of functionality and is even the most populated module in this first version.
 Included in this version the functionality goes from creating to importing to removing resources on an API Management instance:
 
 * [Creating a new API operation in the Azure API Management instance](https://scripting.arcus-azure.net/features/powershell/azure-api-management#creating-a-new-api-operation-in-the-azure-api-management-instance)

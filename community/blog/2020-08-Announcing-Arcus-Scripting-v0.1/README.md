@@ -75,7 +75,7 @@ The [docs](https://github.com/arcus-azure/arcus.scripting/blob/master/docs/previ
 
 ## Azure DevOps
 
-Something that coming up several times but was never actually seen as a separate functionality, was setting Azure pipeline variables. This functionality was scattered across scripts and was making the functions itself unnecessary complex. By separating this functionality in a dedicated module only for Azure DevOps related functionality, we have made using these functions a lot more user-friendly.
+Something that comes up several times, but was never actually seen as separate functionality, was the possibility of setting Azure DevOps pipeline variables. As a result, this functionality was scattered across scripts and was making those unnecessarily complex. By separating this functionality into an Azure DevOps dedicated module named `Arcus.Scripting.DevOps`, we have made using it a lot more user-friendly and easier to maintain.
 
 The `Set-AzDevOpsVariable` takes in the name and the value of the variable. It's as simple as that!
 

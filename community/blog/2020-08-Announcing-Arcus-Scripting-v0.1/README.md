@@ -71,7 +71,7 @@ The `Arcus.Scripting.ARM` PowerShell module has been built to help you in manipu
 Currently, this module contains the capability to inject content into an ARM template, allowing you to control the formatting of the injected content:
 - `Inject-ArmContent`
 
-The [docs](https://github.com/arcus-azure/arcus.scripting/blob/master/docs/preview/features/powershell/arm.md) has an example of an OpenAPI specifications you'd want to deploy.
+The [docs](https://github.com/arcus-azure/arcus.scripting/blob/master/docs/preview/features/powershell/arm.md) show you an example of injecting OpenAPI specifications into an ARM template.
 
 ## Azure DevOps
 

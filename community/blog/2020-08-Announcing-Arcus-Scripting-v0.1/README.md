@@ -102,5 +102,6 @@ Here are some features that are on the horizon:
   * Provide scripts to [enable](https://github.com/arcus-azure/arcus.scripting/issues/19) or [disable](https://github.com/arcus-azure/arcus.scripting/issues/20) logic apps in a fixed order, preventing data-loss during an upgrade
 
 Are we missing something? Don't hesitate to [make a suggestion](https://github.com/arcus-azure/arcus.scripting/issues/new?template=Feature_request.md) and we're happy to help where we can!
+
 Thanks for reading!
 Arcus team

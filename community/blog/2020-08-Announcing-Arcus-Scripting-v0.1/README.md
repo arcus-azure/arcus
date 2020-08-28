@@ -104,4 +104,5 @@ Here are some features that are on the horizon:
 Are we missing something? Don't hesitate to [make a suggestion](https://github.com/arcus-azure/arcus.scripting/issues/new?template=Feature_request.md) and we're happy to help where we can!
 
 Thanks for reading!
+
 Arcus team

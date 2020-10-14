@@ -1,17 +1,17 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients recieve an obligation free consultation.",
-    "image": "images/features/noun_branding_1885335.svg"
+    "title": "Build By Experts, For Experts",
+    "description": "We bake our best practices into Arcus to help our existing & future clients.",
+    "image": "images/features/noun_3d modeling_1885342.svg"
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Modular Design",
+    "description": "All components can be used seperately, but they are better together.",
     "image": "images/features/noun_The Process_1885341.svg"
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
-    "image": "images/features/noun_3d modeling_1885342.svg"
+    "title": "Open-Source & Free to use",
+    "description": "We build our framework in the open and is free to use under the <a href=\"https://github.com/arcus-azure/arcus/blob/master/LICENSE\">MIT license</a>.",
+    "image": "images/features/noun_branding_1885335.svg"
   }
 ]

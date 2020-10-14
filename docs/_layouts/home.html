@@ -30,9 +30,9 @@ bodyClass: page-home
         <div class="service service-summary">
           <div class="service-content">
             <h2 class="service-title">
-              <a href="{{site.baseurl}}{{ components.url }}">{{ components.title }}</a>
+              <a href="{{site.baseurl}}{{ component.url }}">{{ component.title }}</a>
             </h2>
-            <p>{{ components.content | markdownify | strip_html | truncate: 100 }}</p>
+            <p>{{ component.content | markdownify | strip_html | truncate: 100 }}</p>
           </div>
         </div>
       </div>

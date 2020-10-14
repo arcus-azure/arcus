@@ -1,7 +1,57 @@
-repository: arcus-azure/arcus
-theme: jekyll-theme-slate
-logo: https://raw.githubusercontent.com/arcus-azure/arcus/master/media/arcus.png
-title: Arcus
-description: Azure development in a breeze
+baseurl: ''
+exclude: ['README.md']
+permalink: pretty
+title: 'Arcus'
+
+google_analytics_id: null
+homepage:
+  show_call_box: true
+logo:
+  mobile: "images/logo/logo-mobile.svg"
+  desktop: "images/logo/logo.svg"
+  desktop_height: "36px"
+footer:
+  copyright_text: 'Free Jekyll theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
+
+seo:
+  meta_og_title: "Jekyll Serif Theme"
+  meta_og_type: "website"
+  meta_og_url: "https://jekyll-serif-theme.netlify.app"
+  meta_og_image: "https://raw.githubusercontent.com/zerostaticthemes/jekyll-serif-theme/master/screenshots/tn.png"
+  meta_og_description: "Jekyll Serif is a modern business theme for Hugo. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated."
+  meta_twitter_card: "summary"
+  meta_twitter_site: "@zerostaticio"
+  meta_twitter_creator: "@zerostaticio"
+
+collections:
+  components:
+    output: true
+    permalink: /components/:path/
+  services:
+    output: true
+    permalink: /services/:path/
+  team:
+    output: true
+    permalink: /team/:path/
+
+defaults:
+  - scope:
+      type: components
+    values:
+      layout: service
+      bodyClass: page-components-single
+  - scope:
+      type: services
+    values:
+      layout: service
+      bodyClass: page-services-single
+  - scope:
+      path: 'images'
+    values:
+      image: true
+
+sass:
+  style: compact # possible values: nested expanded compact compressed
+
 plugins:
-  - jemoji
+  - jekyll-environment-variables

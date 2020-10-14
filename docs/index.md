@@ -2,11 +2,9 @@
 layout: home
 title: Arcus
 description: Azure development in a breeze.
-intro_image: "images/illustrations/pointing.svg"
-intro_image_absolute: true
-intro_image_hide_on_mobile: true
+intro_image: "images/splash/landing.jpg"
 ---
 
 # Arcus - Azure development in a breeze.
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+A free and open-source framework to simply building applications running on Microsoft Azure.

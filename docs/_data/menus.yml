@@ -6,7 +6,7 @@ main:
     url: "https://github.com/arcus-azure"
     weight: 2
   - name: "License"
-    url: "https://github.com/arcus-azure/arcus/blob/master/LICENSE"
+    url: "/license/"
     weight: 3
 
 footer:
@@ -17,5 +17,5 @@ footer:
     url: "https://github.com/arcus-azure"
     weight: 2
   - name: "License"
-    url: "https://github.com/arcus-azure/arcus/blob/master/LICENSE"
+    url: "/license/"
     weight: 3

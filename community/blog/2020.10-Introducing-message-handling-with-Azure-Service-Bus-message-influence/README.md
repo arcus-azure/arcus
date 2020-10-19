@@ -117,7 +117,8 @@ All are helping in making the developer and consumer more in control of our mess
 ## What's on the horizon?
 
 We are exploring how we can make our message handler approach available to customers using Azure Functions to provide a consistent experience. This would mean that Azure Functions would act as the message pump, but you can re-use your existing message handlers.
-We'll also look at how we can let the consumer be more in control of how the incoming Azure Service Bus messages are being deserialized before they're passed to the message handling.
+
+Next to that, we are working hard to give customers more control in how incoming messages are being deserialized before they're passed to the message handling.
 
 Have a question, remark, feedback or idea for a superduper addition?
 Feel free to take a look at our [GitHub repository](https://github.com/arcus-azure/arcus.messaging) and [create an issue](https://github.com/arcus-azure/arcus/issues/new/choose).

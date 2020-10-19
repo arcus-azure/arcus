@@ -120,7 +120,7 @@ We are exploring how we can make our message handler approach available to custo
 
 Next to that, we are working hard to give customers more control in how incoming messages are being deserialized before they're passed to the message handling.
 
-Have a question, remark, feedback or idea for a superduper addition?
+Have a question, remark, feedback or idea for a superduper addition? Feel free to take a look at our [GitHub repository](https://github.com/arcus-azure/arcus.messaging) and [create an issue](https://github.com/arcus-azure/arcus/issues/new/choose).
 Feel free to take a look at our [GitHub repository](https://github.com/arcus-azure/arcus.messaging) and [create an issue](https://github.com/arcus-azure/arcus/issues/new/choose).
 
 Thank you very much for reading and happy messaging!

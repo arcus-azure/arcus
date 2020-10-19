@@ -8,7 +8,7 @@ Previous versions already had set up a message handling system where messages co
 
 Until now.
 
-## Azure Service Bus message operations
+## Providing capability to directly decide what to do with Azure Service Bus messages
 
 Currently, we provide three specific Azure Service Bus functions:
 - **Completing** a message which marks the Service Bus message 'complete' on Azure so no other queue can process it again (this is normally done automatically but can be turned off so you're in full control).

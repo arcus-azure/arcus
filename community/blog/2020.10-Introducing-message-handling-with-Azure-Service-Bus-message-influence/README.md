@@ -106,7 +106,13 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Is that all?
 
-No, of course not. The v0.4 and v0.5 version also has some minor updates regarding less verbose logging and some extra correlation extensions to pass along your own custom operation/transation ID property. All are helping in making the developer and consumer more in control of our messaging functionality.
+No, of course not!
+
+We've released more improvements such as:
+- Less verbose logging for our message pump and TCP health probes. All telemetry is still there, but moved to `Trace` verbosity
+- Additional correlation extensions to pass along your own custom operation/transation ID property name
+
+All are helping in making the developer and consumer more in control of our messaging functionality.
 
 ## What's on the horizon?
 

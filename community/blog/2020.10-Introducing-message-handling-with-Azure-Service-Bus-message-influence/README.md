@@ -4,7 +4,7 @@
 On March 27th, 2020 we've [announced Arcus Messaging](https://www.codit.eu/blog/announcing-arcus-messaging-background-jobs/) for the first time which was just the start of a new journey to where we are today.
 
 Starting from v0.4 and v0.5, the [Arcus Messaging](https://github.com/arcus-azure/arcus.messaging) has got an upgrade in how you can interact with messages coming from Azure Service Bus.
-Previous versions already had set up a message handling system where messages could be routed and processed according to contextual information, but the system wasn't yet mature enough that it provided a way to report back to Azure when the message processing was completed.
+Previous versions already had set up a message handling system where messages could be routed and processed according to contextual information, but it didn't cover all the scenarios that our customers have and we fell short, for example, it didn't provide a way to manually dead-letter a message.
 
 Until now.
 

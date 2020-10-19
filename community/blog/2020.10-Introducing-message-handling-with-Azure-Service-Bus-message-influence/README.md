@@ -18,7 +18,8 @@ We have introduced three new message operations for Azure Service Bus which you 
 ## Specific Azure Service Bus message handlers
 
 Because of the way the message handlers are registered and used inside the application, there's no 'callback' function to access the Azure Service Bus.
-That's why we've created two 'message handler templates' to help with this. These templates implements the message handler signature but also provides you with a whole range of specific Azure Service Bus functions that are related to completing the message processing.
+
+That's why we've created two dedicated message handlers for Azure Service Bus which allow you to interact closely with the message itself so that you can influence the message processing.
 
 - `AzureServiceBusMessageHandler<>`: is an `IMessageHandler` implementation which provides the specific Azure Service Bus message operations
 - `AzureServiceBusFallbackMessageHandler`: is an `IServiceBusFallbackMessageHandler` implementation which provides the specific Azure Service Bus message operations

@@ -21,11 +21,7 @@ Because of the way the message handlers are registered and used inside the appli
 
 That's why we've created two dedicated message handlers for Azure Service Bus which allow you to interact closely with the message itself so that you can influence the message processing.
 
-- `AzureServiceBusMessageHandler<>`: is an `IMessageHandler` implementation which provides the specific Azure Service Bus message operations
-- `AzureServiceBusFallbackMessageHandler`: is an `IServiceBusFallbackMessageHandler` implementation which provides the specific Azure Service Bus message operations
-
-### Regular message handling
-
+`AzureServiceBusMessageHandler<>` is an `IMessageHandler` implementation which provides the specific Azure Service Bus message operations.
 Here is an example of how a normal `IMessageHandler` implementation is created for Azure Service Bus.
 The `IAzureServiceBusMessageHanlder<>` is used here as shortcut, which in fact implemnets the `IMessageHandler<>`.
 
@@ -62,7 +58,7 @@ public class OrderMessageHandler<Order> : AzureServiceBusMessageHandler<Order>
 Note that in the regular message handling you don't have to specify which message to abandon. This is all done behind the screens so the message handler only has to focus on the message processing and call the specific Azure Service Bus message operations when necessary.
 The registration of this kind of message handler is just the same as any other regular message handler can can be added with the `.AddServiceBusMessageHandler` or `.AddMessageHandler` extensions.
 
-### Fallback message handling
+## Fallback message handling
 
 The capability to 'fallback' during message handling is also rather new. When a message is received on the message pump but there's not a single registered message handler that can handle the message correctly, the library provides a way to route your message to a fallback message handler.
 This can of course be used when you expect that the received message will not always be handled. For more information on this topic, see our [dedicated docs page](https://messaging.arcus-azure.net/features/message-pumps/customization#fallback-message-handling) that explains this concept more thoroughly.
@@ -70,7 +66,8 @@ This can of course be used when you expect that the received message will not al
 The fallback message handling is possible more correct when we're talking about dead lettering a message. Fallback message handlers will process the Azure Service Bus message when none other regular message handler was able to correctly process it.
 At the end of the fallback message processing, the message could be dead lettered on Azure for example.
 
-Here's an example of how a normal `IServiceBusFallbackMessageHandler` is implemented:
+Here's an example of how a normal `IServiceBusFallbackMessageHandler` is implemented.
+`AzureServiceBusFallbackMessageHandler` is an `IServiceBusFallbackMessageHandler` implementation which provides the specific Azure Service Bus message operations
 
 ```csharp
 public class OrderFallbackMessageHandler : IAzureServiceBusFallbackMessageHandler

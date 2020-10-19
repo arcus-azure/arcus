@@ -10,7 +10,7 @@ Until now.
 
 ## Providing capability to directly decide what to do with Azure Service Bus messages
 
-Currently, we provide three specific Azure Service Bus functions:
+We have introduced three new message operations for Azure Service Bus which you can now use in your message handlers:
 - **Completing** a message which marks the Service Bus message 'complete' on Azure so no other queue can process it again (this is normally done automatically but can be turned off so you're in full control).
 - **Dead lettering** a message which marks the Service Bus message 'dead lettered' on Azure so it's moved to the dead letter queue.
 - **Abandoning** a message which marks the Service Bus message 'abandonned' on Azure.

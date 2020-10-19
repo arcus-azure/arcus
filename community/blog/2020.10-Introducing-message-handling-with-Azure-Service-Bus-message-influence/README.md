@@ -99,7 +99,7 @@ We'll see how we can reuse our message handling system in the context of Azure f
 We'll also look at how we can let the consumer be more in control of how the incoming Azure Service Bus messages are being deserialized before they're passed to the message handling.
 
 Have a question, remark, feedback or idea for a superduper addition?
-Feel free to take a look at our GitHub repository and create an issue.
+Feel free to take a look at our [GitHub repository](https://github.com/arcus-azure/arcus.messaging) and [create an issue](https://github.com/arcus-azure/arcus/issues/new/choose).
 
 Thank you very much for reading and happy messaging!
 

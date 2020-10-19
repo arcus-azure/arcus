@@ -64,6 +64,9 @@ The registration of this kind of message handler is just the same as any other r
 
 ### Fallback message handling
 
+The capability to 'fallback' during message handling is also rather new. When a message is received on the message pump but there's not a single registered message handler that can handle the message correctly, the library provides a way to route your message to a fallback message handler.
+This can of course be used when you expect that the received message will not always be handled. For more information on this topic, see our [dedicated docs page](https://messaging.arcus-azure.net/features/message-pumps/customization#fallback-message-handling) that explains this concept more thoroughly.
+
 The fallback message handling is possible more correct when we're talking about dead lettering a message. Fallback message handlers will process the Azure Service Bus message when none other regular message handler was able to correctly process it.
 At the end of the fallback message processing, the message could be dead lettered on Azure for example.
 

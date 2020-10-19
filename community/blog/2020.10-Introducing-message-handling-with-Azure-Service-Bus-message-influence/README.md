@@ -32,7 +32,7 @@ public class OrderFallbackMessageHandler : IAzureServiceBusFallbackMessageHandle
 }
 ```
 
-When you decide you want to dead letter the message, you'll have to implement  `AzureServiceBusFallbackMessageHandler` instead.
+When you decide you want to dead-letter the message, you'll have to implement  `AzureServiceBusFallbackMessageHandler` instead.
 
 ```csharp
 public class OrderFallbackMessageHandler : AzureServiceFallbackMessageHandler

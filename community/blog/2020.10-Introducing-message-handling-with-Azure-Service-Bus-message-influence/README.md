@@ -17,7 +17,7 @@ This can be used as a fail-safe to create awareness of these messages or when yo
 
 For more information on this topic, see our [dedicated docs page](https://messaging.arcus-azure.net/features/message-pumps/customization#fallback-message-handling) that explains this concept more thoroughly.
 
-The fallback message handling is possible more correct when we're talking about dead lettering a message. Fallback message handlers will process the Azure Service Bus message when none other regular message handler was able to correctly process it.
+The fallback message handling can be used to dead-letter messages, for example, so that an operator can have a look at them and decide they were not correctly processed due to a bug or if it's the expected behavior.
 At the end of the fallback message processing, the message could be dead lettered on Azure for example.
 
 Here's an example of how a normal `IServiceBusFallbackMessageHandler` is implemented.

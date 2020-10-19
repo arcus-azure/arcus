@@ -1,5 +1,8 @@
 # Introducing message handling with Azure Service Bus message influence in v0.5
 
+[Arcus.Messaging]() has been arround quite a while now. It was created to remove the huge hurdle of constantly having to write the same boilerplate for processing message queues. 
+See [our annoucing post](https://www.codit.eu/blog/announcing-arcus-messaging-background-jobs/) that introduced Arcus.Messaging for the first time for more information.
+
 Starting from v0.4 and updated in v0.5, the [Arcus.Messaging](https://github.com/arcus-azure/arcus.messaging) has got an upgrade in handling messages from Azure Service Bus.
 Previous versions already had set up a message handling system where messages could be routed and processed according to contextual information, but the system wasn't yet mature enough that it provided a way to report back to Azure when the message processing was completed.
 

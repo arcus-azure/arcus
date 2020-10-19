@@ -98,7 +98,7 @@ No, of course not. The v0.4 and v0.5 version also has some minor updates regardi
 We'll see how we can reuse our message handling system in the context of Azure functions where the function binding will take the place of the message pump.
 We'll also look at how we can let the consumer be more in control of how the incoming Azure Service Bus messages are being deserialized before they're passed to the message handling.
 
-Have a question, remark, feedback or idea for a superdub addition?
+Have a question, remark, feedback or idea for a superduper addition?
 Feel free to take a look at our GitHub repository and create an issue.
 
 Thank you very much for reading and happy messaging!

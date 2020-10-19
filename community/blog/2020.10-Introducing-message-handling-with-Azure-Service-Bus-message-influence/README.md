@@ -59,6 +59,7 @@ public class OrderMessageHandler<Order> : AzureServiceBusMessageHandler<Order>
 ```
 
 Note that in the regular message handling you don't have to specify which message to abandon. This is all done behind the screens so the message handler only has to focus on the message processing and call the specific Azure Service Bus message operations when necessary.
+The registration of this kind of message handler is just the same as any other regular message handler can can be added with the `.AddServiceBusMessageHandler` or `.AddMessageHandler` extensions.
 
 ### Fallback message handling
 
@@ -91,6 +92,17 @@ public class OrderFallbackMessageHandler : AzureServiceFallbackMessageHandler
 ```
 
 Note that because the fallback message handlers have more control over the original Azure Service Bus message, they will have to pass along the message to the base operations.
+
+Registering this fallback message handler is just the same as when implementing the interface:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddServiceBusMessageHandler<OrderCompletedMessageHandler>()
+            .AddServiceBusMessageHandler<OrderCancelledMessageHandler>()
+            .AddServiceBusFallbackMessageHandler<OrderFallbackMessageHandler>();
+}
+```
 
 ## Is that all?
 

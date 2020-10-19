@@ -8,56 +8,6 @@ Previous versions already had set up a message handling system where messages co
 
 Until now.
 
-## Providing capability to directly decide what to do with Azure Service Bus messages
-
-We have introduced three new message operations for Azure Service Bus which you can now use in your message handlers:
-- **Completing** a message which marks the Service Bus message 'complete' on Azure so no other queue can process it again (this is normally done automatically but can be turned off so you're in full control).
-- **Dead lettering** a message which marks the Service Bus message 'dead lettered' on Azure so it's moved to the dead letter queue.
-- **Abandoning** a message which marks the Service Bus message 'abandonned' on Azure.
-
-## Specific Azure Service Bus message handlers
-
-Because of the way the message handlers are registered and used inside the application, there's no 'callback' function to access the Azure Service Bus.
-
-That's why we've created two dedicated message handlers for Azure Service Bus which allow you to interact closely with the message itself so that you can influence the message processing.
-
-`AzureServiceBusMessageHandler<>` is an `IMessageHandler` implementation which provides the specific Azure Service Bus message operations.
-Here is an example of how a normal `IMessageHandler` implementation is created for Azure Service Bus.
-The `IAzureServiceBusMessageHanlder<>` is used here as shortcut, which in fact implemnets the `IMessageHandler<>`.
-
-```csharp
-public class OrderMessageHandler<Order> : IAzureServiceBusMessageHandler<Order>
-{
-    public async Task ProcessMessageAsync(Order order, AzureServiceBusMessageContext context, ...)
-    {
-        // Processing order.
-    }
-}
-```
-
-When you decide you want to abandon the message when the order is not recognized or the message context is invalid, you'll have to implement `AzureServiceBusMessageHandler<>` instead.
-
-```csharp
-public class OrderMessageHandler<Order> : AzureServiceBusMessageHandler<Order>
-{
-    public override async Task ProcessMessageAsync(Order order, AzureServiceBusMessageContext context, ...)
-    {
-        if (order.Customer is null)
-        {
-            // Calling base operation where the Azure Service Bus operations are located.
-            await base.AbandonMessageAsync();
-        }
-        else
-        {
-            // Processing order.
-        }
-    }
-}
-```
-
-Note that in the regular message handling you don't have to specify which message to abandon. This is all done behind the screens so the message handler only has to focus on the message processing and call the specific Azure Service Bus message operations when necessary.
-The registration of this kind of message handler is just the same as any other regular message handler can can be added with the `.AddServiceBusMessageHandler` or `.AddMessageHandler` extensions.
-
 ## Fallback message handling
 
 The capability to 'fallback' during message handling is also rather new. When a message is received on the message pump but there's not a single registered message handler that can handle the message correctly, the library provides a way to route your message to a fallback message handler.
@@ -104,6 +54,58 @@ public void ConfigureServices(IServiceCollection services)
             .AddServiceBusFallbackMessageHandler<OrderFallbackMessageHandler>();
 }
 ```
+
+## Providing capability to directly decide what to do with Azure Service Bus messages
+
+We have introduced three new message operations for Azure Service Bus which you can now use in your message handlers:
+- **Completing** a message which marks the Service Bus message 'complete' on Azure so no other queue can process it again (this is normally done automatically but can be turned off so you're in full control).
+- **Dead lettering** a message which marks the Service Bus message 'dead lettered' on Azure so it's moved to the dead letter queue.
+- **Abandoning** a message which marks the Service Bus message 'abandonned' on Azure.
+
+## Specific Azure Service Bus message handlers
+
+Because of the way the message handlers are registered and used inside the application, there's no 'callback' function to access the Azure Service Bus.
+
+That's why we've created two dedicated message handlers for Azure Service Bus which allow you to interact closely with the message itself so that you can influence the message processing.
+
+- `AzureServiceBusMessageHandler<>` is an `IMessageHandler` implementation which provides the specific Azure Service Bus message operations.
+Here is an example of how a normal `IMessageHandler` implementation is created for Azure Service Bus.
+- `AzureServiceBusFallbackMessageHandler`: is an `IServiceBusFallbackMessageHandler` implementation which provides the specific Azure Service Bus message operations
+
+The `IAzureServiceBusMessageHanlder<>` is used here as shortcut, which in fact implemnets the `IMessageHandler<>`.
+
+```csharp
+public class OrderMessageHandler<Order> : IAzureServiceBusMessageHandler<Order>
+{
+    public async Task ProcessMessageAsync(Order order, AzureServiceBusMessageContext context, ...)
+    {
+        // Processing order.
+    }
+}
+```
+
+When you decide you want to abandon the message when the order is not recognized or the message context is invalid, you'll have to implement `AzureServiceBusMessageHandler<>` instead.
+
+```csharp
+public class OrderMessageHandler<Order> : AzureServiceBusMessageHandler<Order>
+{
+    public override async Task ProcessMessageAsync(Order order, AzureServiceBusMessageContext context, ...)
+    {
+        if (order.Customer is null)
+        {
+            // Calling base operation where the Azure Service Bus operations are located.
+            await base.AbandonMessageAsync();
+        }
+        else
+        {
+            // Processing order.
+        }
+    }
+}
+```
+
+Note that in the regular message handling you don't have to specify which message to abandon. This is all done behind the screens so the message handler only has to focus on the message processing and call the specific Azure Service Bus message operations when necessary.
+The registration of this kind of message handler is just the same as any other regular message handler can can be added with the `.AddServiceBusMessageHandler` or `.AddMessageHandler` extensions.
 
 ## Is that all?
 

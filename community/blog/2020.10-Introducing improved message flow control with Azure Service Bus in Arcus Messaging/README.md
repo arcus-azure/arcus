@@ -1,4 +1,4 @@
-# Introducing message handling with Azure Service Bus message influence in v0.5
+# Introducing improved message flow control with Azure Service Bus in Arcus Messaging in v0.5
 
 [Arcus Messaging](https://messaging.arcus-azure.net/) has been around for quite a while now. It was created to remove the huge hurdle of constantly having to write the same boilerplate for processing message queues. 
 On March 27th, 2020 we've [announced Arcus Messaging](https://www.codit.eu/blog/announcing-arcus-messaging-background-jobs/) for the first time which was just the start of a new journey to where we are today.

@@ -19,24 +19,24 @@ seo:
   meta_og_description: "Azure development in a breeze."
 
 collections:
+  usecases:
+    output: true
+    permalink: /usecases/:path/
   components:
     output: true
     permalink: /components/:path/
-  services:
-    output: true
-    permalink: /services/:path/
 
 defaults:
+  - scope:
+      type: usecases
+    values:
+      layout: usecases
+      bodyClass: page-usecases-list
   - scope:
       type: components
     values:
       layout: components
       bodyClass: page-components-single
-  - scope:
-      type: services
-    values:
-      layout: service
-      bodyClass: page-services-single
   - scope:
       path: 'images'
     values:

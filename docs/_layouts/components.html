@@ -22,9 +22,9 @@ bodyClass: page-components-list
   <div class="row">
     {% for component in site.components %}
     <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
+      <div class="component component-summary">
+        <div class="component-content">
+          <h2 class="component-title">
             <a href="{{site.baseurl}}{{ component.url }}">{{ component.title }}</a>
           </h2>
           <p>{{ component.content | markdownify | strip_html | truncate: 100 }}</p>

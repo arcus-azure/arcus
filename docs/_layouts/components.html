@@ -25,7 +25,7 @@ bodyClass: page-components-list
       <div class="component component-summary">
         <div class="component-content">
           <h2 class="component-title">
-            <a href="{{site.baseurl}}{{ component.url }}">{{ component.title }}</a>
+            <a href="{{ component.github }}">{{ component.title }}</a>
           </h2>
           <p>{{ component.content | markdownify | strip_html | truncate: 100 }}</p>
         </div>

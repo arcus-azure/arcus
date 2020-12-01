@@ -93,3 +93,28 @@ bodyClass: page-home
     </div>
   </div>
 </div>
+
+<div class="strip">
+  <div class="container pt-6 pb-6 pb-md-10">
+    <h1>Blog Posts</h1>
+    <div class="row justify-content-start">
+      {% for blogpost in site.blogposts %}
+      <div class="col-12 col-md-4 mb-1">
+        <div class="component component-summary">
+          <div class="component-content">
+            <h2 class="component-title">
+              <a href="{{ blogpost.articleUrl }}" target="_blank">{{ blogpost.title }}</a>
+            </h2>
+            <p>{{ blogpost.description | markdownify | strip_html | truncate: 100 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a class="button button-primary" href="{{site.baseurl}}/blogposts">View All Blog Posts</a>
+      </div>
+    </div>
+  </div>
+</div>

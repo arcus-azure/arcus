@@ -25,6 +25,9 @@ collections:
   components:
     output: true
     permalink: /components/:path/
+  blogposts:
+    output: true
+    permalink: /blogposts/:path/
 
 defaults:
   - scope:
@@ -37,6 +40,11 @@ defaults:
     values:
       layout: components
       bodyClass: page-components-single
+  - scope:
+      type: blogposts
+    values:
+      layout: blogposts
+      bodyClass: page-blogposts-single
   - scope:
       path: 'images'
     values:

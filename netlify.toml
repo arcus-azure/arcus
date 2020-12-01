@@ -19,6 +19,11 @@ ID = "a94cac62-0d30-4d52-a378-d60cc1717db9"
 
   # Directory with the lambda functions to deploy to AWS.
   # functions = "project/functions/"
+  
+# Build context
+[build.environment]
+  RUBY_VERSION = "2.7.1" 
+  JEKYLL_ENV = "production" 
 
 # Production context: all deploys from the Production branch set in your site's 
 # deploy settings will inherit these settings.

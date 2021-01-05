@@ -7,9 +7,9 @@ This post will show you how our new version of the **Arcus Background Jobs** lib
 ## Cluster jobs
 
 Here's a take on some Databricks jobs which have been run on a cluster. Note the end result is shown in the last column.
-The end result of this post would be that we could notify the consumer somehow of this outcome without them looking it up in the Databricks cluster itself. 
-
 ![Cluster jobs](./images/cluster-jobs.png)
+
+The outcome of this blog post would be that we could notify the consumer of the job outcome without looking it up in the Databricks cluster itself. 
 
 ## Azure Function Databricks Job Metrics
 

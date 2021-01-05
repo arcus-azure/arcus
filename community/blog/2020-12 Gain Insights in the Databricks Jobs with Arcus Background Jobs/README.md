@@ -89,7 +89,7 @@ There, in the alert condition, the Databricks metric will be available to you.
 
 # Conclusion
 
-In this post we have looked on how we can monitor Databricks jobs with the new **Arcus BackgroundJobs** library. We're not inventing anything new here, only integreting existing services: Databricks job outcomes to Azure Function to Application Insights.
+In this post, we have looked at how we can monitor Databricks jobs with the new **Arcus Background Jobs** library. We're not inventing anything new here, only integrating existing services - Querying Databricks job outcomes in an Azure Function and flowing the information to Azure Application Insights.
 
 You'll be happy to know that we have created an project template for this with already the necessary Azure Function and packages embedded.
 This template will be available starting from v0.5 in the [Arcus Templates](https://templates.arcus-azure.net/) library.

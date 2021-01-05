@@ -14,7 +14,7 @@ The outcome of this blog post would be that we could notify the consumer of the 
 ## Azure Function Databricks Job Metrics
 
 The **Arcus Background Jobs** library includes a new package in the v0.2 version called [Arcus.BackgroundJobs.Databricks](https://www.nuget.org/packages/Arcus.BackgroundJobs.Databricks/). This package contains all the necessary capabilities to query the Databricks cluster so we can retrieve the result of the completed jobs. 
-We'll use an Azure Function to create a timer that will periodically query this Databricks cluster.
+We'll use an Azure Function that will periodically query our Databricks cluster by using a timer trigger.
 
 The job outcome itself will be written as an Application Insights Metric so we can use it later as a source of an alert.
 

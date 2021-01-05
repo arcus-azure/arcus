@@ -80,9 +80,6 @@ The Databricks job outcome is available as custom dimension in the metric:
 ![Custom dimensions](./images/custom-dimensions.png)
 
 If you want, you can create an alert on this metric by going to **Application Insights > Monitoring > Alerts > New alert rule**.
-
-![New alert rule](./images/new-alert-rule.png)
-
 There, in the alert condition, the Databricks metric will be available to you.
 
 ![Alert condition](./images/alert-condition.png)

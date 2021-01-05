@@ -2,7 +2,7 @@
 
 Starting from [Arcus Background Jobs v0.2](https://github.com/arcus-azure/arcus.backgroundjobs/releases/tag/v0.2.0) we have introduced a new library to monitor Databricks clusters. The challenge with Databricks clusters in Azure is that they do not provide out-of-the-box job metrics in Azure Monitor which makes it hard to operate them. People would have to look up the status of the Databricks job themselves to figure out how it ran and using automated alerts is hard.
 
-This post will show you how our new version of the **Arcus BackgroundJobs** library will help you with this problem so the next time you run a Databricks job, you'll be notified right away!
+This post will show you how our new version of the **Arcus Background Jobs** library will help you with this problem so the next time you run a Databricks job, you'll be notified right away!
 
 ## Cluster jobs
 

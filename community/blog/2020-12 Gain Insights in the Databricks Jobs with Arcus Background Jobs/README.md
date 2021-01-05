@@ -60,7 +60,7 @@ namespace GainInsights
 
 The `DatabricksInfoProvider` is an Arcus type that allows you to either measure the job outcomes directly, or query them so you can log them yourself. For more information on this type, see [the official docs](https://background-jobs.arcus-azure.net/features/databricks/gain-insights).
 
-Note that we specify a time window in which we want the completed jobs to exist. This is now set on the start and end of each run of the Azure Function time trigger.
+> 💡 We specify a time window in which we want the completed jobs to exist. This is now set at the start and end of each run of the Azure Function time trigger.
 
 ## Application Insights metrics and alerts
 

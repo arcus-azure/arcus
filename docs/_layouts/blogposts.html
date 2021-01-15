@@ -20,7 +20,8 @@ bodyClass: page-blogposts-list
 
 <div class="container pt-6 pb-6">
   <div class="row">
-    {% for blogpost in site.blogposts %}
+    {% assign blogposts = site.blogposts| sort: 'date' | reverse %}
+    {% for blogpost in blogposts %}
     <div class="col-12 col-md-6 mb-3">
       <div class="blogpost blogpost-summary">
         <div class="blogpost-content">

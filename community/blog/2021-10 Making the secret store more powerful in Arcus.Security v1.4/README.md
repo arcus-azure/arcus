@@ -56,7 +56,9 @@ Host.CreateDefaultBuilder()
     });
 ```
 
-Normally, you would now inject the `ISecretProvider` into your dependent services, but to retrieve a specific provider, you'll have to inject `ISecretStore`. This new interface is another abstraction layer to interact with the secret store. With the `.GetProvider` overloads, you can now retrieve the previously registered environment variables secret provider directly.
+Normally, you would now inject the `ISecretProvider` into your dependent services to consume secrets. However, in order to retrieve a specific provider you need to inject `ISecretStore` which allows you to interact with the secret store.
+
+By using our `.GetProvider` methods, you can now retrieve the previously registered environment variables secret provider directly by using its name.
 
 ```csharp
 [ApiController]

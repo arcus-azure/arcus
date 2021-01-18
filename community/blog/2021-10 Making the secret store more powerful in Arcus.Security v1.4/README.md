@@ -46,7 +46,7 @@ In certain scenarios, you want to retrieve a secret from a specific secret provi
 
 In any case, you'll have to interact in a different way with the secret store. That's where this new feature comes into play.
 
-Starting from v1.4 we allow secret providers to be registered with an unique name. This name will be used to later retrieve the provider so choose wisely. The environment variable secret provider can for example be registered with `"EnvironmentVariables"`:
+Starting from v1.4, we allow secret providers to be registered with a unique name. This name will be used to later retrieve the provider so choose wisely. The environment variable secret provider can, for example, be registered with the name `"EnvironmentVariables"`:
 
 ```csharp
 Host.CreateDefaultBuilder()

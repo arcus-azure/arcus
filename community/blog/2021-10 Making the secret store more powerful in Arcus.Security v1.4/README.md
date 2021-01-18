@@ -7,7 +7,7 @@ We also assume you are familiar with some of the concepts of Arcus, especially t
 
 ## Secret name mutation
 
-One of the most requested and discussed new features in this new release, is the mutation of secret names. When a secret is looked up in the Arcus secret store, the requested name is directly passed allong to all the registered secret providers. The secret name mutation feature allows you to manipulate the secret name _before_ it's passed to the secret provider.
+One of the most requested features shipped in this release is the mutation of secret names. When a secret is looked up in the Arcus secret store, the requested name is directly passed along to all the registered secret providers. The secret name mutation feature allows you to manipulate the secret name _before_ it's passed to the secret provider.
 
 Imagine that you have two secret providers, 1 gets secrets from the `IConfiguration` (in Debug mode) and 1 gets it from environment variables:
 

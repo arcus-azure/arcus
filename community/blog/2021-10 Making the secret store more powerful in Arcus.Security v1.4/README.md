@@ -103,7 +103,9 @@ Note that our existing secret providers (Azure Key Vault, ...) already have been
 
 Besides these three major updates, we also have a lot of other stuff added to this release. Here are some take-aways:
 * [**Opt-in for tracking security events**](https://security.arcus-azure.net/features/secret-store/): the secret store can now by default track every secret that is being retrieved by setting the `.WithAuditing` 
-* [**HashiCorp**](https://security.arcus-azure.net/features/secret-store//provider/hashicorp-vault) and [**Docker secrets**](https://security.arcus-azure.net/features/secret-store/provider/docker-secrets) are made available as secret providers for the secret store.
+* **New secret providers**
+    * [**HashiCorp**](https://security.arcus-azure.net/features/secret-store//provider/hashicorp-vault)
+    * [**Docker secrets**](https://security.arcus-azure.net/features/secret-store/provider/docker-secrets)
 * **Secret store** is now available outside the .NET Core hosting can be used in any project (also in [Azure Functions](https://security.arcus-azure.net/features/secret-store/#using-secret-store-within-azure-functions)) with a new extension on the `IServiceCollection`. 
 
 ## Conclusion

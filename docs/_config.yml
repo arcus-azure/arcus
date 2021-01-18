@@ -28,6 +28,7 @@ collections:
   blogposts:
     output: true
     permalink: /blogposts/:path/
+    sort_by: date
 
 defaults:
   - scope:

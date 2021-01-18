@@ -42,7 +42,9 @@ With these secret name mutations, we can call in `secretProvider.GetRawSecret("A
 
 ## Named secret providers
 
-In certain scenario's you want to retrieve a secret from a specific secret provider, without first trying every other registered provider. This can be because you already know the location, or you want to spare resources if you have many secret providers registered... In any case, you'll have to interact in a different way with the secret store. That's where this new feature comes into play.
+In certain scenarios, you want to retrieve a secret from a specific secret provider without trying every other registered provider first in case you already know the location of your secret.
+
+In any case, you'll have to interact in a different way with the secret store. That's where this new feature comes into play.
 
 Starting from v1.4 we allow secret providers to be registered with an unique name. This name will be used to later retrieve the provider so choose wisely. The environment variable secret provider can for example be registered with `"EnvironmentVariables"`:
 

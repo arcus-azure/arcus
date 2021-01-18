@@ -3,7 +3,7 @@
 Starting from [Arcus.Security v1.4](https://github.com/arcus-azure/arcus.security/releases/tag/v1.4.0), the secret store got a lot of new updates. In this post we'll run over some of the major updates.
 This post will not contain all the new changes, so for more information see the [release notes](https://github.com/arcus-azure/arcus.security/releases/tag/v1.4.0) of this new version.
 
-We also assume you're familiar with some of the concepts of Arcus, especially the secret store concept. If you aren't, there's a nice [blog post](https://www.codit.eu/blog/introducing-secret-store-net-core/) that will guide you through this concept and our [official docs](https://security.arcus-azure.net/features/secret-store/) also have a whole page dedicated to this.
+We also assume you are familiar with some of the concepts of Arcus, especially the secret store concept. If you are not, we recommend reading our [blog post](https://www.codit.eu/blog/introducing-secret-store-net-core/) that will guide you through concept and/or read our [official docs](https://security.arcus-azure.net/features/secret-store/).
 
 ## Secret name mutation
 

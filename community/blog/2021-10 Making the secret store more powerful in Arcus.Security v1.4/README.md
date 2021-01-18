@@ -75,8 +75,7 @@ public class MyController : ControllerBase
 }
 ```
 
-> The v1.4 release also adds the possibility to store Azure Key Vault secrets with the Azure Key Vault secret provider. 
-> The named secret provider feature allows you to retrieve the Azure Key Vault scret provider and use this storing functionality.
+A good example of why you would want to use this is our Azure Key Vault provider. As of this release, you can store secrets in your vault. In order to be able to do that, you need to create a named secret provider so that you can store those secrets
 
 ## Critical exceptions
 

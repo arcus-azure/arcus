@@ -23,7 +23,7 @@ Host.CreateDefaultBuilder()
     });
 ```
 
-Values in the configuration are usually structed with double points (as in: `Arcus:Secrets:MySecret`) while environment variables are mostly structured with capitals with underscores (as in: `ARCUS_SECRETS_MYSECRET`).
+Values in the configuration are usually structed by using colons (ie. `Arcus:Secrets:MySecret`) while environment variables are mostly structured with capitals with underscores (ie. `ARCUS_SECRETS_MYSECRET`).
 But when requesting the secret, I would want to use the same name to request the same secret (in this case `MySecret`). Let's say I want to use dots instead to requests secrets (as in `Arcus.Secrets.MySecret`). We can use the secret name mutation to _mutate_ the secret name to adhere the respectively secret provider's secret name scheme before it's passed allong:
 
 ```csharp

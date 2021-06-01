@@ -1,6 +1,6 @@
 # Enhanced request tracking in Arcus.WebApi v1.3
 
-The new version v1.3 of the [Arcus Web API](https://github.com/arcus-azure/arcus.webapi) project is all about request tracking. Previous versions introduced the request tracking concept as a way to track the incoming HTTP request and outgoing HTTP response with additional configurations on what should be included in the tracking information. This includes the request/response body, headers, the time it took to process the request...
+[Arcus Web API](https://github.com/arcus-azure/arcus.webapi) v1.3 is all about request tracking. Previous versions introduced the request tracking concept as a way to track the incoming HTTP request and outgoing HTTP response with a limited set of knobs to tweak such as to request/response body, headers, the time it took to process the request...
 
 This new version takes this to a whole new level so that your next project can benefit from a production-ready request tracking functionality!
 

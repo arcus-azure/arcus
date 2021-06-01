@@ -7,7 +7,8 @@ This new version takes this to a whole new level so that your next project can b
 ## Omit entire routes from the request tracking
 
 Initially, the request tracking was tracking all routes. This was a good first basic approach but when more realistic scenario's comes into play, this is rather cumbersome.
-For example: health endpoints to track the health of your web API could add noise to the tracking. Especially when their called often, and the result is almost always success.
+
+For example, health endpoints to track the health of your web API add noise to your telemetry pipeline without a lot of added value. Especially when they are called often, and the result is almost always a success.
 
 We created an `[ExcludeRequestTracking]` attribute that you can place upon routes (both on class and method level). This attribute will exclude the entire request tracking functionality from that specific route:
 

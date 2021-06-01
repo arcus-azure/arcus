@@ -51,8 +51,9 @@ public class Startup
 
 As a continuation of the previous health endpoints example. It would be even better if we can only measure health failures and ignore all success statuses. That would be both make the tracking more cost-efficient, actionable and help with troubleshooting.
 
-We created an `[RequestTracking]` attribute to pass along either a fixed HTTP status code or a range of HTTP status status codes.
-These status codes will act as an **allow list**. The request tracking will only happen when the HTTP response's status code is within the configured status code range.
+You can now define an **allow list** of HTTP status status codes to track for a given endpoint by using the `RequestTracking` attribute.
+
+The request tracking will only happen when the HTTP response's status code is within the configured status code range.
 
 In the following example, the request tracking of the health endpoint will only happen when the HTTP response's status code is minimum 500 or maximum 599 (range is inconclusive).
 

@@ -30,7 +30,9 @@ public class HealthController : ControllerBase
 }
 ```
 
-When such a health endpoint is generated (like [Dapr](https://docs.dapr.io/developing-applications/building-blocks/observability/sidecar-health/)) and you have no control over where the this endpoint is hosted, you can't really add this attribute. For those scenarios we added an additional option to the configurable request tracking options:
+When endpoints are exposed by one of your dependencies, such as [Dapr](https://docs.dapr.io/developing-applications/building-blocks/observability/sidecar-health/), you have no control over where the endpoint is hosted nor can you extend it.
+
+For those scenarios we added an additional option to the configurable request tracking options:
 
 ```csharp
 using Microsoft.AspNetCore.Builder;

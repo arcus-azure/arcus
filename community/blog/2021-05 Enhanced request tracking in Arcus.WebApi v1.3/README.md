@@ -10,7 +10,7 @@ Initially, the request tracking was tracking all routes. This was a good first b
 
 For example, health endpoints to track the health of your web API add noise to your telemetry pipeline without a lot of added value. Especially when they are called often, and the result is almost always a success.
 
-We created an `[ExcludeRequestTracking]` attribute that you can place upon routes (both on class and method level). This attribute will exclude the entire request tracking functionality from that specific route:
+You can now annotate API controllers and routes with our new `ExcludeRequestTracking` attribute which will ensure that the entire request tracking functionality will be excluded:
 
 ```csharp
 using Arcus.WebApi.Logging;

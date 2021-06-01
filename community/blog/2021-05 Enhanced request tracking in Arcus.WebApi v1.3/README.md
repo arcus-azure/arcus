@@ -96,7 +96,8 @@ public class Startup
 
 Tracking the HTTP request and/or response body can be quite expensive. Sometimes the request is worth tracking but the bodies are just to great to be included in the telemetry. We already provided in previous versions an request tracking option to opt-in for the inclusion of the HTTP request/response bodies, but this option acted on a global level. A finer control was required.
 
-We created an `[RequestTracking]` where you can pass an exclusion filter. This filter will determine whether or not the HTTP request/response should be excluded for that specific route.
+By using `RequestTracking` attribute you can now also specify what should be excluded from the request tracking, for example, the request and/or response body for a given route.
+
 The following example shows how an HTTP request body can be excluded from the request tracking, in combination when the `IncludeRequestBody` option is set:
 
 ```csharp

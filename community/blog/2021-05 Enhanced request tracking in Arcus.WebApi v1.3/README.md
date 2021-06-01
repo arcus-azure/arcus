@@ -94,7 +94,9 @@ public class Startup
 
 ## Finer grained request/response body exclusion
 
-Tracking the HTTP request and/or response body can be quite expensive. Sometimes the request is worth tracking but the bodies are just to great to be included in the telemetry. We already provided in previous versions an request tracking option to opt-in for the inclusion of the HTTP request/response bodies, but this option acted on a global level. A finer control was required.
+Up until now, users had the choice of using request and/or response body tracking to gain more insights. However, this was only configurable for all operations which can become pretty expensive since that might be too much or does not give any added value.
+
+Because of that, we are allowing you to choose where you want to track what!
 
 By using `RequestTracking` attribute you can now also specify what should be excluded from the request tracking, for example, the request and/or response body for a given route.
 

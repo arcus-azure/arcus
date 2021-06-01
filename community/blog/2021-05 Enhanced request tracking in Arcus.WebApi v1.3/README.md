@@ -49,7 +49,7 @@ public class Startup
 
 ## Only track certain HTTP status codes
 
-As a continuation of the previous health endpoints example. It would be even better if we only could see health failures and disregard all success statuses. That would be both make the tracking more cleaner and help with defect detection when something's wrong.
+As a continuation of the previous health endpoints example. It would be even better if we can only measure health failures and ignore all success statuses. That would be both make the tracking more cost-efficient, actionable and help with troubleshooting.
 
 We created an `[RequestTracking]` attribute to pass along either a fixed HTTP status code or a range of HTTP status status codes.
 These status codes will act as an **allow list**. The request tracking will only happen when the HTTP response's status code is within the configured status code range.

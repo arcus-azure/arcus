@@ -25,6 +25,8 @@ collections:
   components:
     output: true
     permalink: /components/:path/
+  users:
+    output: true
   blogposts:
     output: true
     permalink: /blogposts/:path/
@@ -40,6 +42,11 @@ defaults:
       type: components
     values:
       layout: components
+      bodyClass: page-components-single
+  - scope:
+      type: users
+    values:
+      layout: users
       bodyClass: page-components-single
   - scope:
       type: blogposts

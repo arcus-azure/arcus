@@ -69,7 +69,7 @@ bodyClass: page-home
   </div>
 </div>
 
-<div class="strip ">
+<div class="strip">
   <div class="container pt-6 pb-6 pb-md-10">
     <h1>Components</h1>
     <div class="row justify-content-start">
@@ -90,6 +90,25 @@ bodyClass: page-home
       <div class="col-auto">
         <a class="button button-primary" href="{{site.baseurl}}/components">View All Components</a>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip-grey">
+  <div class="container pt-6 pb-6 pb-md-10">
+    <h1>End-Users</h1>
+    <p>Arcus is being using in production by the following end-users:</p>
+    <div class="row justify-content-start">      
+      {% for component in site.users %}
+      <div class="col-12 col-md-4 mb-1">
+        <div class="component component-summary">
+          <div class="component-content">
+            <a href="{{ component.url }}" target="_blank"><img src="{{ component.logo }}" alt="{{ component.name }}" /></a>
+          </div>
+          <p>{{ component.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

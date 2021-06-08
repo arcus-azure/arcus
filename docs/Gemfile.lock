@@ -68,8 +68,8 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  jekyll (~> 4.1)
-  jekyll-environment-variables
+  jekyll (~> 4.1, >= 4.1.1)
+  jekyll-environment-variables (>= 1.0.1)
 
 BUNDLED WITH
    1.17.2

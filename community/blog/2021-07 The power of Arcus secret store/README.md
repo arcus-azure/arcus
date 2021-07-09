@@ -145,4 +145,5 @@ We talked a lot about only *some* of the major features of the Arcus secret stor
 We hope that with this post, you're as excited as we are with the secret store.
 If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact us](https://github.com/arcus-azure/arcus.security/issues/new/choose).
 
+Thank you for reading!
 The Arcus team

@@ -113,7 +113,7 @@ public class OrderController : ControllerBase
 }
 ```
 
-We are very flexible in the registration of the secret providers. We allow all kinds of combinations and even multiple registrations of the same type. Imagine two Azure Key Vaults with public and user secrets.
+We are very flexible in the registration of the secret providers allowing all kinds of combinations and even multiple registrations of the same type, for example, you can use two Azure Key Vaults sources.
 
 ```csharp
 using Microsoft.Extensions.Hosting;

@@ -52,7 +52,7 @@ class Program
 } 
 ```
 
-> Note that when a secret is being retrieved, the secret providers are being called in the order they were registered. So in this case, the environment variables will be checked before the Azure Key Vault is contacted.
+> 💡 When a secret is being retrieved, the secret providers are being called in the order they were registered. So in this case, the environment variables will be checked before the Azure Key Vault is contacted.
 
 The secret store is also available for [Azure Functions](https://security.arcus-azure.net/features/secret-store/#using-secret-store-within-azure-functions) and [can be configured outside the `Program`](https://security.arcus-azure.net/features/secret-store/#configuring-secret-store-without-net-host-builder).
 Let's look at the advantages of using our Arcus secret store.

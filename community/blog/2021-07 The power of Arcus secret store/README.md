@@ -120,7 +120,7 @@ using Microsoft.Extensions.Hosting;
 
 .ConfigureSecretStore((config, stores) =>
 {
-    stores.AddAzureKeyVaultWithManagedServiceIdentity("https://public-secrets.vault.azure.net")
+    stores.AddAzureKeyVaultWithManagedServiceIdentity("https://shared-platform.vault.azure.net")
           .AddAzureKeyVaultWithManagedServiceIdentity("https://user-secrets.vault.azure.net"); 
 })
 ```

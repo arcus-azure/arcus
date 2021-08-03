@@ -129,9 +129,16 @@ using Microsoft.Extensions.Hosting;
 
 ## Designed for security
 
-Besides all the user-friendly features, there're also security reasons why the Arcus secret store is a recommended choice. We made sure that all the secret providers are registered in one single place and are being contacted via one single access point. This is much safer and easier to maintain then writing multiple service integrations yourself, scattered across the application. 
 
-It's also safer than using the general [ASP.NET Core configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) approach because we explicitly made the distinction between **data** and **secrets**. Many vulnerabilities gets introduced when secrets are seeen as data and are included in logs, for example. Leakage of sensitive information is a real risk in this case. Or when expired secrets doesn't get transient handling upon retrieval.
+While [.NET's configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) approach feels very similar, it does not make an explicit distinction between **configuration** and **secrets**.
+
+Many vulnerabilities get introduced when secrets are seen as data and are included in logs, for example. Leakage of sensitive information is a real risk in this case. Or when expired secrets don't get transient handling upon retrieval.
+
+**With Arcus secret store, you are making secrets a first-class citizen in .NET Core** to ensure they are handled accordingly.
+
+We make sure that all the secret providers are registered in a central place and are being contacted via the secret store. This is much safer and easier to maintain since it is easy to get an overview of the various secret sources that the application depends on.
+
+Lastly, there is a lot less work for end-users since they no longer have to write multiple service integrations themselves, scattered across the application, but instead rely on a variety of sources.
 
 We also provide [security events](https://security.arcus-azure.net/features/secret-store/#include-security-auditing) to our secret store to make sure that malicious activity can be detected more easily. These events are written every time the secret store is queried.
 

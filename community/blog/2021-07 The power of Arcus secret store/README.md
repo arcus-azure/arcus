@@ -14,9 +14,9 @@ The Arcus secret store lets you access all of them with a single call instead of
 In many ways, the secret store looks similar to the [ASP.NET Core configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) with some subtle but powerful differences.
 
 Some terminology:
-* **Secret**: sensitive information that needs to be stored securely. Access keys, connection strings, client secrets...
-* **Secret provider**: instance that provides secrets from a certain location. This location can be: Azure Key Vault, environment variables, HashiCorp Vault... and your own locations.
-* **Secret store**: system that combines all the secret providers into a single access point.
+* A **Secret** is a notion of sensitive information that needs to be stored securely such as authentication keys, passwords, connection strings, client secrets...
+* A **Secret provider** allows you to fetch secrets from a given secret source. While we support various sources such as Azure Key Vault, HashiCorp Vault, environment variables, and more, you can even build your own secret provider!
+* A **Secret store** is a convenient way to query all configured secret providers with a single call, allowing you to configure all the various sources once and leave it up to us.
 
 An example of a simple secret store configuration is shown here:
 

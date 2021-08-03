@@ -90,7 +90,7 @@ We allow you to [asynchrounously invalidate the cache](https://background-jobs.a
 
 ## Plug & play
 
-Our secret store is very easily to set up. All it requires is a single call to register the store `ConfigureSecretStore`, after that you can immediately use our `ISecretProvider` interface abstraction throughout your application.
+Our secret store is very easy to set up. All that is required is defining what your secret store looks like through `ConfigureSecretStore`, after that you can immediately use our `ISecretProvider` interface abstraction throughout your application.
 
 ```csharp
 using Arcus.Security.Core;

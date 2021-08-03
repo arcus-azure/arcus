@@ -3,7 +3,7 @@
 A question we get a lot, is what added-value the Arcus secret store provides. 'Why not use the Azure Key Vault SDK directly?'
 In this post we'll take a look at the true power of the Arcus secret store so you understand why you should use the Arcus secret store in your next project.
 
-The Arcus secret store is available in the [Arcus security](https://github.com/arcus-azure/arcus.security) library and contains a thorough [documentation](https://security.arcus-azure.net/) page if you want to explore other features available.
+The Arcus secret store is available as part of [Arcus security](https://github.com/arcus-azure/arcus.security) and contains thorough [documentation](https://security.arcus-azure.net/) if you want to explore other features available.
 
 ## What is it again?
 

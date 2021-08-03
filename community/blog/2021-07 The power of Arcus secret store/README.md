@@ -139,7 +139,11 @@ With all the scecret-contacting functionality in one place, you're not only maki
 
 ## Extensibility
 
-A last section we can dedicate to the extensibility of the Arcus secret store. You can write your own secret providers, use [in-memory secret providers](https://github.com/arcus-azure/arcus.testing/blob/master/docs/features/inmemory-secret-provider.md) for testing purposes. We are also working hard to make sure that *all* built-in secret providers are completely overridable so you can bring your own version of the existing functionality. If that's not enough, you can also [mutate secret names](https://security.arcus-azure.net/features/secret-store/create-new-secret-provider#adding-secret-name-mutation-before-looking-up-secret) on-the-fly when they come into any secret provider.
+We are open to extension!
+
+As an example, we allow you to write your own secret providers to retrieve secrets where you need them or you can use [in-memory secret providers](https://github.com/arcus-azure/arcus.testing/blob/master/docs/features/inmemory-secret-provider.md) for testing purposes.
+
+We are also working hard to make sure that *all* built-in secret providers are completely extensible so you can bring your own version of the existing functionality. If that's not enough, you can also [mutate secret names](https://security.arcus-azure.net/features/secret-store/create-new-secret-provider#adding-secret-name-mutation-before-looking-up-secret) on-the-fly when they come into any secret provider.
 
 Even the registration process of the secret store is adaptable. We have demonstrated this [here](https://www.codit.eu/blog/role-based-authorization-low-level-customization-arcus-secret-store/) where we introduced an extra layer of authorization that determined which user role gets to access which secret provider.
 

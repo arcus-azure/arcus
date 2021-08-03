@@ -133,7 +133,7 @@ Besides all the user-friendly features, there're also security reasons why the A
 
 It's also safer than using the general [ASP.NET Core configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) approach because we explicitly made the distinction between **data** and **secrets**. Many vulnerabilities gets introduced when secrets are seeen as data and are included in logs, for example. Leakage of sensitive information is a real risk in this case. Or when expired secrets doesn't get transient handling upon retrieval.
 
-We also included [security events](https://security.arcus-azure.net/features/secret-store/#include-security-auditing) to our secret store to make sure that malicous activity can be detected more easily. These events are written every time the secret store is contacted.
+We also provide [security events](https://security.arcus-azure.net/features/secret-store/#include-security-auditing) to our secret store to make sure that malicious activity can be detected more easily. These events are written every time the secret store is queried.
 
 With all the scecret-contacting functionality in one place, you're not only making your application more secure but decreasing the maintenance effort.
 

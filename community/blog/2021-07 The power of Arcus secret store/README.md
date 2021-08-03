@@ -135,7 +135,7 @@ It's also safer than using the general [ASP.NET Core configuration](https://docs
 
 We also provide [security events](https://security.arcus-azure.net/features/secret-store/#include-security-auditing) to our secret store to make sure that malicious activity can be detected more easily. These events are written every time the secret store is queried.
 
-With all the scecret-contacting functionality in one place, you're not only making your application more secure but decreasing the maintenance effort.
+With all the secret functionality in one place, you're not only making your application more secure but decreasing the maintenance effort.
 
 ## Extensibility
 

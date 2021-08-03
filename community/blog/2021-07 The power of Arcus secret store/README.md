@@ -85,7 +85,7 @@ using Arcus.Security.Core.Providers;
 });
 ```
 
-See also our [asynchrounous cache invalidation](https://background-jobs.arcus-azure.net/features/security/auto-invalidate-secrets) to automatically invalidate cached Azure Key Vault secrets. 
+We allow you to [asynchrounously invalidate the cache](https://background-jobs.arcus-azure.net/features/security/auto-invalidate-secrets) to automatically keep secrets aligned with the latest Azure Key Vault secrets. 
 
 ## Plug & play
 

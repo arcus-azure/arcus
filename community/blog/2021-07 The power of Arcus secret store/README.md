@@ -5,7 +5,7 @@ In this post we'll take a look at the true power of the Arcus secret store so yo
 
 The Arcus secret store is available as part of [Arcus security](https://github.com/arcus-azure/arcus.security) and contains thorough [documentation](https://security.arcus-azure.net/) if you want to explore other features available.
 
-## What is it again?
+## What is Arcus Secret Store?
 
 The Arcus secret store is a system that provides secrets located in different places via a single access point. In a more complex application, secrets values can be located in Azure Key Vaults, environment variables, development configuration files... The Arcus secret store lets you access all of them with a single call instead of using specific SDK's to access them separatly.
 In many ways, the secret store looks simulair to the [ASP.NET Core configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) with some subtle but powerful differences.

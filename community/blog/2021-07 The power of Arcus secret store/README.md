@@ -58,6 +58,22 @@ The secret store is also available for [Azure Functions](https://security.arcus-
 
 Let's look at the advantages of using our Arcus secret store.
 
+## Designed for security
+
+While [.NET's configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) approach feels very similar, it does not make an explicit distinction between **configuration** and **secrets**.
+
+Many vulnerabilities get introduced when secrets are seen as data and are included in logs, for example. Leakage of sensitive information is a real risk in this case. Or when expired secrets don't get transient handling upon retrieval.
+
+**With Arcus secret store, you are making secrets a first-class citizen in .NET Core** to ensure they are handled accordingly.
+
+We make sure that all the secret providers are registered in a central place and are being contacted via the secret store. This is much safer and easier to maintain since it is easy to get an overview of the various secret sources that the application depends on.
+
+Lastly, there is a lot less work for end-users since they no longer have to write multiple service integrations themselves, scattered across the application, but instead rely on a variety of sources.
+
+We also provide [security events](https://security.arcus-azure.net/features/secret-store/#include-security-auditing) to our secret store to make sure that malicious activity can be detected more easily. These events are written every time the secret store is queried.
+
+With all the secret functionality in one place, you're not only making your application more secure but decreasing the maintenance effort.
+
 ## Caching
 
 A feature that makes the secret store unique, is caching. This allows the secret providers to not hit service limitations based on your usage pattern and improve performance.
@@ -126,23 +142,6 @@ using Microsoft.Extensions.Hosting;
 ```
 
 > Note that with our [named secret providers feature](https://security.arcus-azure.net/features/secret-store/named-secret-providers), you can retrieve a single secret provider instead of the combination. This can be useful in a scenario like this.
-
-## Designed for security
-
-
-While [.NET's configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) approach feels very similar, it does not make an explicit distinction between **configuration** and **secrets**.
-
-Many vulnerabilities get introduced when secrets are seen as data and are included in logs, for example. Leakage of sensitive information is a real risk in this case. Or when expired secrets don't get transient handling upon retrieval.
-
-**With Arcus secret store, you are making secrets a first-class citizen in .NET Core** to ensure they are handled accordingly.
-
-We make sure that all the secret providers are registered in a central place and are being contacted via the secret store. This is much safer and easier to maintain since it is easy to get an overview of the various secret sources that the application depends on.
-
-Lastly, there is a lot less work for end-users since they no longer have to write multiple service integrations themselves, scattered across the application, but instead rely on a variety of sources.
-
-We also provide [security events](https://security.arcus-azure.net/features/secret-store/#include-security-auditing) to our secret store to make sure that malicious activity can be detected more easily. These events are written every time the secret store is queried.
-
-With all the secret functionality in one place, you're not only making your application more secure but decreasing the maintenance effort.
 
 ## Extensibility
 

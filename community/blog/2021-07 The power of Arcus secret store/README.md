@@ -60,10 +60,11 @@ Let's look at the advantages of using our Arcus secret store.
 
 ## Caching
 
-A feature that makes the secret store unique, is caching. This makes sure that registered secret providers won't be called upon every secret retrieval. This helps you avoiding hitting service limitations.
+A feature that makes the secret store unique, is caching. This allows the secret providers to not hit service limitations based on your usage pattern and improve performance.
+
 The secret store also allows you to define your own caching strategy for [custom secret providers](https://security.arcus-azure.net/features/secret-store/create-new-secret-provider) or extending existing ones.
 
-The caching functionality acts as a 'wrapper' arround existing secret providers. Any secret provider you can think of can be 'wrapped' into a cached version.
+The caching functionality acts as a 'wrapper' around existing secret providers and thus any secret provider you can think of can be 'wrapped' into a cached version.
 
 ```csharp
 using Arcus.Security.Core.Caching;

@@ -73,7 +73,7 @@ public class OrderProcessingFunction
     {
         log.LogInformation($"C# ServiceBus queue trigger function processed message: {message.MessageId}");
 
-        var context = new AzureServiceBusMessageContext(message.MessageId, _jobId, AzureServiceBusSystemProperties.CreateFrom(message), message.ApplicationProperties);
+        AzureServiceBusMessageContext context = message.GetMessageContext(_jobId);
         MessageCorrelationInfo correlationInfo = message.GetCorrelationInfo();
 
         await _messageRouter.RouteMessageAsync(message, context, correlationInfo, cancellationToken);

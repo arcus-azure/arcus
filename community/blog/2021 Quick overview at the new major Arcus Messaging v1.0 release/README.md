@@ -118,7 +118,9 @@ public class Startup
 ```
 
 ## Flexible message parsing
-Our built-in JSON deserialization is using by-default a very strict schema when parsing incoming messages. Only when all the properties in the JSON body matched the properties in the typed message of the message handler, would the message be processed. This allows a very secure system as you know that you're processing the correct type of message. But in development scenario's where you update the messaging model and forget to update the message type, this can become cumbersome as you would end up with lots of errors saying that the message handler can't process your message.
+Our built-in JSON deserialization is using strict schema parsing by default when parsing incoming messages. Only when all the properties in the JSON body match the properties in the defined message, it will be passed to the message handler to be processed. This allows a very secure approach as you know that you're processing the correct type of message.
+
+But message scenarios evolve and so does your contract, so we allow you to be more flexible.
 
 In the following example, the `.Deserialization.AdditionalMembers` property is set to `Ignore`, which means any additional members that are in the incoming messaging model but are not in the `Order` message type will be ignored instead of errrored (default).
 

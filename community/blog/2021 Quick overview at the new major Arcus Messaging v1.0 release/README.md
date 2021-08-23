@@ -96,7 +96,7 @@ public class OrderProcessingFunction
 ```
 
 ## Managed identity authentication
-This new version also has a new way of authenticating the Azure Service Bus message pump. We've added managed identity authentication in both Azure Service Bus queues as topics. 
+We leverage a new way of authenticating the Azure Service Bus message pump by using password-less authentication with managed identity authentication for both Azure Service Bus queues and topics. 
 This authentication mechanism uses the new Azure SDK, explained in a previous section. 
 
 Managed identity authentication allows us to use zero(!) secrets and fully relies on the automatically assigned identity to authenticate with any Azure service.

@@ -49,7 +49,13 @@ With this release, we are separating these two responsibilities into dedicated c
 
 The message pump is still in charge of receiving messages, but relies on our message router to determine what message handler will process the message.
 
-We made this change because it allows us to re-use this routing functionality for other purposes. Our ultimate goal is to use this router in Azure Functions where the function trigger takes on the role of the message pump and our message router can be called directly from the function trigger implementation. This would become highly reusable as the exact same message handlers could be used for both approaches: via message pump and via Azure Functions. Currently, the message router cannot be used in Azure Functions (at the time of writing) as we are depending on a [preview package](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.ServiceBus/5.0.0-beta.5).
+By doing this, it allows us to re-use our routing functionality and bring it to other message pumps such as Azure Functions.
+
+Your Azure Function will replace the Arcus message pump and route messages to your message handlers accordingly.
+
+This allows you to fully decouple the message pump from your business logic and build re-usable components without a lock-in.
+
+Are you excited about this? So are we! But we need to wait for the official release of [`Microsoft.Azure.WebJobs.Extensions.ServiceBus`](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.ServiceBus/5.0.0-beta.5) first.
 
 To get you exicted, here is an example of our upcoming Azure Functions support:
 

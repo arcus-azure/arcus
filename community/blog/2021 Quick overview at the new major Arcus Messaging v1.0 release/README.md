@@ -141,7 +141,7 @@ public class Startup
 ```
 
 ## Conclusion
-The major v1.0 Arcus Messaging release was a big update in the library. Lots of changes and improvements were made so it becomes even more production-ready.
+Arcus Messaging v1.0 is a big improvement with a lot of changes and improvements making it more production-ready.
 Have a look at our [release notes](https://github.com/arcus-azure/arcus.messaging/releases/tag/v1.0.0) and [official documentation](https://messaging.arcus-azure.net/) for more information on this new release.
 
 If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact us](https://github.com/arcus-azure/arcus.messaging/issues/new/choose).

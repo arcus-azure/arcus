@@ -10,7 +10,9 @@ Microsoft released a [new client library SDK](https://github.com/Azure/azure-sdk
 
 We believe we need to align with this new strategy, so we have adopted it in [Arcus Security](https://github.com/arcus-azure/arcus.security) and now it was time to align Arcus Messaging.
 
-The most notable change here for consumers is the move from the Azure Service Bus `Message` model towards the `ServiceBusReceivedMessage`. This breaking change has the most impact on our fallback message handlers, which receive the full Azure Service Bus message in their implementation.
+The most notable change here for end-users is the move from the Azure Service Bus `Message` model towards the `ServiceBusReceivedMessage`.
+
+This breaking change has the most impact on our extensions & fallback message handlers, which receive the full Azure Service Bus message in their implementation.
 
 An example of this new signature:
 

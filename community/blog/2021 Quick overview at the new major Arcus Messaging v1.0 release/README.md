@@ -119,7 +119,7 @@ public class Startup
         services.AddServiceBusTopicMessagePumpUsingManagedIdentity(
             topicName: properties.EntityPath,
             subscriptionName: "Receive-All", 
-	          serviceBusNamespace: "<your-namespace>"
+	    serviceBusNamespace: "<your-namespace>"
             // The optional client id to authenticate for a user assigned managed identity.
             clientId: "<your-client-id>");
     }

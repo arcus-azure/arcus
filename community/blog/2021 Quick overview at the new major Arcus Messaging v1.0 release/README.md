@@ -6,7 +6,9 @@ Because the new version contains a few breaking changes, we provide a [dedicated
 Come and take a quick look what the release has to offer in this overview blog post.
 
 ## New Azure SDK
-Microsoft released a [new client library SDK](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/README.md) for interacting with Azure Service Bus resources. This new library is part of the overall Azure SDK updates. Our [Arcus Security](https://github.com/arcus-azure/arcus.security) library [is already updated](https://github.com/arcus-azure/arcus.security/issues/191) to use this new Azure SDK, so now it was time to update Arcus Messaging.
+Microsoft released a [new client library SDK](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/README.md) for interacting with Azure Service Bus resources. This new library is part of the overall Azure SDK updates.
+
+We believe we need to align with this new strategy, so we have adopted it in [Arcus Security](https://github.com/arcus-azure/arcus.security) and now it was time to align Arcus Messaging.
 
 The most notable change here for consumers is the move from the Azure Service Bus `Message` model towards the `ServiceBusReceivedMessage`. This breaking change has the most impact on our fallback message handlers, which receive the full Azure Service Bus message in their implementation.
 

@@ -47,7 +47,7 @@ Versions before the v1.0 release all used the message pump to both receive and r
 
 We made this change because it allows us to re-use this routing functionality for other purposes. Our ultimate goal is to use this router in Azure Functions where the function trigger takes on the role of the message pump and our message router can be called directly from the function trigger implementation. This would become highly reusable as the exact same message handlers could be used for both approaches: via message pump and via Azure Functions. Currently, the message router cannot be used in Azure Functions (at the time of writing) as we are depending on a [preview package](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.ServiceBus/5.0.0-beta.5).
 
-To get you exicted, such Azure Functions implementation would look something like this:
+To get you exicted, here is an example of our upcoming Azure Functions support:
 
 ```csharp
 using Arcus.Messaging.Abstractions;

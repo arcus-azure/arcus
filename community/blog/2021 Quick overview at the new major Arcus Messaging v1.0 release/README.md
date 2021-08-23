@@ -43,7 +43,11 @@ public class OrderFallbackMessageHandler : IAzureServiceBusFallbackMessageHandle
 Microsoft has also provided a [dedicated migration guide](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/MigrationGuide.md) for this new Azure SDK if you're curious in any new funtionality or changes.
 
 ## Extracted message routing for multi-purpose message handling
-Versions before the v1.0 release all used the message pump to both receive and route the messages to the correct registered message handler. In this release, we have made sure that these two resposibilities are split between two services. The message pump still receives the messages, but now a dedicated router will determine and delegate the message to the message handler that can handle the message.
+Before v1.0, our message pump was in charge of both receiving and routing messages to the required message handler. 
+
+With this release, we are separating these two responsibilities into dedicated components and laying the groundwork for more powerful message processing.
+
+The message pump is still in charge of receiving messages, but relies on our message router to determine what message handler will process the message.
 
 We made this change because it allows us to re-use this routing functionality for other purposes. Our ultimate goal is to use this router in Azure Functions where the function trigger takes on the role of the message pump and our message router can be called directly from the function trigger implementation. This would become highly reusable as the exact same message handlers could be used for both approaches: via message pump and via Azure Functions. Currently, the message router cannot be used in Azure Functions (at the time of writing) as we are depending on a [preview package](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.ServiceBus/5.0.0-beta.5).
 

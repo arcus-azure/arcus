@@ -40,7 +40,7 @@ public class OrderFallbackMessageHandler : IAzureServiceBusFallbackMessageHandle
 }
 ```
 
-Microsoft has also provided a [dedicated migration guide](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/MigrationGuide.md) for this new Azure SDK if you're curious in any new funtionality or changes.
+Microsoft also provides a [dedicated migration guide](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/MigrationGuide.md) for this new Azure SDK, if you are curious about any new functionality or changes.
 
 ## Extracted message routing for multi-purpose message handling
 Before v1.0, our message pump was in charge of both receiving and routing messages to the required message handler. 

@@ -1,7 +1,7 @@
 # Taking messaging to the next level with Arcus Messaging v1.0
 Arcus Messaging v1.0 release is the biggest one yet which provides more ways to authenticate, improvements, and many more.
 
-Because the new version contains a lot of breaking changes, we've created a [dedicated migration guide](https://messaging.arcus-azure.net/guides/migration-guide-v1.0) to help consumers in updating towards this new major version.
+Because the new version contains a few breaking changes, we provide a [dedicated migration guide](https://messaging.arcus-azure.net/guides/migration-guide-v1.0) to help end-users to migrate to our new approach.
 
 Come and take a quick look what the release has to offer in this overview blog post.
 

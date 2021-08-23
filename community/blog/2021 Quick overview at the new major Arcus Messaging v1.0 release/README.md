@@ -14,7 +14,7 @@ The most notable change here for end-users is the move from the Azure Service Bu
 
 This breaking change has the most impact on our extensions & fallback message handlers, which receive the full Azure Service Bus message in their implementation.
 
-An example of this new signature:
+Here is an example of our new signature:
 
 ```csharp
 using Arcus.Message.Abstractions.ServiceBus.MessageHandling;

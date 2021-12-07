@@ -1,14 +1,14 @@
 # 2021, the Year Arcus Matured
-And here we are again. A year has passed and a lot of changes has been made on the Arcus front. This post will summarize the biggest changes that has been made in the year 2021.
+And here we are again. A year has passed and a lot of changes have been made on the Arcus front. This post will summarize the biggest changes that have been made in the year 2021.
 
-2021 was a very big year for Arcus. In every repository were major changes made. This results now in fully, productive-ready open-source libraries that are ready to be used within your projects.
+2021 was a very big year for Arcus. In every repository major changes were made. This resulted in full production-ready open-source libraries that are ready to be used within your projects.
 
 ## Web API
-The [Web API repository](https://github.com/arcus-azure/arcus.webapi) has probably got the most releases this year. Lots of changes have been made on almost all available functionality. Too big to name them all.
+The [Web API repository](https://github.com/arcus-azure/arcus.webapi) has probably got the most releases this year. Lots of changes have been made on almost all available functionality. Too many to name them all.
 The most important, and seemingly most-used feature of this library is the request tracking. This feature has also had some major updates:
 
 * Capability to omit entire endpoint routes from the request tracking
-* Capability to track only requests with a certain HTTP status code response
+* Capability to only track requests with a certain HTTP status code response
 * Capability to include/exclude request/response bodies from the telemetry
 
 These changes are all available as general options and operation-specific attributes.
@@ -157,7 +157,7 @@ The [scripting repository](https://github.com/arcus-azure/arcus.scripting) has r
 The new features are too many to list them all here. Take a look at our [feature docs](https://scripting.arcus-azure.net/) to get familiar with our available functionality.
 
 ## Conclusion, What's on the Horizon?
-2021 was a big year for Arcus. A lot has changed. New features were introduced, existing ones were updated. It was a year where Arcus was more used than before. Consumers can with ideas and issues which made the code and available functionality stronger.
+2021 was a big year for Arcus. A lot has changed. New features were introduced, existing ones were updated. It was a year where Arcus was more used than before. Consumers contributed with ideas and issues which made the code and available functionality stronger.
 
 What's on the horizon? What brings 2022? At the end of this year, 3 new code-owners were introduced to Arcus. This will be a new milestone for the Arcus initiative. More opinions and viewpoints will for sure make these libraries better and more usable. 
 

@@ -122,7 +122,7 @@ Besides those changes, we are working hard to make this library production-ready
 See our [features docs](https://observability.arcus-azure.net/) for more information on our available functionality.
 
 ## Templates
-The [templates repository](https://github.com/arcus-azure/arcus.templates) is probably the easiest place to get started with Arcus. It provides development-ready project templates for you to use at the start of your project. It already contains all the necessary best-practices and correctly use of Arcus libraries so you don't have to worry about infrastructure code but can focus on the business end.
+The [templates repository](https://github.com/arcus-azure/arcus.templates) is probably the easiest place to get started with Arcus. It provides development-ready project templates for you to use at the start of your project. It already contains all the necessary best-practices and correct use of Arcus libraries so you don't have to worry about infrastructure code but can focus on the business end.
 
 2021 was the year that we took this to another level and created project templates for Azure Functions.
 * Capability to create Azure Functions project with a HTTP endpoint trigger 

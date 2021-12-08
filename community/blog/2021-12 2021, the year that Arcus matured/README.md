@@ -138,7 +138,7 @@ When the [messaging library](https://github.com/arcus-azure/arcus.messaging) is 
 See our [feature docs](https://templates.arcus-azure.net/) for more information on our available functionality.
 
 ## Background Jobs
-Last but not least, we also have a new scheduled job in the [background jobs repository](https://github.com/arcus-azure/arcus.backgroundjobs). We already had a job that would notify us when an Azure Key Vault secret was expired, but now we also are able to notify consumers when a Service Principal client secrets is about to expire or is expired.
+We also have a new scheduled job in the [background jobs repository](https://github.com/arcus-azure/arcus.backgroundjobs). We already had a job that would notify us when an Azure Key Vault secret was expired, but now we also are able to notify consumers when a Service Principal client secrets is about to expire or is expired.
 
 This is a great way to keep track of your available client secrets. An Azure Event Grid event will notify you with all the details (secret name, expiration date). This library has already shown it's added-value by providing low-level infrastructure code that takes care of missing links between services.
 

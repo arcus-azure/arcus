@@ -145,7 +145,7 @@ This is a great way to keep track of your available client secrets. An Azure Eve
 See our [feature docs](https://background-jobs.arcus-azure.net/) for more information on our available functionality.
 
 ## Scripting
-The [scripting repository](https://github.com/arcus-azure/arcus.scripting) has received various updates. From Azure API Management to Azure SQL databases to Azure DevOps integrations. This repository has always be a place where many things come together. Repeated tasks in CI build pipelines are local development. The library was used more this year, which lead to great new ideas and functionality:
+The [scripting repository](https://github.com/arcus-azure/arcus.scripting) has received various updates. From Azure API Management to Azure SQL databases to Azure DevOps integrations. This repository has always been a place where many things come together. Repeated tasks in CI build pipelines or local development, for example. The library was used more this year, which lead to great new ideas and functionality:
 * Capability to upload private/public certificate to Azure API Management
 * Capability to upload schema's/maps (transformations) into Azure Integration Account
 * Capability to run SQL migration with semantic versioning

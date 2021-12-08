@@ -134,7 +134,7 @@ There are already several project options and additional built-in functionality 
 * Capability to configure minimum Serilog logging level from application settings
 * Capability to use .NET project templates directly from Visual Studio 
 
-When the [messaging library](https://github.com/arcus-azure/arcus.messaging) is ready to provide the message routing outside message pumps, we create additional Azure Functions project templates with Azure Service Bus triggers. 
+When the [messaging library](https://github.com/arcus-azure/arcus.messaging) is ready to provide the message routing outside message pumps, we will create additional Azure Functions project templates with Azure Service Bus triggers. 
 See our [feature docs](https://templates.arcus-azure.net/) for more information on our available functionality.
 
 ## Background Jobs

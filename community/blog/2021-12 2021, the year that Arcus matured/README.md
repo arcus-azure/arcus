@@ -1,7 +1,7 @@
 # 2021, the Year Arcus Matured
 And here we are again. A year has passed and a lot of changes have been made on the Arcus front. This post will summarize the biggest changes that have been made in the year 2021.
 
-2021 was a very big year for Arcus. In every repository major changes were made. This resulted in full production-ready open-source libraries that are ready to be used within your projects.
+2021 was an impactfull year for Arcus. In every repository major changes were made. This resulted in full production-ready open-source libraries that are ready to be used within your projects.
 
 ## Web API
 The [Web API repository](https://github.com/arcus-azure/arcus.webapi) has probably got the most releases this year. Lots of changes have been made on almost all available functionality. Too many to name them all.

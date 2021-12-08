@@ -114,7 +114,7 @@ The changes that were made this year on this, are:
 * Capability to add operation parent ID to correlation information
 * Capability to add dependency name to dependency telemetry
 
-Besides those changes, we are working hard to make this library production-ready. It's a popular and very important library to have mature telemetry in your project.
+Besides those changes, we are working hard to make it even more production worthy. It's a popular and very important library to have mature telemetry in your project.
 * Capability to track Azure Key Vault dependencies
 * Capability to use telemetry type filter outside Arcus-related Serilog sink
 * Capability to add public exception properties to exception telemetry

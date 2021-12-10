@@ -5,7 +5,7 @@ And here we are again. A year has passed and a lot of changes has been made on t
 
 ![Arcus stats](media/Arcus%20stats%20'21.png)
 
-The most popular packages are are not a surprise.
+Our most popular packages is are not a surprise. Let's see how these and other packages have changed over the year.
 
 ![Arcus popular](media/Arcus%20popular.png)
 

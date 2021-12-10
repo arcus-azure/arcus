@@ -1,7 +1,7 @@
 # 2021, the Year Arcus Matured
-And here we are again. A year has passed and a lot of changes has been made on the Arcus front. This post will summarize the biggest changes that has been made in the year 2021.
+And here we are again. A year has passed and a lot of changes have been made on the Arcus front. This post will summarize the biggest changes that have been made in the year 2021.
 
-2021 was a very big year for Arcus. In every repository were major changes made. This results now in fully, productive-ready open-source libraries that are ready to be used within your projects.
+2021 was an impactful year for Arcus. In every repository major changes were made. This resulted in full production-ready open-source libraries that are ready to be used within your projects.
 
 ![Arcus stats](media/Arcus%20stats%20'21.png)
 
@@ -10,11 +10,11 @@ Our most popular packages is are not a surprise. Let's see how these and other p
 ![Arcus popular](media/Arcus%20popular.png)
 
 ## Web API
-The [Web API repository](https://github.com/arcus-azure/arcus.webapi) has probably got the most releases this year. Lots of changes have been made on almost all available functionality. Too big to name them all.
+The [Web API repository](https://github.com/arcus-azure/arcus.webapi) has probably got the most releases this year. Lots of changes have been made on almost all available functionality. Too many to name them all.
 The most important, and seemingly most-used feature of this library is the request tracking. This feature has also had some major updates:
 
 * Capability to omit entire endpoint routes from the request tracking
-* Capability to track only requests with a certain HTTP status code response
+* Capability to only track requests with a certain HTTP status code response
 * Capability to include/exclude request/response bodies from the telemetry
 
 These changes are all available as general options and operation-specific attributes.
@@ -120,7 +120,7 @@ The changes that were made this year on this, are:
 * Capability to add operation parent ID to correlation information
 * Capability to add dependency name to dependency telemetry
 
-Besides those changes, we are working hard to make this library production-ready. It's a popular and very important library to have mature telemetry in your project.
+Besides those changes, we are working hard to make it even more production worthy. It's a popular and very important library to have mature telemetry in your project.
 * Capability to track Azure Key Vault dependencies
 * Capability to use telemetry type filter outside Arcus-related Serilog sink
 * Capability to add public exception properties to exception telemetry
@@ -128,7 +128,7 @@ Besides those changes, we are working hard to make this library production-ready
 See our [features docs](https://observability.arcus-azure.net/) for more information on our available functionality.
 
 ## Templates
-The [templates repository](https://github.com/arcus-azure/arcus.templates) is probably the easiest place to get started with Arcus. It provides development-ready project templates for you to use at the start of your project. It already contains all the necessary best-practices and correctly use of Arcus libraries so you don't have to worry about infrastructure code but can focus on the business end.
+The [templates repository](https://github.com/arcus-azure/arcus.templates) is probably the easiest place to get started with Arcus. It provides development-ready project templates for you to use at the start of your project. It already contains all the necessary best-practices and correct use of Arcus libraries so you don't have to worry about infrastructure code but can focus on the business end.
 
 2021 was the year that we took this to another level and created project templates for Azure Functions.
 * Capability to create Azure Functions project with a HTTP endpoint trigger 
@@ -140,18 +140,18 @@ There are already several project options and additional built-in functionality 
 * Capability to configure minimum Serilog logging level from application settings
 * Capability to use .NET project templates directly from Visual Studio 
 
-When the [messaging library](https://github.com/arcus-azure/arcus.messaging) is ready to provide the message routing outside message pumps, we create additional Azure Functions project templates with Azure Service Bus triggers. 
+When the [messaging library](https://github.com/arcus-azure/arcus.messaging) is ready to provide the message routing outside message pumps, we will create additional Azure Functions project templates with Azure Service Bus triggers. 
 See our [feature docs](https://templates.arcus-azure.net/) for more information on our available functionality.
 
 ## Background Jobs
-Last but not least, we also have a new scheduled job in the [background jobs repository](https://github.com/arcus-azure/arcus.backgroundjobs). We already had a job that would notify us when an Azure Key Vault secret was expired, but now we also are able to notify consumers when a Service Principal client secrets is about to expire or is expired.
+We also have a new scheduled job in the [background jobs repository](https://github.com/arcus-azure/arcus.backgroundjobs). We already had a job that would notify us when an Azure Key Vault secret was expired, but now we also are able to notify consumers when a Service Principal client secrets is about to expire or is expired.
 
 This is a great way to keep track of your available client secrets. An Azure Event Grid event will notify you with all the details (secret name, expiration date). This library has already shown it's added-value by providing low-level infrastructure code that takes care of missing links between services.
 
 See our [feature docs](https://background-jobs.arcus-azure.net/) for more information on our available functionality.
 
 ## Scripting
-The [scripting repository](https://github.com/arcus-azure/arcus.scripting) has received various updates. From Azure API Management to Azure SQL databases to Azure DevOps integrations. This repository has always be a place where many things come together. Repeated tasks in CI build pipelines are local development. The library was more used this year, which lead to great new ideas and functionality:
+The [scripting repository](https://github.com/arcus-azure/arcus.scripting) has received various updates. From Azure API Management to Azure SQL databases to Azure DevOps integrations. This repository has always been a place where many things come together. Repeated tasks in CI build pipelines or for local development. The library was used more this year, which lead to great new ideas and functionality:
 * Capability to upload private/public certificate to Azure API Management
 * Capability to upload schema's/maps (transformations) into Azure Integration Account
 * Capability to run SQL migration with semantic versioning
@@ -163,7 +163,7 @@ The [scripting repository](https://github.com/arcus-azure/arcus.scripting) has r
 The new features are too many to list them all here. Take a look at our [feature docs](https://scripting.arcus-azure.net/) to get familiar with our available functionality.
 
 ## Conclusion, What's on the Horizon?
-2021 was a big year for Arcus. A lot has changed. New features were introduced, existing ones were updated. It was a year where Arcus was more used than before. Consumers can with ideas and issues which made the code and available functionality stronger.
+2021 was a big year for Arcus. A lot has changed. New features were introduced, existing ones were updated. It was a year where Arcus was more used than before. Consumers contributed with ideas and issues which made the code and available functionality stronger.
 
 What's on the horizon? What brings 2022? At the end of this year, 3 new code-owners were introduced to Arcus. This will be a new milestone for the Arcus initiative. More opinions and viewpoints will for sure make these libraries better and more usable. 
 

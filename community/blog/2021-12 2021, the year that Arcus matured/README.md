@@ -5,6 +5,10 @@ And here we are again. A year has passed and a lot of changes has been made on t
 
 ![Arcus stats](media/Arcus%20stats%20'21.png)
 
+The most popular packages are are not a surprise.
+
+![Arcus popular](media/Arcus%20popular.png)
+
 ## Web API
 The [Web API repository](https://github.com/arcus-azure/arcus.webapi) has probably got the most releases this year. Lots of changes have been made on almost all available functionality. Too big to name them all.
 The most important, and seemingly most-used feature of this library is the request tracking. This feature has also had some major updates:

@@ -1,7 +1,7 @@
 # Service correlation preparation and .NET 6 support in Arcus Observability v2.4
 Some time has passed since our last release of Arcus Observability. Recently, we finished the v2.4 release which has tons of new features. Let's take a look!
 
-We are preparing for a major feature called [service-to-service correlation](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map?tabs=net). This feature will allow us to correlate back-and-forth between different services, linking your entire application. This is a great way to get an solid overview of your project, and pin-point possible problems like bottlenecks.
+We are preparing for a major feature called [service-to-service correlation](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map?tabs=net). This feature will allow us to correlate back-and-forth between different services, linking your entire application. This is a great way to get a solid overview of your project and pin-point possible problems like bottlenecks.
 Because this feature encompasses several different systems and type of services, we are preparing each related Arcus repository. Starting with [Arcus Observability](https://github.com/arcus-azure/arcus.observability).
 
 ## Tracking Azure Service Bus requests

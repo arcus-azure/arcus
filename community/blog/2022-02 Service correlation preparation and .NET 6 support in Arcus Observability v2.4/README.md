@@ -5,7 +5,7 @@ We are preparing for a major feature called [service-to-service correlation](htt
 Because this feature encompasses several different systems and type of services, we are preparing each related Arcus repository. Starting with [Arcus Observability](https://github.com/arcus-azure/arcus.observability).
 
 ## Tracking Azure Service Bus requests
-Before v2.4, we could only track HTTP requests. Which meant that we only could track incoming messages in an Web API context. For our service-to-service correlation feature, this was not enough as many different services can 'receive' a request. Azure Service Bus, for example.
+Before v2.4, we could only track HTTP requests. Which meant that we could only track incoming messages in an Web API context. For our service-to-service correlation feature, this was not enough as many different services can 'receive' a request. Azure Service Bus, for example.
 
 In Arcus Observability v2.4, we've added support for tracking incoming messages on Azure Service Bus queues or topic subscriptions. In an application, when a message is peaked on the queue or topic subscription, one can now track this message. In a larger setup, this was a small but critical missing part of the service-to-service correlation puzzle.
 

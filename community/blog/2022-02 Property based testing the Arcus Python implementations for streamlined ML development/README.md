@@ -108,7 +108,7 @@ def test_time_windows_default_example():
     assert_all_windows_equals(df, windows, win_size)
 ```
 
-Generating a table of sensor data as data frames is not so hard as one might think. Hypothesis already provides a way to [generate data frames](https://hypothesis.readthedocs.io/en/latest/numpy.html?highlight=dataframe#hypothesis.extra.pandas.data_frames) for us. All we have to do is provide it with some reasonable size and types. In our first version, we used a subset of our initial sensor data columns and allowed Hypothesis to generate for us any non-Nan float number.
+Generating a table of sensor data as data frames is not as hard as one might think. Hypothesis already provides a way to [generate data frames](https://hypothesis.readthedocs.io/en/latest/numpy.html?highlight=dataframe#hypothesis.extra.pandas.data_frames) for us. All we have to do is provide it with some reasonable size and types. In our first version, we used a subset of our initial sensor data columns and allowed Hypothesis to generate for us any non-Nan float number.
 
 ```python
 from hypothesis import strategies as st, assume

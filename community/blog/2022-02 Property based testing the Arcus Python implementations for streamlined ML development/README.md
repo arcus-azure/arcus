@@ -1,5 +1,5 @@
 # Property-based testing the Arcus Python implementations for streamlined ML development
-Arcus.ML contains several easy-to-use Python implementations for more fluent ML development. This post will guide through the process of testing these implementations with a technique to ensure robust outcomes: property-based testing.
+Arcus.ML contains several easy-to-use Python implementations for more fluent machine learning development. This post will guide through the process of testing these implementations with a technique to ensure robust outcomes: property-based testing.
 
 ## Why property-based testing is the right choice
 The Python implementations in the [Arcus.ML](https://machine-learning.arcus-azure.net/) repository are very generic and are meant to be used in a wide range of different scenario's. Because of this, we need to test this thoroughly. Adding some static example-based tests that verify if some static input results in an expected static outcome is not enough. At Arcus, we try to make sure that every developer of any level can access the codebase. Both junior and senior people should be able to work with it. That's why it would be a very wrong move to remove all the example-based tests from the project.

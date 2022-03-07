@@ -64,7 +64,7 @@ def test_black_white_property(image_list):
 ```
 
 ## Customizable time windows for more accurate predication
-A big portion of the Arcus.ML library is about manipulating time series: combining, slicing, time references... For this post we'll be looking at the windows function which will provide us with a 'windowed' version of an incoming time series. Looking at time series in windows helps greatly in a more accurate prediction at a given point with the recent past. Put simply, windows are nothing more than a set of smaller versions of the initial data set, each starting from a different place and overlapping with each other. Time series are expressed here as [pandas](https://pandas.pydata.org/docs/getting_started/index.html#getting-started) data frames and will output the windows as [numpy](https://numpy.org/doc/stable/user/absolute_beginners.html) arrays. 
+A big portion of the Arcus.ML library is about manipulating time series: combining, slicing, time references... For this post we'll be looking at the windows function which will provide us with a 'windowed' version of an incoming time series. Looking at time series in windows helps greatly to get a more accurate prediction for a given point with the recent past. Put simply, windows are nothing more than a set of smaller versions of the initial data set, each starting from a different place and overlapping with each other. Time series are expressed here as [pandas](https://pandas.pydata.org/docs/getting_started/index.html#getting-started) data frames and will output the windows as [numpy](https://numpy.org/doc/stable/user/absolute_beginners.html) arrays. 
 
 The tests uses a static example of sensor values. This is a simplified set of that same data set:
 ```

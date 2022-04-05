@@ -6,7 +6,7 @@ Lots of new interesting things are now available in Arcus WebAPI. This blog will
 
 While this is a very helpful feature, the customization was missing something crucial: we don't allow custom sanitization of the request/response body. This, too, can contain sensitive or personal information that should not be exposed in any logging system. Arcus Web API v1.5 solves this the same way the sanitization of headers occurs: with overridable functionality.
 
-Here a rudimentary(!) example of what this could look like. Note that all overidable functionality is optional and doesn't have to be overridden.
+Here a rudimentary(!) example of what this could look like. Note that all overridable functionality is optional and doesn't have to be overridden.
 
 ```csharp
 using Arcus.WebApi.Logging;

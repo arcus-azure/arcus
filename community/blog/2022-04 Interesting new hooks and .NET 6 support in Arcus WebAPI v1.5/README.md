@@ -131,7 +131,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 ## .NET 6 support
-Last but definitely not least, is the long-awaited update for .NET 6 support. Arcus Web API is a massively used library and was lingering behind due to the almost-deprecated .NET Core target framework. This update ends this struggle while still support .NET Core support for whoever needs it. This change is part in a long process in which we are making Arcus in its entirety fully .NET 6 compatible. This is not the final step on the entire Arcus front, but is the last step on the Web API front.
+Last but definitely not least, is the long-awaited update for .NET 6 support. Arcus Web API is a massively used library and was lingering behind due to the almost-deprecated .NET Core target framework. This update ends this struggle while still supporting .NET Core for whoever needs it. This change is part in a long process in which we are making Arcus in its entirety fully .NET 6 compatible. This is not the final step on the entire Arcus front, but is the last step on the Web API front.
 
 ## Conclusion
 Arcus Web API v1.5 has tons of new features and changes. There's a lot more to be found like better developer experience with faulted HTTP correlation registration and non-escaped JSON serialization during request tracking.

@@ -95,7 +95,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-These extensions will greatly help make the Arcus Web API project not ony more easier understandable but more maintainable too. If we choose to change internal workings or additional built-in JSON features, we can update our extensions instead of altering the actual internal code of the project template. A cleaner approach for both consumers as maintainers.
+These extensions will greatly help make the Arcus Web API project not only easier to understand but more maintainable too. If we choose to change internal workings or additional built-in JSON features, we can update our extensions instead of altering the actual internal code of the project template. A cleaner approach for both consumers and maintainers.
 
 ## Better JWT Bearer authentication extension with secret store access
 Arcus is not only to provide 'new' functionality. Most of the time, things are already there but just need some finetuning or has a 'gap' with other functionality. Arcus provides a bridge, a way of connecting all the necessary functionality so that developers solely can focus on the actual implementation.

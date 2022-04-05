@@ -71,7 +71,7 @@ public class Startup
 ## Built-in JSON formatting extensions
 Our [Arcus Web API project template](https://templates.arcus-azure.net/features/web-api-template) is using several great and highly recommended approaches to start off your project. One of these approaches is to limit the input/output formatting of models to only JSON formatting. What this means is that the registered input/output formatters were inspected and altered. While this is a valuable addition to the Web API project template, it is still somewhat boilerplate code that with its inspection code doesn't make the template a very user-friendly or clean place to work in.
 
-Arcus Web API v1.5 changed this. In a new library called `Arcus.WebApi.Hosting`, we have added extensions on the MVC options so that this JSON formatting limitation can be added in a more fluent manner.
+Arcus Web API v1.5 changes this. In a new library called `Arcus.WebApi.Hosting`, we have added extensions on the MVC options so that this JSON formatting limitation can be added in a more fluent manner.
 
 ```csharp
 using System.Text.Json.Serialization;

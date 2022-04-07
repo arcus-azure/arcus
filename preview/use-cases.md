@@ -5,7 +5,7 @@ Differentiating between configuration data and secrets is critical for the secur
 
 The [Arcus secret store](https://security.arcus-azure.net/features/secret-store) is the answer. The secret store will be the single point of truth in interacting with required secrets for your application. Multiple 'secret providers' can be configured that accesses the secrets from external sources like: Azure Key Vault, HashiCorp Vault, Docker secrets, environment variables... and the secret store will provide a single access point for the application to fetch those secrets.
 
-An example of how well the secret store integrates within an application:
+An example of how to implement an Azure KeyVault and appsettings config file and how well the secret store integrates within an application:
 
 ```csharp
 using Microsoft.Extensions.Hosting;

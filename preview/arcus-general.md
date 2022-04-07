@@ -24,7 +24,7 @@ There are many reasons to use Arcus in your current and future projects.
   It helps with infrastructure like secure secret management, application-wide telemetry tracking, tedious DevOps operations and even has fully development-ready project templates to get you started immediately.
 
 * Centralized
-  The entire Arcus framework is maintained and tested the same way, with the same set of dedicated experts. There exists a single point of truth were everything is maintained and made ready for your benefit.
+  The entire Arcus framework is maintained and tested the same way, with the same set of dedicated experts. There exists a single point of truth where everything is maintained and made ready for your benefit.
 
 * Best practices
   Every Arcus component has the company-wide best practices backed right into the code. It is secure by-default, tracks telemetry by itself, automates hard-to-setup DevOps tasks, and many more.

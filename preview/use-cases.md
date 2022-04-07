@@ -37,6 +37,7 @@ public class Program
 }
 ```
 
+The Arcus secret store is by-default integrated in [all our .NET project templates](https://templates.arcus-azure.net/)!
 For more information, see [our documentation site](https://security.arcus-azure.net/features/secret-store).
 
 Blogs:

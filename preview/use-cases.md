@@ -74,6 +74,7 @@ logger.LogRequest(httpContext.Request, httpContext.Response, measurement, teleme
 logger.LogMetric("Orders Received", 133, telemetryContext);
 ```
 
+The Arcus observability is by-default integrated in [all our .NET project templates](https://templates.arcus-azure.net/)!
 For more information, see [our documentation site](https://observability.arcus-azure.net/).
 
 Blogs:

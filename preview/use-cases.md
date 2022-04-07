@@ -1,7 +1,7 @@
 # Use-cases
 
 ## Centralize secret management independent from application
-Differentiating between configuration data and secrets is critical for the security application. HTTP ports, application name... can all be seen as public data but access tokens, private keys... should not be in the same group. Accessing them in a centralized manner and secure manner is therefore important.
+Differentiating between configuration data and secrets is critical for the security of applications. HTTP ports, application name... can all be seen as public data but access tokens, private keys... should not be in the same group. Accessing them in a centralized manner and secure manner is therefore important.
 
 The [Arcus secret store](https://security.arcus-azure.net/features/secret-store) is the answer. The secret store will be the single point of truth in interacting with required secrets for your application. Multiple 'secret providers' can be configured that accesses the secrets from external sources like: Azure Key Vault, HashiCorp Vault, Docker secrets, environment variables... and the secret store will provide a single access point for the application to fetch those secrets.
 

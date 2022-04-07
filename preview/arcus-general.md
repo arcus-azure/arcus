@@ -21,7 +21,7 @@ There are many reasons to use Arcus in your current and future projects.
 
 * Time-saving
   Arcus contains tremendous amounts of boilerplate code that helps you save loads of time during project development.
-  It helps with infrastructure like secure secret management, application-wide telemetry tracking, tedious DevOps operations. and even has fully development-ready project templates to get you started immediately.
+  It helps with infrastructure like secure secret management, application-wide telemetry tracking, tedious DevOps operations and even has fully development-ready project templates to get you started immediately.
 
 * Centralized
   The entire Arcus framework is maintained and tested the same way, with the same set of dedicated experts. There exists a single point of truth were everything is maintained and made ready for your benefit.

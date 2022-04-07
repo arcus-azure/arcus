@@ -56,6 +56,7 @@ ILogger logger = ...
 var telemetryContext = new Dictionary<string, object>
 {
     { "Customer", "Contoso"},
+    { "OrderId", "12345" }
 };
 
 // Events

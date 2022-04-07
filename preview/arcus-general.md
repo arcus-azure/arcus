@@ -17,7 +17,7 @@ It is Codit’s strategy to centralize company-wide best practices and use it ac
 🚩 Are you doing the same thing at multiple customers? Then we are happy to hear! [Link to arcus GitHub]()
 
 ## Why should you use Arcus?
-There exists many reasons to use Arcus in your current and future projects.
+There are many reasons to use Arcus in your current and future projects.
 
 * Time-saving
   Arcus contains tremendous amounts of boilerplate code that helps you save loads of time during project development.

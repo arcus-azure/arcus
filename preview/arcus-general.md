@@ -27,7 +27,7 @@ There are many reasons to use Arcus in your current and future projects.
   The entire Arcus framework is maintained and tested the same way, with the same set of dedicated experts. There exists a single point of truth where everything is maintained and made ready for your benefit.
 
 * Best practices
-  Every Arcus component has the company-wide best practices backed right into the code. It is secure by-default, tracks telemetry by itself, automates hard-to-setup DevOps tasks, and many more.
+  Every Arcus component has the industry-wide best practices backed right into the code. It is secure by-default, tracks telemetry by itself, automates hard-to-setup DevOps tasks, and many more.
 
 ## How to use Arcus?
 The Arcus components are available on NuGet, PowerShell Gallery and Python PyPi.
@@ -61,6 +61,15 @@ Arcus is being using in production by these and many more end-users:
 * Kubernetes event grid bridge
 * Promitor
 * VanGelder
+* Euronav
+* Colruyt
+* Brunswick
+* Portima
+* Emsa
+* Nat Loterij
+* Azelis
+* HFG
+* Quion
 
 # Use-cases
 Hear the success stories of Arcus in many projects, currently in production. Hear about what benefit Arcus it brings!

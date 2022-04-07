@@ -60,7 +60,7 @@ Arcus is being using in production by these and many more end-users:
 * Codit
 * Kubernetes event grid bridge
 * Promitor
-* VanGelder
+* Van Gelder groente & fruit 
 
 # Use-cases
 Hear the success stories of Arcus in many projects, currently in production. Hear about what benefit Arcus it brings!

@@ -34,7 +34,7 @@ The Arcus components are available on NuGet, PowerShell Gallery and Python PyPi.
 
 Are you using Web API technology? Take a look at these components:
 * Arcus Web API project template
-* Arcus Azure Functions HTTP trigger
+* Arcus Azure Functions HTTP trigger template
 * Arcus Web API
 
 Are you using messaging technology with Azure? Like Azure Service Bus? Take a look at these components:
@@ -60,7 +60,7 @@ Arcus is being using in production by these and many more end-users:
 * Codit
 * Kubernetes event grid bridge
 * Promitor
-* VanGelder
+* Van Gelder groente & fruit
 * Euronav
 * Colruyt
 * Brunswick

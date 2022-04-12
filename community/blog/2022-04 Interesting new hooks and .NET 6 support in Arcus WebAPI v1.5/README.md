@@ -52,20 +52,12 @@ This custom-made request tracking middleware can then be given to the registrati
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 
-public class Startup
-{
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        app.UseRouting();
+WebApplicationBuilder builder = WebApplication.CreateBuilder();
+WebApplication app = builder.Build();
 
-        app.UseRequestTracking<PIIRequestTrackingMiddleware>();
-
-        ...
-        app.UseMvc();
-    }
-}
+app.UseRouting();
+app.UseRequestTracking<PIIRequestTrackingMiddleware>();
 ```
 
 ## Built-in JSON formatting extensions
@@ -75,24 +67,22 @@ Arcus Web API v1.5 changes this. In a new library called `Arcus.WebApi.Hosting`,
 
 ```csharp
 using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 
-public void ConfigureServices(IServiceCollection services)
+WebApplicationBuilder builder = WebApplication.CreateBuilder();
+
+builder.Services.AddControllers(mvcOptions =>
 {
-    services.AddMvc(mvcOptions => 
-    {
-        // Limit the available input/output formatting to only JSON formatting.
-        mvcOptions.OnlyAllowJsonFormatting();
+     // Limit the available input/output formatting to only JSON formatting.
+     mvcOptions.OnlyAllowJsonFormatting();
 
-        // Configure that single (JSON) formatting. 
-        mvcOptions.ConfigureJsonFormatting(jsonOptions =>
-        {
-            jsonOptions.IgnoreNullValues = true;
-            jsonOptions.Converters.Add(new JsonStringEnumConverter());
-        }
-    });
-}
+     // Configure that single (JSON) formatting. 
+     mvcOptions.ConfigureJsonFormatting(jsonOptions =>
+     {
+         jsonOptions.IgnoreNullValues = true;
+         jsonOptions.Converters.Add(new JsonStringEnumConverter());
+     });
+});
 ```
 
 These extensions will greatly help make the Arcus Web API project not only easier to understand but more maintainable too. If we choose to change internal workings or additional built-in JSON features, we can update our extensions instead of altering the actual internal code of the project template. A cleaner approach for both consumers and maintainers.
@@ -105,29 +95,30 @@ This new feature is a great example of this principle. [JWT Bearer authenticatio
 Arcus Web API v1.5 provides consumers with an alternative extension to register JWT Bearer authentication with access to the `IServiceProvider` which gives them access to all the registered services in the application. Included the Arcus secret store.
 
 ```csharp
+
+using System.Text;
 using Arcus.Security.Core;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddSecretStore(stores => ...)
-            .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer((jwt, serviceProvider) =>
-            {
-                // Get the Arcus secret store provider
-                var secretProvider = serviceProvider.GetRequiredService<ISecretProvider>();
+WebApplicationBuilder builder = WebApplication.CreateBuilder();
+
+builder.Services.AddSecretStore(stores => ...)
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer((jwt, serviceProvider) =>
+                {
+                    // Get the Arcus secret store provider
+                    var secretProvider = serviceProvider.GetRequiredService<ISecretProvider>();
                 
-                // Retrieve signing key.
-                string key = secretProvider.GetRawSecretAsync(secretName).GetAwaiter().GetResult();
+                    // Retrieve signing key.
+                    string key = secretProvider.GetRawSecretAsync(secretName).GetAwaiter().GetResult();
                 
-                // Provide signing key to JWT Bearer validation parameters.
-                jwt.TokenValidationParameters = new TokenValidationParameters 
-                {  
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
-                }
-            });
-}
+                    // Provide signing key to JWT Bearer validation parameters.
+                    jwt.TokenValidationParameters = new TokenValidationParameters 
+                    {  
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+                    };
+                });
 ```
 
 ## .NET 6 support

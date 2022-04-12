@@ -2,7 +2,7 @@
 Lots of new interesting things are now available in Arcus WebAPI. This blog will run-down some of these new features.
 
 ## Request tracking with custom body serialization for reducing personal information
-[Request tracking](https://webapi.arcus-azure.net/features/logging/) was already available in a couple of versions of [Arcus Web API](https://webapi.arcus-azure.net/). The tracking functionality allowed several options plus several routing filters on when/where the request tracking should take place. This request tracking functionality is also capable of sanitizing a custom set of headers that needs to be tracked. The reason for this customization is because some headers should never be tracked, for example authentication headers
+[Request tracking](https://webapi.arcus-azure.net/features/logging/) was already available in a couple of versions ago of [Arcus Web API](https://webapi.arcus-azure.net/). The tracking functionality allowed several options plus several routing filters on when/where the request tracking should take place. This request tracking functionality is also capable of sanitizing a custom set of headers that needs to be tracked. The reason for this customization is because some headers should never be tracked, for example authentication headers
 
 While this is a very helpful feature, the customization was missing something crucial: we don't allow custom sanitization of the request/response body. This, too, can contain sensitive or personal information that should not be exposed in any logging system. Arcus Web API v1.5 solves this the same way the sanitization of headers occurs: with overridable functionality.
 

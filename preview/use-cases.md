@@ -37,6 +37,28 @@ public class Program
 }
 ```
 
+A secret store reference can be injected into your application to retrieve back the secrets from your configured sources:
+```csharp
+using Arcus.Security.Core;
+
+[ApiController]
+public class OrderController : ControllerBase
+{
+    private readonly ISecretProvider _secretStore;
+
+    public OrderController(ISecretProvider secretStore)
+    {
+        _secretStore = secretStore;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Orders()
+    {
+        string secret = await _secretStore.GetRawSecretAsync("MySecret");
+    }
+}
+```
+
 The Arcus secret store is by-default integrated in [all our .NET project templates](https://templates.arcus-azure.net/)!
 For more information, see [our documentation site](https://security.arcus-azure.net/features/secret-store).
 

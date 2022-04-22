@@ -36,7 +36,7 @@ Set-AzIntegrationAccountCertificates `
 For more information on all things Azure Integration Account, see our [documentation page](https://scripting.arcus-azure.net/Features/powershell/azure-integration-account) where all the available PowerShell functions are described.
 
 ## Adding Azure App Service application settings with ease
-Azure App Services can have common application settings. Just like local application settings, these should not contain any sensitive or secret information, but are especially useful to pass-in dynamically configuration values that can manipulate the application. Setting such application settings has to be done via the Azure portal. With Arcus Scripting v0.6, you don't have to make that trip to the portal anymore.
+Azure App Services can have common application settings. Just like local application settings, these should not contain any sensitive or secret information, but are especially useful to pass-in dynamic configuration values that can manipulate the application. Setting such application settings has to be done via the Azure portal. With Arcus Scripting v0.6, you don't have to make that trip to the portal anymore.
 
 Installing the new library `Arcus.Scripting.AppService` gives you access to the Azure App Service functionality:
 ```powershell

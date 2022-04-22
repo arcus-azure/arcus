@@ -64,7 +64,7 @@ Set-AzAppServiceSetting `
 For more information on this module, see our [documentation page](https://scripting.arcus-azure.net/Features/powershell/azure-app-service).
 
 ## Extended ARM template content injection with absolute file paths
-One of the new features in v0.6 is entirely written by a contributor. It's great to see our library expanding with features that were missing. All these additions grow from the usage of the library and the healthy reflex to contribute the missing pieces. In this case, our ARM template functionality to inject content into the template was missing something. We allowed relative value files to be injected into the ARM template but didn't had support for absolute external file paths. The way it was updated made sure that we stay backwards compatible with both relative file paths, making this a very flexible piece of functionality.
+One of the new features in v0.6 is entirely written by a contributor. It's great to see our library expanding with features that were missing. All these additions grow from the usage of the library and the healthy reflex to contribute the missing pieces. In this case, our ARM template functionality to inject content into the template was missing something. We allowed relative value files to be injected into the ARM template but didn't have support for absolute external file paths. The way it was updated made sure that we stay backwards compatible with both relative file paths, making this a very flexible piece of functionality.
 
 All ARM functionality is located in the `Arcus.Scripting.ARM` powershell module:
 ```powershell

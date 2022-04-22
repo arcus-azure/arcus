@@ -6,7 +6,7 @@ Azure Integration Accounts are critical for business-to-business (B2B) and integ
 
 When such an Azure Integration Account was previously setup in a client project, this was done manually in the Azure portal or via custom scripts. This tedious repeated work was the perfect candidate to be included in the Arcus Scripting library.
 
-Starting from v0.6, one can finally upload all these artifacts with clean, well-named PowerShell functions. This wil reduce the custom scripts being copied from project to project, increase support and maintenance, and make the DevOps code a lot cleaner.
+Starting from v0.6, one can finally upload all these artifacts with clean, well-named PowerShell functions. This wil reduce the custom scripts being copied from project to project, improve support and maintenance, and make the DevOps code a lot cleaner.
 
 All functions are located within a single PowerShell module, called `Arcus.Scripting.IntegrationAccount`:
 ```powershell

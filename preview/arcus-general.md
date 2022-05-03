@@ -11,7 +11,8 @@ It is Codit’s strategy to centralize company-wide best practices and use it ac
   All Arcus components are highly functional and composable. They can be used separately, but they are better together.
 
 * Open-Source & Free to use
-  The Arcus framework is constantly updated by contributions from Codit employees and abroad!
+  The Arcus library is constantly updated by contributions from Codit employees and abroad!  
+  As the Arcus library is free to use and open-source so we happily accept your contributions!  Please take a look at our [contribution guide](https://github.com/arcus-azure/.github/blob/master/CONTRIBUTING.md) to get up to speed if you want to contribute.
   It is free to use under the MIT license.
 
 🚩 Are you doing the same thing at multiple customers? Then we are happy to hear! [Link to arcus GitHub]()

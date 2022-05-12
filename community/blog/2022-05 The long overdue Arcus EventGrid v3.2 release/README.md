@@ -3,7 +3,7 @@ Version v3.2 of the Arcus EventGrid library was released recently, almost two ye
 
 ## EventGrid authorization with Arcus secret store
 We provide support for endpoint validation, when implementing your own custom web hook. This validation allows to secure your web hook with a secret key (taken from the query string or an HTTP header).  
-This is needed, because Azure EventGrid is send a validation request to a newly configured web hook, in order to prevent people leveraging Azure EventGrid to bring down a 3rd party API. 
+This is needed, because Azure EventGrid sends a validation request to a newly configured web hook, in order to prevent people leveraging Azure EventGrid to bring down a 3rd party API. 
 
 Authorization with Azure EventGrid was previously done with an attribute where the secret was managed internally. This approach was more a 'proof of concept' than a production-ready implementation. The new version uses the [Arcus secret store](https://security.arcus-azure.net/features/secret-store/) as a way of handling secrets and can be assigned globally on the entire Web application or locally on specific operations.
 

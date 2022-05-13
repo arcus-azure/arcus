@@ -16,7 +16,7 @@ public class Program
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddMvc(options => options.Filters.AddEventGridAuthorization(HttpRequestProperty.Header, "x-api-key", "MySecret")));
+        services.AddMvc(options => options.Filters.AddEventGridAuthorization(HttpRequestProperty.Header, "x-api-key", secretName: "MySecret")));
     }
 }
 ```

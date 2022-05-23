@@ -1,7 +1,7 @@
 # How to use Arcus?
 Arcus' main goal is to make your application development more efficient. This includes infrastructure or boilerplate code that is almost exactly the same on every project. You can see Arcus as the middleware between your business application code and Azure components.
 
-Focusing on application code as much as possible, that' where Arcus comes in.
+Focusing on application code as much as possible, that's where Arcus comes in.
 
 ![Code - Arcus - Azure](./media/code-arcus-azure.png)
 

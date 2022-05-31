@@ -1,5 +1,5 @@
 # New Azure background jobs and Managed Identity support in Arcus.BackgroundJobs v0.4
-Arcus.BackgroundJobs v0.4 is packed with lots of fresh new features and added support. Come take a look at what is all included in this new release!
+Arcus.BackgroundJobs v0.4 is packed with lots of fresh new features and added support. Come take a look at what is included in this new release!
 
 ## Notify upon potential expired Azure client secrets
 This new background job rose from a typical problem when working with applications within Active Directory. There is no built-in support for getting notified when a client secret is expired or is about to expire. Unlike Azure Key Vault, there is no way of hooking upon an event and running arbitrary code that could potentially rotate the client secret. The consequence of this 'missing link' is that applications will report authentication failures when the client secret is expired. At this point, it is already too late as the administrator of the application will have to figure out what client secret needs rotating and do the key rotation. All the while, the application is offline.

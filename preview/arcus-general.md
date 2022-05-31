@@ -30,7 +30,7 @@ There are many reasons to use Arcus in your current and future projects.
 * Best practices
   Every Arcus component has the industry-wide best practices backed right into the code. It is secure by-default, tracks telemetry by itself, automates hard-to-setup DevOps tasks, and many more.
 
-## How to use Arcus?
+## When to use Arcus?
 The Arcus components are available on NuGet, PowerShell Gallery and Python PyPi.
 
 Are you using Web API technology? Take a look at these components:
@@ -52,8 +52,6 @@ Are you using Azure resources in your DevOps pipeline? Take a look at these comp
 Are you using ML technology? Take a look at these components:
 * Arcus ML
 * Arcus Azure ML
-
-For more information on all the different Arcus components: [separate page]().
 
 ## Who's using Arcus?
 Arcus is being using in production by these and many more end-users:

@@ -1,7 +1,7 @@
 # How to use Arcus?
 Arcus' main goal is to make your application development more efficient. This includes infrastructure or boilerplate code that is almost exactly the same on every project. You can see Arcus as the middleware between your business application code and Azure components.
 
-Focusing on application code as much as possible, that' where Arcus comes in.
+Focusing on application code as much as possible, that's where Arcus comes in.
 
 ![Code - Arcus - Azure](./media/code-arcus-azure.png)
 
@@ -10,7 +10,7 @@ The observability library provides the solution to a single point of truth for y
 
 ![Logger Arcus - Application Insights](./media/logger-arcus-appinsights.png)
 
-We use Serilog as our main logging system as this is  Microsoft also favorites this library. How this works is: Arcus registered a Serilog sink that writes telemetry to Application Insights. Writing logging messages or telemetry now all happens now with the injected `ILogger` instances in your application. With custom extension on the logger like `LogEvent`, `LogDependency`... one can control the telemetry via the logging system itself.
+We use Serilog as our main logging system as Microsoft also favorites this library. How this works is: Arcus registers a Serilog sink that writes telemetry to Application Insights. Writing logging messages or telemetry now all happens with the injected `ILogger` instances in your application. With custom extension on the logger like `LogEvent`, `LogDependency`... one can control the telemetry via the logging system itself.
 
 For more information on observability, see [our official documentation page](https://observability.arcus-azure.net/).
 

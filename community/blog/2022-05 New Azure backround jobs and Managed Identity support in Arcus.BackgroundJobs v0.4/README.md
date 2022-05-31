@@ -79,7 +79,7 @@ public class Program
 For more information on this background job, see [our official documentation](https://background-jobs.arcus-azure.net/Features/AzureAppConfiguration/auto-refresh-app-configuration).
 
 ## Managed Identity support for CloudEvents background jobs
-We are very happy to announce that the v0.4 release of BackgroundJobs also includes a valuable contribution that solves a missing functionality problem in the background jobs environment. This library heavily builds on top of our Arcus Messaging library. The Messaging library received some previous releases ago a feature that allowed Managed Identity authentication when registering message pumps. As Managed Identity is the way to go from a security perspective, this could not be missing in our BackgroundJobs library.
+We are very happy to announce that the v0.4 release of BackgroundJobs also includes a valuable contribution that solves a missing functionality problem in the background jobs environment. This library heavily builds on top of our Arcus Messaging library. The Messaging library received a feature some releases ago that allowed Managed Identity authentication when registering message pumps. As Managed Identity is the way to go from a security perspective, this could not be missing in our BackgroundJobs library.
 
 Luckily, one of our contributors saw this and made a proposal. When registering CloudEvents background jobs you can now use Managed Identity authentication instead of passing secret keys that point to connection strings within the Arcus secret store. It is a simple and small change, but it has a huge impact. Another reason why contributions are so important.
 

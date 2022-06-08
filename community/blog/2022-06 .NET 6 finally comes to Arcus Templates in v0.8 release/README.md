@@ -6,7 +6,7 @@ The core functionality of the Arcus Messaging library is message handling. Descr
 
 Azure Functions differ from the usual message pump setup because the message is already being received by the function's trigger; whether it is a message on an Azure Service Bus queue or a topic subscription. Since the trigger already takes over the work of the message pump, we only need to route messages.
 
-Easy extensions on the Azure Functions types allow you to register your message handlers the same way as with a message pump setup. 
+Easy extensions on the `IFunctionsHostBuilder` allow you to register your message handlers the same way as with a message pump setup. 
 
 ```csharp
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;

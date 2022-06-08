@@ -2,7 +2,7 @@
 The v0.8 release of Arcus Templates ends the journey of adding .NET support to Arcus. This release also contains tons of new features and useful changes. This run-down post will guide you through the biggest ones.
 
 ## New Azure Functions Service Bus message handling project templates
-The core functionality of the Arcus Messaging library; is message handling. Describing the business logic in reusable message handlers where an incoming message is routed via Arcus functionality to the correct handler. Previous releases of Arcus Messaging made sure that the functionality that receives a message is separated from the functionality that routes the message. The reason for this is so we can reuse the message routing in different scenarios. This is one of those scenarios.
+The core functionality of the Arcus Messaging library is message handling. Describing the business logic in reusable message handlers where an incoming message is routed via Arcus functionality to the correct handler. Previous releases of Arcus Messaging made sure that the functionality that receives a message is separated from the functionality that routes the message. The reason for this is so we can reuse the message routing in different scenarios. This is one of those scenarios.
 
 Azure Functions differ from the usual message pump setup because the message is already being received by the trigger function; whether it is a message on an Azure Service Bus queue or a topic subscription. Since the trigger function already takes over the work of the message pump, we only need to route messages.
 

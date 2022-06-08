@@ -76,8 +76,41 @@ We solved this problem by adding a custom API model to the template. This custom
 The health endpoint available in the Web API project template uses this new API model as a way to expose the application's health. For more information on the Web API project template, see [our official documentation](https://templates.arcus-azure.net/features/web-api-template).
 
 ## Hide JSON serialization behind maintainable extensions
-The Arcus templates are especially useful for speeding up development and removing the need to write boilerplate code. Message handling, secret management, we have all sorts of ways to abstract a problem into business components. Sometimes, though, it is not such a big piece of boilerplate functionality. The Web API project template used to have some lines of code to restrict and configure the JSON serialization. It was not a lot but it was enough to make the application startup code dirty. Not only dirty; but less maintainable. The code was removing output formatters, changing how the JSON serialization handles enumerations, etc. If we would decide to change this strategy, we couldn't provide support to consumers who already ran the template in their project.
+The Arcus templates are especially useful for speeding up development and removing the need to write boilerplate code. Message handling, secret management, we have all sorts of ways to abstract a problem into business components. Sometimes, though, it is not such a big piece of boilerplate functionality. The Web API project template used to have some lines of code to restrict and configure the JSON serialization. It was not a lot but it was enough to make the application startup code dirty. Not only dirty; but less maintainable. The code was removing output formatters, changing how the JSON serialization handles enumerations, etc. 
 
+This is what it looked like before. This piece of code was added to every new project result of the Web API project template.
+
+```csharp
+WebApplicationBuilder builder = ...
+
+builder.Services.AddControllers(options =>
+{
+    var allButJsonInputFormatters = options.InputFormatters.Where(formatter => !(formatter is SystemTextJsonInputFormatter));
+    foreach (IInputFormatter inputFormatter in allButJsonInputFormatters)
+    {
+        options.InputFormatters.Remove(inputFormatter);
+    }
+
+    // Removing for text/plain, see https://docs.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-3.0#special-case-formatters
+    options.OutputFormatters.RemoveType<StringOutputFormatter>();
+
+    var onlyJsonInputFormatters = options.InputFormatters.OfType<SystemTextJsonInputFormatter>();
+    foreach (SystemTextJsonInputFormatter inputFormatter in onlyJsonInputFormatters)
+    {
+        inputFormatter.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        inputFormatter.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    }
+
+    var onlyJsonOutputFormatters = options.OutputFormatters.OfType<SystemTextJsonOutputFormatter>();
+    foreach (SystemTextJsonOutputFormatter outputFormatter in onlyJsonOutputFormatters)
+    {
+        outputFormatter.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        outputFormatter.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    }
+});
+```
+
+If we would decide to change this strategy, we couldn't provide support to consumers who already ran the template in their project.
 A previous Web API release made sure that our JSON serialization strategy is accessible through the MVC options, which makes it not only cleaner but also more maintainable.
 
 ```csharp
@@ -103,7 +136,7 @@ The v0.8 Templates ends the quite long journey of adding .NET 6 support to Arcus
 We've learned a lot during adding this kind of widespread support to Arcus and plan to use that knowledge in the future when .NET 7 arrives.
 
 ## Conclusion
-The Templates v0.8 release was a much-requested release. It took us quite some time to fully make these project templates not only .NET 6 compatible, but also using the latest features and Arcus changes from dependent libraries. Now, these templates are finally done and can be used in your next project.
+The Templates v0.8 release was much-requested. It took us quite some time to fully make these project templates not only .NET 6 compatible, but also using the latest features and Arcus changes from dependent libraries. Now, these templates are finally done and can be used in your next project.
 
 See [our official documentation](https://templates.arcus-azure.net/) for more information on all the currently supported features.
 If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact the Arcus team at Codit](https://github.com/arcus-azure/arcus.templates/issues/new/choose).

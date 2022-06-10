@@ -1,4 +1,4 @@
-# .NET 6 finally comes to Arcus Templates in v0.8 release, together with new templates and features
+# Arcus Templates v0.8 finally brings .NET 6 support to Arcus, together with new templates and features
 The v0.8 release of Arcus Templates ends the journey of adding .NET support to Arcus. This release also contains tons of new features and useful changes. This run-down post will guide you through the biggest ones.
 
 ## New Azure Functions Service Bus message handling project templates

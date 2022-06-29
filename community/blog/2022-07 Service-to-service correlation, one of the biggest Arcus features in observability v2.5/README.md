@@ -32,7 +32,7 @@ using (var measurement = DurationMeasurement.Start())
           measurement: measurement,
           dependencyId: dependencyId);
 
-       // Output: {"DependencyType" "Http", "DependencyId":  "DependencyName": "POST /r/ujxglouj", "TargetName": "requestbin.net", "ResultCode": 200, "Duration": "00:00:00.2521801", "StartTime": "03/23/2020 09:56:31 +00:00", "IsSuccessful": true, "Context": {}}
+       // Output: {"DependencyType" "Http", "DependencyId": "abc", "DependencyName": "POST /r/ujxglouj", "TargetName": "requestbin.net", "ResultCode": 200, "Duration": "00:00:00.2521801", "StartTime": "03/23/2020 09:56:31 +00:00", "IsSuccessful": true, "Context": {}}
 
     }
 }

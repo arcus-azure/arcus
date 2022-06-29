@@ -49,7 +49,7 @@ Don't worry, the service-to-service correlation feature will be explained more i
 ## Future proof Application Insights connection string support
 Soon, Application Insights will [stop supporting instrumentation keys](https://azure.microsoft.com/en-us/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/) and fully rely on connection strings to track telemetry. Instead of waiting until the last months, we already made sure that we can support connection strings. The feature documentation and code also reflect this to gently guide users to use connection strings instead of instrumentation keys.
 
-We added a couple of new extensions to make this explicit:
+We have added a couple of new extensions to make this explicit:
 ```csharp
 using Serilog;
 using Serilog.Configuration;

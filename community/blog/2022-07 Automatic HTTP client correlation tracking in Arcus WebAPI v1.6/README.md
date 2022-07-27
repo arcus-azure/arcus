@@ -2,7 +2,7 @@
 Arcus WebAPI v1.6 is all about service-to-service correlation. Both sending and receiving sides are updated with cool features to ease the complexity of HTTP correlation.
 
 ## Automatic tracking correlated HTTP requests
-Arcus WebAPI already contained the necessary middleware components to receive and parse the HTTP correlation from incoming requests and use it throughout the application. The `Request-Id` and `X-Transaction-Id` request headers are used to determine by what ID the parent of this request (sender) is identifying itself (`Request-Id`) and by what ID this whole HTTP interaction should be identified (`X-Transaction-Id`). This will eventually result in an HTTP correlation model that is accessible anywhere in the application. What v1.6 adds, is how we send and track such a correlated HTTP request.
+Arcus WebAPI already contained the necessary middleware components to receive and parse the HTTP correlation from incoming requests and use it throughout the application. The `Request-Id` and `X-Transaction-ID` request headers are used to determine by what ID the parent of this request (sender) is identifying itself (`Request-Id`) and by what ID this whole HTTP interaction should be identified (`X-Transaction-ID`). This will eventually result in an HTTP correlation model that is accessible anywhere in the application. What v1.6 adds, is how we send and track such a correlated HTTP request.
 
 To put things in perspective, here is a diagram of such interactions. In this example, the user interacts with service A which calls service B to answer the client's request. 
 ![HTTP correlation interaction with two services](img/http-correlation.png)
@@ -31,7 +31,7 @@ WebApplication app = builder.Build();
 app.UseHttpCorrelation();
 ```
 
-Now, what happens when the injected `HttpClient` is used with this additional HTTP message handler? Internally, two things happen: first, the available HTTP correlation in the application will be used to enrich the outgoing HTTP request with the necessary correlation headers. As shown in the diagram, the request will have two headers: `Request-Id` and `X-Transaction-Id`. Second, the request will be tracked as an HTTP dependency and will be available as such if Application Insights is configured.
+Now, what happens when the injected `HttpClient` is used with this additional HTTP message handler? Internally, two things happen: first, the available HTTP correlation in the application will be used to enrich the outgoing HTTP request with the necessary correlation headers. As shown in the diagram, the request will have two headers: `Request-Id` and `X-Transaction-ID`. Second, the request will be tracked as an HTTP dependency and will be available as such if Application Insights is configured.
 
 The complexity of HTTP correlation is hard to explain and even harder to get right in your application. That is why we have chosen to use this approach as it hides all the infrastructure from your application code so that consumers only have to focus on the request's contents.
 

@@ -84,7 +84,7 @@ using (var measurement = DurationMeasurement.Start())
 ```
 
 ## Conclusion
-This new release contains besides the new types of request tracking also bunch of changes and fixes that improves the entire telemetry tracking experience. Take a look at the [release notes](https://github.com/arcus-azure/arcus.observability/releases/tag/v2.6.0) and [feature documentation](https://observability.arcus-azure.net/) to learn more about Arcus Observability.
+Besides the new types of request tracking this new release also contains a bunch of changes and fixes that improve the entire telemetry tracking experience. Take a look at the [release notes](https://github.com/arcus-azure/arcus.observability/releases/tag/v2.6.0) and [feature documentation](https://observability.arcus-azure.net/) to learn more about Arcus Observability.
 
 See [our official documentation](https://observability.arcus-azure.net/) for more information on all the currently supported features.
 If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact us](https://github.com/arcus-azure/arcus.observability/issues/new/choose).

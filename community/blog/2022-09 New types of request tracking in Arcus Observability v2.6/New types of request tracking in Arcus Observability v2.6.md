@@ -1,7 +1,7 @@
 # New types of request tracking in Arcus Observability v2.6
 The Arcus Observability v2.6 release contains all sorts of new ways to track requests in Application Insights. Let's have a look!
 
-Previously, we only supported HTTP and Azure Service Bus request tracking in our telemetry extensions. The v2.6 ends this with great new and extensible ways to track telemetry.
+Previously, we only supported HTTP and Azure Service Bus request tracking in our telemetry extensions. The v2.6 expands on this with great new and extensible ways to track telemetry.
 
 ## Azure EventHubs request tracking
 We are working on fully supporting Azure EventHubs in our [Messaging library](https://messaging.arcus-azure.net/). This means that we should be able to track EventHubs requests, as the messaging system will retrieve and process these events. When we update our Messaging library, events that gets processed by your implemented message handlers will automatically be tracked.

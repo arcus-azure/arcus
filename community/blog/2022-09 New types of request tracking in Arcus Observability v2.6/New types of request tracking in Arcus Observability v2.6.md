@@ -29,7 +29,7 @@ using (var measurement = DurationMeasurement.Start())
 We also provide overloads that take in an additional Azure EventHubs consumer group and an operation name which provides a functional description of the event.
 
 ## Azure Functions (isolated) HTTP trigger request tracking
-With the arrival of isolated Azure Functions, processing HTTP requests has changed. Previously, we were able to re-use the ASP.NET Core `HttpRequest`/`IActionResult` but the isolated HTTP trigger variant stepped away from the reusable approach and uses new types: `HttpRequestData`/`HttpResponseData`. This impact how we track events with our Observability library as there is no default conversion available between the two approaches.
+With the arrival of isolated Azure Functions, processing HTTP requests has changed. Previously, we were able to re-use the ASP.NET Core `HttpRequest`/`IActionResult` but the isolated HTTP trigger variant stepped away from the reusable approach and uses new types: `HttpRequestData`/`HttpResponseData`. This impacts how we track events with our Observability library as there is no default conversion available between the two approaches.
 
 Therefore, Observability v2.6 introduces a new set of `LogRequest` overloads in the `Arcus.Observability.Telemetry.AzureFunctions` package that uses `HttpRequestData` instead of `HttpRequest`.
 

@@ -6,9 +6,9 @@ Arcus Messaging v1.3 introduces a new type of messaging to the family: EventHubs
 
 Because of our very flexible messaging framework, we were able to quickly and easily add EventHubs messaging. A message pump implementation is available in the `Arcus.Messaging.Pumps.EventHubs` package and a message router implementation (for non-message pump scenarios, like Azure Functions) is available in the `Arcus.Messaging.Abstractions.EventHubs` package.
 
-You can create your own EventHubs message handler implementation by implementing the `IAzureEventHubsMessageHandler<>` interface. This process is very similar to Service Bus. The only difference here is the use of a specific message context `AzureEventHubsMessageContext` which gives consumers access to the EventHubs-specific information. This includes the EventHubs namespace, consumer group but also message-specific information like the partition key. This information is useful for message tracking during message processing.
+You can create your own EventHubs message handler implementation by implementing the `IAzureEventHubsMessageHandler<>` interface. This process is very similar to Service Bus. The only difference here is the use of a specific message context `AzureEventHubsMessageContext` which gives consumers access to the EventHubs-specific information. This includes the EventHubs namespace, consumer group but also message-specific information like the partition key. This info is useful for message tracking during message processing.
 
-This example shows how a sensor reading can be processed from a message handler implementation.
+The following example shows how a sensor reading can be processed from a message handler implementation.
 ```csharp
 using Arcus.Messaging.Abstractions.EventHubs.MessageHandling;
 using Microsoft.Extensions.Logging;
@@ -35,7 +35,7 @@ public class SensorReadingAzureEventHubsMessageHandler : IAzureEventHubsMessageH
 }
 ```
 
-Registering this implementation is also very similar to Service Bus. We provide an `.AddEventHubsMessagePump(...)` extension to register a message pump implementation that retrieves events from EventHubs without any action on your part. The consumers' job is only focusing on how events, or in this case sensor reading events, should be processed.
+Registering this implementation is also very similar to Service Bus. We provide an `.AddEventHubsMessagePump(...)` extension to register a message pump implementation that retrieves events from EventHubs without any additional action on your part. The consumers' job is only focusing on how events, or in this case sensor reading events, should be processed.
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

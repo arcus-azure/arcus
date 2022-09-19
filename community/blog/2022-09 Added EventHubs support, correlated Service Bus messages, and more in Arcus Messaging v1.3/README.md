@@ -44,7 +44,7 @@ Host.CreateDefaultBuilder()
     .ConfigureSecretStore(...)
     .ConfigureServices(services =>
     {
-        services.AddEventHubsMessagePump("<event-hubs-name>", "<event-hubs-connection-string-secret-name>", "<blob-container-name>", "<storage-account-connection-string-secret-name>)
+        services.AddEventHubsMessagePump("<event-hubs-name>", "<event-hubs-connection-string-secret-name>", "<blob-container-name>", "<storage-account-connection-string-secret-name>")
                 .WithEventHubsMessageHandler<SensorReadingAzureEventHubsMessageHandler, SensorReading>();
     });
 ```

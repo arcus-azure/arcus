@@ -110,7 +110,7 @@ public class OrderController : ControllerBase
 
 For more information see our official documentation for [Service Bus extensions](https://messaging.arcus-azure.net/Features/service-bus-extensions) and [EventHubs extensions](https://messaging.arcus-azure.net/Features/event-hubs-extensions).
 
-💡 We have a [user guide]() that explains fully how service-to-service correlations work for applications that integrate Service Bus. 
+💡 We have a [user guide](https://observability.arcus-azure.net/Guidance/Service-to-service%20Correlation/use-service-to-service-correlation-in-service-bus) that explains fully how service-to-service correlations work for applications that integrate Service Bus. 
 
 ## Removed exception details from TCP health probe
 We also added a small feature with a big security impact to this release. The v0.8 Arcus Templates release included a dedicated API health report model with the exception details removed. These details are useful for defect localization but are unnecessary information for the public eye. In certain cases, this information could be used maliciously and pose a security risk.

@@ -120,7 +120,7 @@ The Arcus Messaging also has a variant on this health report endpoint, which is 
 Starting from Arcus Messaging v1.3, these exception details are removed from the public endpoint which makes it a more safe and production-ready implementation.
 
 ## Conclusion
-Arcus Messaging v1.3 is a big release for EventHubs but also provides extensive functionality to fully support service-to-service scenarios.
+Arcus Messaging v1.3 is a big release with support for EventHubs but also provides extensive functionality to fully support service-to-service scenarios.
 Have a look at our [release notes](https://github.com/arcus-azure/arcus.messaging/releases/tag/v1.3.0) and [official documentation](https://messaging.arcus-azure.net/) for more information on this new release.
 
 If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact the Arcus team at Codit](https://github.com/arcus-azure/arcus.messaging/issues/new/choose).

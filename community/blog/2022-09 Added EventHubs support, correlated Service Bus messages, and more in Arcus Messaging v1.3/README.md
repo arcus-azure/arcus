@@ -56,7 +56,7 @@ Host.CreateDefaultBuilder()
 ## Correlated Service Bus and EventHubs messages
 Service-to-service correlation is a big focus within Arcus. We have already updated our Web API package to fully support send/receive operations of correlated HTTP requests/responses. This results in a clear overview of all the interactions between multiple components in Application Insights. The same correlation functionality is now added to the Messaging library, making almost all our components correlation-ready.
 
-Retrieving and processing messages via message pumps or message routers automatically results in request telemetry in Application Insights, so no consumer action has to be taken here. Placing messages on Service Bus or an EventHubs queue requires you to use one of our extensions on `ServiceBusSender` or `EventHubsProducerClient` respectively. Usually, when interacting with Azure in this way, you would register these clients into your application so they can be injected, reused and tested easily. [Azure SDK clients](https://www.nuget.org/packages/Microsoft.Extensions.Azure/) is a great way to do this.
+Retrieving and processing messages via message pumps or message routers automatically results in request telemetry in Application Insights, so no consumer action is required here. Placing messages on Service Bus or an EventHubs queue requires you to use one of our extensions on `ServiceBusSender` or `EventHubsProducerClient` respectively. Usually, when interacting with Azure in this way, you would register these clients into your application so they can be injected, reused and tested easily. [Azure SDK clients](https://www.nuget.org/packages/Microsoft.Extensions.Azure/) is a great way to do this.
 ```csharp
 using Microsoft.Extensions.Hosing;
 

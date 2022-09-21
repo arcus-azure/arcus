@@ -2,7 +2,7 @@
 Arcus Messaging v1.3 is a big release with big changes. Full of features, extended functionality, and useful helpers. This post goes over the major parts of this release.
 
 ## EventHubs message handling support
-Arcus Messaging v1.3 introduces a new type of messaging to the family: EventHubs messaging. Previously, we only supported Azure Service Bus messaging in both message pump worker and Azure Functions trigger scenarios. EventHubs support was a long-requested feature and received more priority due to our internal community. This shows that Arcus is driven by community work and not by higher-up ideas.
+Arcus Messaging v1.3 introduces a new type of messaging to the family: EventHubs messaging. Previously, we only supported Azure Service Bus messaging in both message pump worker and Azure Functions trigger scenarios. EventHubs support was a long awaited feature and received more priority due to our internal community. This shows that Arcus is driven by community work and not by higher-up ideas.
 
 Because of our very flexible messaging framework, we were able to quickly and easily add EventHubs messaging. A message pump implementation is available in the `Arcus.Messaging.Pumps.EventHubs` package and a message router implementation (for non-message pump scenarios, like Azure Functions) is available in the `Arcus.Messaging.Abstractions.EventHubs` package.
 

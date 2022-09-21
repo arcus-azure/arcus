@@ -51,7 +51,7 @@ Host.CreateDefaultBuilder()
 
 ⚠ Note that the EventHubs connection string and storage account connection string are not passed along directly to the message pump extension, but that a secret name is provided. This secret name should correspond with a stored secret in the Arcus secret store. For more information on the secret store, see [our official documentation](https://security.arcus-azure.net/features/secret-store).
 
-💡 The EventHubs message pump and message router have a lot more options to influence the message handling to your needs. See [our official documentation](https://messaging.arcus-azure.net/Features/message-handling/event-hubs) for more information on this and other topics.
+💡 The EventHubs message pump and message router have a lot more options to modify the message handling to your needs. See [our official documentation](https://messaging.arcus-azure.net/Features/message-handling/event-hubs) for more information on this and other topics.
 
 ## Correlated Service Bus and EventHubs messages
 Service-to-service correlation is a big focus within Arcus. We have already updated our Web API package to fully support send/receive operations of correlated HTTP requests/responses. This results in a clear overview of all the interactions between multiple components in Application Insights. The same correlation functionality is now added to the Messaging library, making almost all our components correlation-ready.

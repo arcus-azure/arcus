@@ -74,7 +74,7 @@ For more information on both templates, see our official documentation:
 - [Azure Functions EventHubs trigger project template](https://templates.arcus-azure.net/features/azurefunctions-eventhubs-template)
 
 ## Finalizing Web API project template
-The Arcus Web API project template is the oldest and probably the most popular template in our library. It has been used in several projects and has been improved with feedback to strengthen it for real-life scenarios. The Arcus Templates v1.0 release does not include groundbreaking changes but does however include two small interventions that increase usability.
+The Arcus Web API project template is the oldest and probably the most popular template in our library. It has been used in several projects and has been improved with feedback to strengthen it for real-life scenarios. The two small changes in the Web API project template are not groundbreaking but they do increase usability.
 
 ### Default HTTP port
 People are often eager to begin. Creating a project from a template energizes them. 'All the boilerplate code is already written!' The logical consequence is that people want to start the project as soon as possible, seeing how everything works together. The problem with the template before this release was that it did not contain a default HTTP port, so it could not be started out-of-the box. This port is usually not hard-coded and configured, but during development it is nice to not have to worry about these kind of trivial things. That is why we added a default HTTP port that makes the project run directly after creation.

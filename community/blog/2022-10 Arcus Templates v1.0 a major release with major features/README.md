@@ -30,7 +30,7 @@ private static IHostBuilder CreateHostBuilder(string[] args)
 }
 ```
 
-The project will still have an `OrderFunction` file that receives Azure Service Bus messages from the topic subscription. The difference here is that [Microsoft doesn't yet support all Service Bus message metadata](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus-trigger?tabs=isolated-process%2Cextensionv5&pivots=programming-language-csharp) so we had to be creative to retrieve this. But, no worries, the project has all the necessary functionality to fully support Arcus Messaging. Your focus remains on the implementation of your message handlers.
+The project will still have an `OrderFunction` file that receives Azure Service Bus messages from the topic subscription. The difference here is that [Microsoft doesn't yet support all Service Bus message metadata](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus-trigger?tabs=isolated-process%2Cextensionv5&pivots=programming-language-csharp) so we had to be creative to retrieve this. But, no worries, the project has all the necessary functionality to fully support Arcus Messaging. Your focus can remain on the implementation of your message handlers.
 For more information on the Azure Functions Service Bus trigger project template, see our [official documentation](https://templates.arcus-azure.net/features/azurefunctions-servicebus-topic-template).
 
 ## Adding Azure EventHubs project templates

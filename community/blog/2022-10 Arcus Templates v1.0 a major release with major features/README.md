@@ -6,7 +6,7 @@ Isolated Azure Functions is an alternative way for in-process Azure Functions. I
 
 This release introduces a project option to configure the functions worker of our Azure Functions project templates. Both in-process and isolated are supported; until Microsoft decides to stop supporting the former. Currently, only the Azure Functions Service Bus topic project template (and the new EventHubs project template) are having this option but rest assured, soon the remaining templates will follow suit.
 
-The biggest difference in isolated projects is that the project will have a `Program` instead of a `Startup` file. The Azure Functions project acts like a regular .NET worker project, in this way. Different from the worker templates is that Arcus only registers the message router because the Azure Functions is the message pump for the Service Bus message. Here is a snippet from the `Program` file that shows how we can make use of the `ConfigureFunctionsWorkerDefaults` extension to register all the necessary messaging functionality.
+The biggest difference in isolated projects is that the project will have a `Program` instead of a `Startup` file. The Azure Functions project acts like a regular .NET worker project, in this way. Different from the worker templates is that Arcus only registers the message router because the Azure Function is the message pump for the Service Bus message. Here is a snippet from the `Program` file that shows how we can make use of the `ConfigureFunctionsWorkerDefaults` extension to register all the necessary messaging functionality.
 ```csharp
 using Arcus.Security.Core.Caching.Configuration;
 using Microsoft.Extensions.DependencyInjection;

@@ -68,7 +68,7 @@ public Task ProcessMessageAsync(
 }
 ```
 
-Apart from this, the project's contents is very similar - if not identical: we use the Arcus Messaging EventHubs message pump in the .NET Worker project template and solely register the EventHubs message router in the Azure Functions variant. The message handler, too, is an exact copy in both templates which only shows the reusability of Arcus Messaging.
+Apart from this, the project's contents are very similar - if not identical: we use the Arcus Messaging EventHubs message pump in the .NET Worker project template and solely register the EventHubs message router in the Azure Functions variant. The message handler, too, is an exact copy in both templates which only shows the re-usability of Arcus Messaging.
 For more information on both templates, see our official documentation:
 - [Arcus EventHubs worker project template](https://templates.arcus-azure.net/features/eventhubs-worker-template)
 - [Azure Functions EventHubs trigger project template](https://templates.arcus-azure.net/features/azurefunctions-eventhubs-template)

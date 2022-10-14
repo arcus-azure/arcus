@@ -1,5 +1,5 @@
 # Arcus Templates v1.0: a major release with major features
-The Arcus Templates library is less prone to breaking changes as it does not provide code but starter projects. Because of this, major releases could be unnecessarily postponed. We decided to release Arcus Templates v1.0 as the number of features and changes is far too great for a minor release. Come see it for yourself in this run-down post of the release's highlights.
+Arcus Templates has been around for a while now and was previously published with version number 0.x.x.  Since we have created multiple projects using these templates, we feel Arcus Templates is now mature enough to be released as a production ready v1 release. Come and see it for yourself in this run-down post of this release highlights.
 
 ## Introducing isolated Azure Functions
 Isolated Azure Functions is an alternative way for in-process Azure Functions. It runs the implementation as a separate process - hence, the name 'isolated'. This provides many benefits to the consumer. One of which is more control over the hosting capabilities of the function. For more information on the difference between the two, see [Microsoft's documentation](https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-process-guide).

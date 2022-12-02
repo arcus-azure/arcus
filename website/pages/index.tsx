@@ -31,11 +31,13 @@ const Home: NextPage<Props> = ({ mdxSource, users, components }) => {
             <meta name="twitter:url" content={'https://arcus-azure.net/'} />
             <meta name="twitter:title" content={(mdxSource.frontmatter as any).title} />
             <meta name="twitter:description" content={(mdxSource.frontmatter as any).description} />
+            <meta property="twitter:image" content="/assets/arcus-social.jpg"></meta>
             <meta property="og:type" content="website" />
             <meta property="og:title" content={(mdxSource.frontmatter as any).title} />
             <meta property="og:description" content={(mdxSource.frontmatter as any).description} />
             <meta property="og:site_name" content={'Arcus'} />
             <meta property="og:url" content={'https://arcus-azure.net/'} />
+            <meta property="og:image" content="/assets/arcus-social.jpg"></meta>
           </React.Fragment>
         )}
       </Head>

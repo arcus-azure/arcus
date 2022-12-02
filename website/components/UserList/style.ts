@@ -72,6 +72,6 @@ export const User = styled.div`
   `}
 
   ${media.desktopSM`
-    margin: 0;
+    margin: 0 auto;
   `}
 `;

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { media } from '../../config/theme/util';
+import { List } from '../List/style';
 
 type Section = {
   centered?: boolean;
@@ -67,6 +68,12 @@ export const Left = styled.div<Left>`
 export const Right = styled.div`
   p {
     margin-bottom: 48px;
+  }
+
+  ${List} {
+    li::marker {
+      content: '✓ ';
+    }
   }
 `;
 

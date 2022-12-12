@@ -1,5 +1,5 @@
 # Rethinking event publishing in Arcus EventGrid v3.3
-The Arcus EventGrid v3.3 brings event publishing to a whole new level. It both simplifies and enhances the whole process into something very powerful. Keep reading to find out why. 
+The Arcus EventGrid v3.3 release brings event publishing to a whole new level. It both simplifies and enhances the whole process into something very powerful. Keep reading to find out why. 
 
 ## Moving towards new Azure SDK
 The v3.3 release steps away from defining our very own event publishing contract. Previously, we used an `IEventGridPublisher` interface and builder to create an instance of this interface. This instance could be injected into all the parts of your system that needed event publishing. We used it ourselves when we needed to publish events based on potential expired client secrets. There is, however, a problem here that only recently became a huge one: Microsoft's [`EventGridPublisherClient`](https://www.nuget.org/packages/Azure.Messaging.EventGrid/) does exactly that. With the dependency injection-supported Azure clients, you could inject such a client and publish events without Arcus. This is what software is about, something new comes up and everything changes.

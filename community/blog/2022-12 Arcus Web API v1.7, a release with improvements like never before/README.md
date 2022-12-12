@@ -9,7 +9,7 @@ Microsoft uses activities behind the scenes to set and get hold of the correlati
 ⚡ Note that you only have to upgrade to the v1.7 release to make use of this new way of correlation. Not a single line of code has to be changed as all the complexity happens behind the scenes.
 
 ## Grouping API endpoints based on route parameters
-When tracking HTTP requests on API endpoints with a route parameters, Arcus previously distinguished those requests from each other. A different route parameter resulted in a different kind of operation name in Application Insights, while the API endpoint remained the same. This causes a lot of headaches when localizing a certain endpoint. This looks something like this:
+When tracking HTTP requests on API endpoints with route parameters, Arcus previously distinguished those requests from each other. A different route parameter resulted in a different kind of operation name in Application Insights, while the API endpoint remained the same. This causes a lot of headaches when localizing a certain endpoint. This looks something like this:
 
 ![HTTP request tracking without route template](media/without-route-template.png)
 

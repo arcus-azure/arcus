@@ -61,7 +61,7 @@ In v3.3 we made sure that the registered event publisher uses the new W3C correl
 Look out for [more information about event publishing](https://eventgrid.arcus-azure.net/Features/publishing-events) where we discuss how you can add such a custom delivery property and how this works with other event subscribers.
 
 ## Managed identity authentication support
-But that is not all. v3.3 does not only contain a whole new way of event publishing and event correlation, but we also made sure that you can now more easily register such an event publisher with the recommended managed identity authentication system.
+But that is not all. v3.3 does not only contain a whole new way of event publishing and event correlation features, but we also made sure that you can now more easily register such an event publisher with the recommended managed identity authentication system.
 
 Using managed identity during the event publisher registration only requires a topic endpoint, making it not only the most recommended but the easiest way to register event publishers:
 ```csharp

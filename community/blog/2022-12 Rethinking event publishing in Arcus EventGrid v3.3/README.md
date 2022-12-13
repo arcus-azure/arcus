@@ -63,7 +63,7 @@ Look out for [more information about event publishing](https://eventgrid.arcus-a
 ## Managed identity authentication support
 But that is not all. v3.3 does not only contain a whole new way of event publishing and event correlation features, but we also made sure that you can now more easily register such an event publisher with the recommended managed identity authentication system.
 
-Using managed identity during the event publisher registration only requires a topic endpoint, making it not only the most recommended but the easiest way to register event publishers:
+Using managed identity during the event publisher registration only requires a topic endpoint, making it not only the safest but the easiest way to register event publishers:
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
 

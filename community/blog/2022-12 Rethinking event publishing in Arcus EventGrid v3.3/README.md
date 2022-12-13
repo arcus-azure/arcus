@@ -52,7 +52,7 @@ public class MyService
 Look out for [more information about event publishing](https://eventgrid.arcus-azure.net/Features/publishing-events) and the [Arcus secret store](https://security.arcus-azure.net/features/secret-store).
 
 ## Moving towards W3C correlation
-When implementing service-to-service correlation across our Arcus components, we used a hierarchical approach. This approach is made deprecated which means that we will have to move towards a new way of correlation. W3C is the way forward. The interesting thing about Microsoft's event publishing and event subscribing system is that it does not come with an automatic service-to-service correlation like other components. This means that Arcus can be a real added value here.
+When implementing service-to-service correlation across our Arcus components, we used a hierarchical approach. This approach is deprecated which means that we will have to move towards a new way of correlation. W3C is the way forward. The interesting thing about Microsoft's event publishing and event subscribing system is that it does not come with an automatic service-to-service correlation like other components. This means that Arcus can be a real added value here.
 
 In v3.3 we made sure that the registered event publisher uses the new W3C correlation and that with a single `traceparent` [custom delivery property](https://learn.microsoft.com/en-us/azure/event-grid/delivery-properties), you could make sure that the event subscriber is correlated to the event publisher. When an event is published and sent toward an Azure Service Bus instance, for example, then Azure Application Insights will make this parent-child relationship visible in the transaction overview.
 

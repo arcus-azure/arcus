@@ -1,5 +1,5 @@
 # Synchronous secret retrieval in Arcus Security v1.9
-In some cases, an asynchronous is missing. This causes a bit of friction that the newest Arcus Security release has fixed with minimal change to your code base.
+In some cases, an asynchronous context is missing. This causes a bit of friction that the newest Arcus Security release has fixed with minimal change to your code base.
 
 ## The problem with asynchronous-only secret retrieval
 The Arcus secret store is a very reliable and well-used functionality. It provides an alternative to storing sensitive secrets together with public application configuration values ([learn more about why this is important](https://www.codit.eu/blog/introducing-secret-store-net-core/)). Throughout the following releases, the secret store has grown in functionality and usability. It supports caching, secret versions, and lets you retrieve a single secret provider by name and is fully extensible. But there was a piece missing in this structure, and that is synchronous secret retrieval.

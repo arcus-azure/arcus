@@ -84,10 +84,12 @@ public class RegistrySecretProvider : ISyncSecretProvider
 }
 ```
 
+For more information about creating your custom secret provider, see [our official documentation](https://security.arcus-azure.net/Features/secret-store/create-new-secret-provider).
+
 ## Conclusion
 Adding synchronous secret retrieval to the Arcus secret store was not only a much-needed but also the one true missing link for people that still store secrets in the application configuration. The `IConfiguration` only has synchronous operations, which makes the transition toward the Arcus secret store a little bit cumbersome. Now that this feature is available, we can say that we with Arcus support a fully working alternative that provides security and flexibility to your application.
 
-If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact the Arcus team at Codit](https://github.com/arcus-azure/arcus.security/issues/new/choose).
+For more information about the secret store, see [our official documentation](https://security.arcus-azure.net/features/secret-store). If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact the Arcus team at Codit](https://github.com/arcus-azure/arcus.security/issues/new/choose).
 
 Thank you for reading!
 The Arcus team

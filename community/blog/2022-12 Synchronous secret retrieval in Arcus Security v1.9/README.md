@@ -51,7 +51,7 @@ Note that we still use the `ISecretProvider` and do not need to add any other ty
 ## Implementing your own synchronous secret provider
 The Arcus secret store was from its inception very flexible and extensible and that is also why we made a new interface in the same way we have the `ICachedSecretProvider` and `IVersionedSecretProvider`. This lets consumers choose if they want their secret provider to support synchronous secret retrieval or not. If not, then the secret store will either check for a different registration that does support it or throw a `NotSupportedException` if none does.
 
-Implementing a secret provider that does check the Windows Registry for secrets could look like this:
+Implementing a secret provider that checks the Windows Registry for secrets could look like this:
 ```csharp
 using Arcus.Security.Core;
 using Microsoft.Win32;

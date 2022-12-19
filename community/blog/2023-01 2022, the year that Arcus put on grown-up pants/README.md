@@ -28,7 +28,7 @@ You might already have noticed the new logo in the statistics diagram. Arcus has
 .NET Core will be deprecated at the end of this year. Therefore, we have made it our commitment to add .NET 6 support to all Arcus libraries - while still supporting .NET Core. This is a good example of how we used small releases with big impact. .NET 6 was a big requested feature, and we have learned quite a bit about cross-repository changes and to do this even more smoothly for .NET 8 and beyond (We are mostly supporting LTS).
 
 ## Conclusion
-Arcus took a huge step toward maturity in 2022. We have released lots of new and enhanced functionality, updated our feature documentation with user guides and other helpful descriptions, and rebranded everything related to Arcus.
+Arcus took a huge step towards maturity in 2022. We have released lots of new and enhanced functionality, updated our feature documentation with user guides and other helpful descriptions, and rebranded everything related to Arcus.
 
 This list is by far not complete. There are a lot of technical updates on our repositories that can be looked over in more detail. For more information on our available repositories, see [our general Arcus site](https://arcus-azure.net/).
 

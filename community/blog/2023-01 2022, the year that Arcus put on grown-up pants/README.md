@@ -15,7 +15,7 @@ Correlation was a hot topic this year. Service-to-service correlation was a feat
 ## Secret management
 The Arcus secret store is a great Arcus feature that lets you store secrets more safely in a dedicated store with a single interaction point instead of being scattered in the already populated application configuration. This highly-extensible feature is one of the oldest features in our repertoire and just got more amazing this year.
 
-Versioned and synchronous secret retrieval were added to the Arcus secret store this year. Secret versions allow you to store multiple versions of a single secret in your registered secret providers. Synchronous secret retrieval is an alternative way of secret retrieval instead of the built-in supported asynchronous way. Both are big changes internally but rather small outward changes. Both were grown from consumer interaction with the secret store, making this great feature all the more greater.
+Versioned and synchronous secret retrieval was added to the Arcus secret store this year. Secret versions allow you to store multiple versions of a single secret in your registered secret providers. Synchronous secret retrieval is an alternative way of secret retrieval instead of the built-in supported asynchronous way. Both are big changes internally but rather small outward changes. Both were grown from consumer interaction with the secret store, making this great feature all the more greater.
 
 🚩 [More info on Arcus secret store](https://security.arcus-azure.net/features/secret-store)
 

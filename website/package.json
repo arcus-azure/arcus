@@ -26,6 +26,6 @@
     "@types/react-dom": "18.0.5",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
-    "next-remote-watch": "^1.0.0"
+    "next-remote-watch": "^2.0.0"
   }
 }

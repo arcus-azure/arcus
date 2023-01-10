@@ -1,5 +1,5 @@
 # The final W3C correlation puzzle piece in Arcus Observability v2.7
-What started as a wish for an easier and more quality telemetry correlation finally received its final puzzle piece. Read more to see what this final piece is all about.
+What started as a wish for an easier and better telemetry correlation finally received its final puzzle piece. Read more to see what this final piece is all about.
 
 ## Reusing telemetry component information
 The last couple of Arcus releases were all about W3C correlation and how we can let the telemetry of Microsoft and Arcus work together. Internal correlation IDs were set and reused so that both parties are talking about the same thing. One of the things missing, though, was metadata information. Telemetry from Microsoft didn't know about the component name that we are using with our Arcus telemetry, for example. You won't see any problem in the transaction trace, but you will see strange things happen in the application map on Application Insights as it would seem that a single component is split in two - one for Arcus, one for Microsoft.

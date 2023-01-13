@@ -4,9 +4,7 @@ Managing roles during JWT validation was tedious and repetitive work. Luckily, t
 ## Validating JSON web tokens in Azure API Management
 The `validate-jwt` policy in Azure API Management provides the capability to enforce a valid JWT in an incoming HTTP request. One of these validation rules is whether certain roles have been assigned to a service principal. This authorization functionality is very useful to allow/deny certain functionality to users of the application.
 
-Management of service principal roles to certain Azure Directory Applications is rather tedious. One has to look up the role assignments of an Azure Active Directory application to find out if the service principal has the correct access. Moreover, in certain scenarios, one has to wait a couple of seconds before a role assignment is available for use. All this adds to the problem of managing a service principal for validating JWTs in Azure API Management.
-
-An example of such policy is shown here:
+An example of such a policy is shown here:
 
 ```xml
 <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized. Access token is missing or invalid.">
@@ -21,6 +19,8 @@ An example of such policy is shown here:
     </required-claims>
 </validate-jwt>
 ```
+
+Management of service principal roles to certain Azure Directory Applications is rather tedious. One has to look up the role assignments of an Azure Active Directory application to find out if the service principal has the correct access. Moreover, in certain scenarios, one has to wait a couple of seconds before a role assignment is available for use. All this adds to the problem of managing a service principal for validating JWTs in Azure API Management.
 
 ## List, add, and remove role assignments for a service principal
 In a single Arcus Scripting release, we have fully fixed the problem of role assignments for a service principal. In a new `Arcus.Scripting.ActiveDirectory` PowerShell module, we have created three functions that let you list, add, and remove role assignments to let a service principal access an Azure Active Directory.

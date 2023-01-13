@@ -2,7 +2,7 @@
 Managing roles during JWT validation was tedious and repetitive work. Luckily, the newest Arcus Scripting release changed that.
 
 ## Validating JSON web tokens in Azure API Management
-The `validate-jwt` policy in Azure API Management provides the capability to consumers to enforce a valid JWT in an incoming HTTP request. One of these validation rules is whether certain roles have been assigned to a service principal. This authorization functionality is very useful to allow/deny certain functionality to users of the application.
+The `validate-jwt` policy in Azure API Management provides the capability to enforce a valid JWT in an incoming HTTP request. One of these validation rules is whether certain roles have been assigned to a service principal. This authorization functionality is very useful to allow/deny certain functionality to users of the application.
 
 Management of service principal roles to certain Azure Directory Applications is rather tedious. One has to look up the role assignments of an Azure Active Directory application to find out if the service principal has the correct access. Moreover, in certain scenarios, one has to wait a couple of seconds before a role assignment is available for use. All this adds to the problem of managing a service principal for validating JWTs in Azure API Management.
 

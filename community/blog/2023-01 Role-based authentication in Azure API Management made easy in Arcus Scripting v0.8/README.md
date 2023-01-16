@@ -23,7 +23,7 @@ An example of such a policy is shown here:
 Management of service principal roles to certain Azure Directory Applications is rather tedious. One has to look up the role assignments of an Azure Active Directory application to find out if the service principal has the correct access. Moreover, in certain scenarios, one has to wait a couple of seconds before a role assignment is available for use. All this adds to the problem of managing a service principal for validating JWTs in Azure API Management.
 
 ## List, add, and remove role assignments for a service principal
-In a single Arcus Scripting release, we have fully fixed the problem of role assignments for a service principal. In a new `Arcus.Scripting.ActiveDirectory` PowerShell module, we have created three functions that let you list, add, and remove role assignments to let a service principal access an Azure Active Directory.
+In a single Arcus Scripting release, we have fully fixed the problem of role assignments for a service principal. In a new `Arcus.Scripting.ActiveDirectory` PowerShell module, we have created three functions that let you list, add, and remove role assignments to a service principal in Azure Active Directory.
 
 ```powershell
 PS> List-AzADAppRoleAssignments `

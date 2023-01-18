@@ -89,6 +89,8 @@ This will greatly reduce the observability clutter in your application.
 
 Future dependent services that are not one of Microsoft's resources can still be easily tracked with Arcus telemetry. All other technology will be tracked automatically.
 
+💡 All the [Arcus project templates](https://templates.arcus-azure.net/) will be adapted to this new way of working so that new projects can also benefit from this behavior.
+
 ## Conclusion
 What's great about this update, is that it does not break current behavior but only extends it with automatic dependency tracking via the Application Insights services. There were some arguments to still use the Application Insights SDK instead of our Arcus Serilog sink setup, but this new update renders this difference mute. They now work together.
 

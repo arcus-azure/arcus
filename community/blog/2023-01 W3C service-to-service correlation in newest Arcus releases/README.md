@@ -60,6 +60,8 @@ public class Program
 
 ⚡ Notice that there are no additional changes required for API, Messaging-specific or event Azure Functions applications. All the critical changes are internal. The modifications described here are just to create a seamless integration with Microsoft technology. Behind the scenes, the `AddAppName`/`Add...AppVersion` will make sure that Microsoft's `TelemetryClient` is configured as appropriate. This same client will be re-used when registering the Serilog sink.
 
+⚠ It's worth noting that these changes need to happen across all your applications as these will now use W3C correlation by default. Not changing them will result in a broken transaction diagram. You can always move back to hierarchical to do this migration in steps. 
+
 ## Moving forward
 After the packages are upgraded and the small observability changes are added, we can look at the current and future tracked telemetry. Because this new system uses Microsoft's default W3C correlation format, all called dependent services will be tracked automatically. This includes HTTP requests, SQL commands and any Azure services like Azure Service Bus or EventHubs. This means that if you have tracked such service before with Arcus extensions, you can now remove this (otherwise it will be tracked twice). 
 

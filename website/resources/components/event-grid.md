@@ -1,6 +1,6 @@
 ---
 title: Arcus Event Grid
-description: Azure Event Grid development in a breeze.
+description: Transient EventGrid event publishing and integration test fixtures for easy use.
 github: https://github.com/arcus-azure/arcus.eventgrid
 documentation: https://eventgrid.arcus-azure.net/
 type: component

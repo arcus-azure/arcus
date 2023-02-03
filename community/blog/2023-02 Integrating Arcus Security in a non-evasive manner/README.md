@@ -1,4 +1,4 @@
-# Integrating Arcus Security in a non-evasive manner
+# Integrating Arcus Security in a non-invasive manner
 One of the issues with integrating Arcus in projects is that it is thought of as 'evasive', or 'breaking current functionality'. This post will show you how Arcus can make your application more secure, without bulldozing into your code base.
 
 ## Existing (Azure Functions) application

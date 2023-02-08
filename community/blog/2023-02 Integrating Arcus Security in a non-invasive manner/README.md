@@ -2,7 +2,7 @@
 One of the issues with integrating Arcus in projects is that it is thought of as 'evasive', or 'breaking current functionality'. This post will show you how Arcus can make your application more secure, without bulldozing into your code base.
 
 ## Existing (Azure Functions) application
-There exists a misconception that Arcus is not available in Azure Functions, so for the sake of this exercise, we will show you how an existing Azure Function HTTP trigger can be altered to use Arcus Security to retrieve its secrets.
+There is a misconception that Arcus is not available in Azure Functions, so for the sake of this exercise, we will show you how an existing Azure Function HTTP trigger can be altered to use Arcus Security to retrieve its secrets.
 
 Let's first start with the basics: we have an Azure Functions HTTP trigger application that reads environment variables and connects to an Azure Blob storage. In fast development cycles, all the necessary information (both secrets and configuration) is currently presented to the application in environment variables.
 

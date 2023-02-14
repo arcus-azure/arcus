@@ -26,7 +26,7 @@ The new site has three practical use cases that show:
 In a step-by-step walkthough, we show you what's the difference at code and high level of using Arcus in your project. Any uncertainty will be removed, any hesitance will be resolved. Arcus is ready.
 
 ## Conclusion
-We have really listened to the issues and problems of using Arcus. We have bundled the answers on our new site and made sure that any arguments of not using Arcus are quickly resolved. This new website promotes the real value of Arcus that it deserves. It brings clarity in what was before a scattered project across feature documentation for each component. Now we have a central place to answer your questions, show you the advantages, and walk you through the process of adapting Arcus in your project.
+We have really listened to the issues and problems of using Arcus. We have bundled the answers on our new site and made sure that any arguments of not using Arcus are quickly resolved. This new website promotes the real value of Arcus that it deserves. It brings clarity in what was before a scattered project across feature documentation for each component. Now we have a central place to answer your questions, show you the advantages, and walk you through the process of adopting Arcus in your project.
 
 🎉 See [the new website](https://arcus-azure.net/) for yourself!
 

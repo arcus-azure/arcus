@@ -9,7 +9,7 @@ We already had a general Arcus site, but the problem was that it did not contain
 ## The 'What', 'Why', and 'How' questions
 It was the perfect time, during the creation of the new site with new contents, to reflect on what the general Arcus website should say and inform on. As Arcus is already available and used for several years, we know what the common issues are for not adopting Arcus. It was therefore our goal to make this new site a central place to answer all these common questions.
 
-'What is Arcus?', 'Why should I use Arcus?', and 'How do I use Arcus?' are by far the winners in the struggle for adaption.
+'What is Arcus?', 'Why should I use Arcus?', and 'How do I use Arcus?' are by far the winners in the struggle for adoption.
 
 ![Arcus site navigation](media/navigation.png)
 

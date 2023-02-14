@@ -2,7 +2,7 @@
 Arcus has received many updates regarding the branding of each component's feature documentation. Just recently, we took the final step in the rebranding of Arcus: a whole new general Arcus landing zone.
 
 ## Central place for everything Arcus
-We already had a general Arcus site, but the problem was that it did not contain enough information to have almost any reason to exist. The only reason we had it was to have a central location to direct people to and from where they could be redirected to specific Arcus components. With the rebranding of Arcus' style we also took it upon us to rethink our central place for everything Arcus. Instead of it being a meager 'forwarding' site, it is now the place to be to find any general information on Arcus. We have listened to the comments of the people using Arcus and the people hesitant to use Arcus. With this knowledge, the website has received a whole new makeover that will maximize adaptation.
+We already had a general Arcus site, but the problem was that it did not contain enough information to have almost any reason to exist. The only reason we had it was to have a central location to guide people to where they could find specific Arcus components. With the rebranding of Arcus' style we also took it upon us to rethink our central place for everything Arcus. Instead of it being a meager 'forwarding' site, it is now the place to be to find any general information on Arcus. We have listened to the comments of the people using Arcus and the people hesitant to use Arcus. With this knowledge, the website has received a whole new makeover that will maximize adoption.
 
 🎉 Navigate to [the new website](https://arcus-azure.net/)!
 

@@ -4,5 +4,4 @@ description: Strengthen your application with commonly repeated tasks ranging fr
 github: https://github.com/arcus-azure/arcus.backgroundjobs
 documentation: https://background-jobs.arcus-azure.net/
 type: component
-featured: true
 ---

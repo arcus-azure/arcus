@@ -4,4 +4,5 @@ description: Kickstart your project with .NET project templates which already in
 github: https://github.com/arcus-azure/arcus.templates
 documentation: https://templates.arcus-azure.net/
 type: component
+featured: true
 ---

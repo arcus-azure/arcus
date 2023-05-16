@@ -28,7 +28,7 @@ PS> Cancel-AzLogicAppRuns `
 # Successfully cancelled all running instances for the Azure Logic App 'rcv-shopping-order-sftp' in resource group 'rg-common-dev'
 ```
 
-🚩 It is important to note that this functionality is externally requested by a contributor. It is yet another a great example of how the usability of the Arcus Scripting library. It is fully grown out of the frustration and struggles of interacting with Azure-related resources using PowerShell. An extra layer that makes this interaction more comfortable and logical.
+🚩 It is important to note that this functionality is externally requested by a contributor. It is yet another a great example of how the usability of the Arcus Scripting library. It is fully grown out of the challenges and struggles of interacting with Azure-related resources using PowerShell. An extra layer that makes this interaction more comfortable and logical.
 
 🔗 For more information on this particular command and other Logic Apps-related commands in this module, [see our feature documentation](https://scripting.arcus-azure.net/Features/powershell/azure-logic-apps).
 

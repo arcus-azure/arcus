@@ -33,7 +33,7 @@ PS> Cancel-AzLogicAppRuns `
 🔗 For more information on this particular command and other Logic Apps-related commands in this module, [see our feature documentation](https://scripting.arcus-azure.net/Features/powershell/azure-logic-apps).
 
 ## Azure DevOps
-There is not even an Azure DevOps package that lets you interact with DevOps-related custom functionality. Interacting with DevOps functionality requires constant research for the correct syntax and possibilities. Luckily, with Arcus Scripting we have bundled commonly used functionality in the `Arcus.Scripting.DevOps` module which the v1.0 release enhances even further. 
+Interacting with DevOps functionality requires constant research for the correct syntax and possibilities. Luckily, with Arcus Scripting we have bundled commonly used functionality in the `Arcus.Scripting.DevOps` module which the v1.0 release enhances even further. 
 
 ### Set a variable as secret
 Setting a secret in Azure DevOps dynamically at runtime requires you to write a specially designed host message. Because of this fragile way of working, we already had a command that was able to do this for you. This release now adds the option to dynamically write a variable as a secret. This means that it is not publicly logged in the build output so is handled with more care.

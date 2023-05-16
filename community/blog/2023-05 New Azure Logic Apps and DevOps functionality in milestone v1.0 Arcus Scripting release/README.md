@@ -61,7 +61,7 @@ PS> Save-AzDevOpsBuild `
 ## Conclusion
 We have released Arcus Scripting v1.0! 🎉
 
-This new major release has besides some great new and enhanced functionality a big role to play. From now on we are confident that the Arcus Scripting library is ready for the public. It has been used across several projects, has received many enhancement and feature requests, which makes it mature enough for us to decide to take this milestone of a step.
+Besides some great new and enhanced functionality this new major release has a big role to play. We are confident that the Arcus Scripting library is ready for the public. It has been used across several projects, has received many enhancement and feature requests, which makes it mature enough for us to decide to take this milestone of a step.
 
 Have a look at our [release notes](https://github.com/arcus-azure/arcus.scripting/releases/tag/v1.0.0) and [official documentation](https://scripting.arcus-azure.net/) for more information on this new release.
 

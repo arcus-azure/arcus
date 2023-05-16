@@ -2,7 +2,7 @@
 We recently released the milestone v1.0 release in the Arcus Scripting library. Besides new functionality, this is a milestone in bringing reliable scripting functionality to projects.
 
 ## Azure Logic Apps
-Azure Logic Apps functionality is already a long-time part of the Arcus Scripting library. The recent changes only expand the usability further to bring real added value to projects working with Logic Apps.
+Azure Logic Apps functionality has been a part of the Arcus Scripting library for a long time. The recent changes only expand the usability further to bring real added value to projects working with Logic Apps.
 
 ### Resubmit failed instances on an Azure Logic App
 One of the hurdles with managing failed Azure Logic Apps instances is that you have to manually resubmit each instance individually in the Azure Portal. There is no 'batch' functionality available for this kind of operation. That is why the new v1.0 release has a new command in the `Arcus.Scripting.LogicApps` PowerShell module that lets you interact with the Logic App in a more high-level way. Instead of specifying each failed instance separately, it uses date filtering to get many failed instances in a given time frame.

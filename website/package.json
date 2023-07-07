@@ -10,7 +10,7 @@
   "dependencies": {
     "@types/node": "18.11.17",
     "@mapbox/rehype-prism": "^0.8.0",
-    "@types/styled-components": "^5.1.25",
+    "@types/styled-components": "^5.1.26",
     "date-fns": "^2.28.0",
     "gray-matter": "^4.0.3",
     "modern-normalize": "^1.1.0",

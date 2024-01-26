@@ -12,7 +12,7 @@ The new release is a major release, which also brings some removals. All depreca
 Some types were also removed, like the `DependencyMeasurement` which has been replaced by the `DurationMeasurement`. This was because we tracked not only the duration of dependency telemetry but also of requests, which made the old type illogical to use.
 
 ## Reusable telemetry context
-There also exists a fix in this release, which is the result of frequently using Arcus in the wild. The Observability library provides many logging extensions, almost all of them with a telemetry context. In a real-life project scenario, you might want to reuse the telemetry context across your logging so that all logging is tagged with the same custom dimensions. The problem with earlier releases; was that this was not taken into account as the context was being used as a mutable set. Making it difficult to reuse.
+There also exists a fix in this release, which is the result of frequently using Arcus in the wild. The Observability library provides many logging extensions, almost all of them with a telemetry context. In a real-life project scenario, you might want to reuse the telemetry context across your logging so that all logging is tagged with the same custom dimensions. The problem with earlier releases was that this was not taken into account as the context was being used as a mutable set. Making it difficult to reuse.
 
 The new release fixes this by interacting with the telemetry context in an immutable manner. Now the context can be used across logging so that the entire project logging can be streamlined. This is a great example of how practical usage of the Observability library results in better support and a more dev-friendly experience.
 

@@ -19,7 +19,7 @@ The new release fixes this by interacting with the telemetry context in an immut
 ## Conclusion
 Arcus Observability v3.0 is the first Arcus release of 2024 and immediately brings a whole lot of changes to the table. We expect soon other Arcus library releases with .NET 8 support.
 
- Take a look at the [release notes](https://github.com/arcus-azure/arcus.observability/releases/tag/v3.0.0) and [feature documentation](https://observability.arcus-azure.net/) to learn more about Arcus Observability.
+Take a look at the [release notes](https://github.com/arcus-azure/arcus.observability/releases/tag/v3.0.0) and [feature documentation](https://observability.arcus-azure.net/) to learn more about Arcus Observability.
 
 See [our official documentation](https://observability.arcus-azure.net/) for more information on all the currently supported features.
 If you have any questions, remarks, comments, or just want to discuss something with us; feel free to [contact us](https://github.com/arcus-azure/arcus.observability/issues/new/choose).

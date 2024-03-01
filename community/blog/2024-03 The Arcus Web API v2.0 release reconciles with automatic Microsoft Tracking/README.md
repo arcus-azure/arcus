@@ -1,5 +1,5 @@
 # The Arcus Web API v2.0 release reconciles with automatic Microsoft Tracking
-The new Arcus Web API release provides new support for both the new .NET framework, as well as reconciles any unsupported situations with automatic Microsoft Tracking in Azure Functions applications.
+The new Arcus Web API release provides support for both the new .NET framework, as well as reconciles any unsupported situations with automatic Microsoft Tracking in Azure Functions applications.
 
 ## .NET 8 support
 The new major Web API release is the third Arcus release that supports .NET 8. Same as with the previous releases, we have made sure that we still support .NET Standard 2.1 and .NET 6, but removed any reference with .NET Core. The impact of this will be more visible than the Observability and Security releases, as the Web API is one of the packages that is used directly in projects. Unlike Observability and Security, which are more core-like projects that other libraries build upon. It means that from now on, the real changes and power of .NET 8 will become visible in Arcus-supported projects.

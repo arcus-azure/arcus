@@ -15,7 +15,7 @@ A big enhancement in this release is the simplification of HTTP correlation. Pre
 Now the library is cleaned out of any deprecated members and is using an independent options model to configure HTTP correlation. This will make usage and extensibility much easier to use, while making the Observability library cleared of any specific implementation (which was previously the case with exposed HTTP language in the options).
 
 ## Conclusion
-Having a new version of the Web API library means that we finally are at the brick of converting entire Arcus-supported projects with .NET 8 support. This new major version a big deal, as it will bring both the best features of the new .NET framework as any Arcus enhancements that we finally worked through.
+Having a new version of the Web API library means that we finally are at the brick of converting entire Arcus-supported projects with .NET 8 support. This new major version is a big deal, as it will bring both the best features of the new .NET framework as any Arcus enhancements that we finally worked through.
 
 Take a look at the [release notes](https://github.com/arcus-azure/arcus.webapi/releases/tag/v2.0.0) and [feature documentation](https://webapi.arcus-azure.net/) to learn more about Arcus Web API.
 

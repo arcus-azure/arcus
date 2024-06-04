@@ -4,7 +4,7 @@ The v2.0 release in the Templates library brings all the previously released upd
 ## No more in-process Azure Functions
 Starting from v2.0, the `--function-worker` project option is removed and all Azure Functions project templates are always created with the isolated target. Removing the in-process-specific functionality has an impact on how correlation and runtime packages are used in the background. The Databricks project template is also removed entirely, as this one was only supported with in-process.
 
-The in-process option was mostly still there for backward compatibility, by default the isolated option was already chosen. Nonetheless is this big change that was required to be .NET 8 compatible.
+The in-process option was mostly still there for backward compatibility, by default the isolated option was already chosen. Nonetheless this is a big change that was required to be .NET 8 compatible.
 
 ## Nullable types
 Normally, the project templates try to not force certain ways of working upon the user. You see this in the minimal approach we use in the generated content of the resulting project. For nullable types, we made an exception as certain models that were provided gave warning signals on assigning nullable types to non-nullable values when the user activates nullable types.

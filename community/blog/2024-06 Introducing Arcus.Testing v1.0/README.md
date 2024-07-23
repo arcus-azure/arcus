@@ -1,8 +1,8 @@
 # Introducing Arcus.Testing v1.0
 The Arcus.Testing library was previously mostly used for internal usage but has recently received an update that makes it more broadly usable. Introducing v1.0.
 
-## Migration from Codit Testing Framework
-The Codit Testing Framework was a very good initiative in the past that tried to capture common practices in test suites and provide a central place to manage them. These functions were both Azure-specific and non-technical. While it was prefixed 'Codit' and was only for internal use, it did not contain any Codit-specific or 'secretive' functionality. The motivation for this initiative is very good, but it lacked the quality that Codit strives towards and several common test practices that our own DevOps/QA Practice advocates. The decision was made to move the initiative to Arcus, solving both problems in a single stroke: Arcus has built-in quality and is the result of Practice's decisions.
+## Migration from internal framework
+In the past, we had an internal framework that was a very good initiative that tried to capture common practices in test suites and provide a central place to manage them. These functions were both Azure-specific and non-technical. The motivation for this initiative is very good, but it lacked the quality that Codit strives towards and several common test practices that our own DevOps/QA Practice advocates. The decision was made to move the initiative to Arcus, solving both problems in a single stroke: Arcus has built-in quality and is the result of Practice's decisions.
 
 This brings us to Arcus.Testing v1.0, which contains all the non-Azure-specific functionality that previously resided in the Testing Framework, but there is more.
 
@@ -55,7 +55,7 @@ The idea behind these packages is that all test frameworks use different ways to
 These packages remove any specific testing framework-related code in any upcoming functionality. You can already see this in how the `DisposableCollection` is implemented: you can pass in an `ILogger`.
 
 ## Conclusion
-Arcus.Testing v1.0 is only the first step in providing meaningful functionality to test suites. It provides the baseline which all future functionality will build upon. It is the result of the initiative that started with the Codit Testing Framework, combined with Arcus quality and the experience that the DevOps/QA Practice provides.
+Arcus.Testing v1.0 is only the first step in providing meaningful functionality to test suites. It provides the baseline which all future functionality will build upon. It is the result of the initiative that started with the internal initiative, combined with Arcus quality and the experience that the DevOps/QA Practice provides.
 
 Have a look at our [release notes](https://github.com/arcus-azure/arcus.testing/releases/tag/v1.0.0) and [official documentation](https://testing.arcus-azure.net/) for more information on this new release.
 

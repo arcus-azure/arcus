@@ -1,5 +1,5 @@
 import React from 'react';
-import format from 'date-fns/format';
+import { format } from 'date-fns';
 import { PostMatter, UseCaseMatter } from '../../types';
 import * as Styled from './style';
 import Link from 'next/link';

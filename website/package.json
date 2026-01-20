@@ -25,6 +25,8 @@
   "devDependencies": {
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.10",
+    "eslint": "8.30.0",
+    "eslint-config-next": "12.3.7",
     "next-remote-watch": "^2.0.0"
   }
 }

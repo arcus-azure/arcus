@@ -5,7 +5,8 @@
   "scripts": {
     "build": "next build && next export",
     "start": "next-remote-watch ./resources",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@types/node": "24.10.9",
@@ -24,8 +25,8 @@
   "devDependencies": {
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.10",
-    "eslint": "8.30.0",
-    "eslint-config-next": "12.3.7",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.1.4",
     "next-remote-watch": "^2.0.0"
   }
 }

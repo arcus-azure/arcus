@@ -57,15 +57,29 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 </Columns>
 
 <Columns className="components">
+  <Column>
+    ![Security logo](/img/component.security.dark.jpg#gh-dark-mode-only)
+    ![Security logo](/img/component.security.light.jpg#gh-light-mode-only)
+  </Column>
+  <Column>
+    <h2>Arcus <span className="highlight">Security</span></h2>
+    Arcus Security helps with interacting with secrets in your application by introducing an abstraction layer that provides caching, mapping and high-end customization to external sources.
+
+    <Button icon={faBook} label="Docs" link="https://security.arcus-azure.net" className="components-docs-button" style={{marginRight: 10}} />
+    <Button icon={faGithub} label="GitHub" link="https://github.com/arcus-azure/arcus.security" className="components-gh-button" outline /> 
+  </Column>
+</Columns>
+
+<Columns className="components">
  <Column>
+    ![Testing logo](/img/component.testing.dark.jpg#gh-dark-mode-only)
+    ![Testing logo](/img/component.testing.light.jpg#gh-light-mode-only)
+  </Column>
+   <Column>
     <h2>Arcus <span className="highlight">Testing</span></h2>
     Arcus Testing helps with the creation, maintenance, and defect localization of code testing. Specifically designed to help with integration testing against Azure resources, but also helps with tech-independent infrastructure.
 
     <Button icon={faBook} label="Docs" link="https://testing.arcus-azure.net" className="components-docs-button" style={{marginRight: 10}} />
     <Button icon={faGithub} label="GitHub" link="https://github.com/arcus-azure/arcus.testing" className="components-gh-button" outline />
-  </Column>
- <Column>
-    ![Testing logo](/img/component.testing.dark.jpg#gh-dark-mode-only)
-    ![Testing logo](/img/component.testing.light.jpg#gh-light-mode-only)
   </Column>
 </Columns>

@@ -1,0 +1,19 @@
+{
+  "id": "components",
+  "title": "",
+  "description": "Arcus | Components",
+  "source": "@site/components.mdx",
+  "sourceDirName": ".",
+  "slug": "/components",
+  "permalink": "/components",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "",
+    "hide_table_of_contents": true,
+    "pagination_prev": null,
+    "pagination_next": null
+  }
+}

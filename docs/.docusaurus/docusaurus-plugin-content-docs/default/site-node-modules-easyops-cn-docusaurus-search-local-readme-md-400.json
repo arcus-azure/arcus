@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@easyops-cn/docusaurus-search-local/README",
+  "title": "README",
+  "description": "See https://github.com/easyops-cn/docusaurus-search-local#readme",
+  "source": "@site/node_modules/@easyops-cn/docusaurus-search-local/README.md",
+  "sourceDirName": "node_modules/@easyops-cn/docusaurus-search-local",
+  "slug": "/node_modules/@easyops-cn/docusaurus-search-local/",
+  "permalink": "/node_modules/@easyops-cn/docusaurus-search-local/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@easyops-cn/docusaurus-search-local/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Docusaurus Theme Mermaid",
+    "permalink": "/node_modules/@docusaurus/theme-mermaid/"
+  },
+  "next": {
+    "title": "Changelog",
+    "permalink": "/node_modules/@easyops-cn/docusaurus-search-local/CHANGELOG"
+  }
+}

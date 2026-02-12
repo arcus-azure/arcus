@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@docusaurus/core/README",
+  "title": "Docusaurus core",
+  "description": "",
+  "source": "@site/node_modules/@docusaurus/core/README.md",
+  "sourceDirName": "node_modules/@docusaurus/core",
+  "slug": "/node_modules/@docusaurus/core/",
+  "permalink": "/node_modules/@docusaurus/core/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@docusaurus/core/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Welcome",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "@docusaurus/preset-classic",
+    "permalink": "/node_modules/@docusaurus/preset-classic/"
+  }
+}

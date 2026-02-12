@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@easyops-cn/docusaurus-search-local/CHANGELOG",
+  "title": "Changelog",
+  "description": "All notable changes to this project will be documented in this file. See standard-version for commit guidelines.",
+  "source": "@site/node_modules/@easyops-cn/docusaurus-search-local/CHANGELOG.md",
+  "sourceDirName": "node_modules/@easyops-cn/docusaurus-search-local",
+  "slug": "/node_modules/@easyops-cn/docusaurus-search-local/CHANGELOG",
+  "permalink": "/node_modules/@easyops-cn/docusaurus-search-local/CHANGELOG",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@easyops-cn/docusaurus-search-local/CHANGELOG.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "README",
+    "permalink": "/node_modules/@easyops-cn/docusaurus-search-local/"
+  },
+  "next": {
+    "title": "@fortawesome/free-solid-svg-icons - SVG with JavaScript version",
+    "permalink": "/node_modules/@fortawesome/free-solid-svg-icons/"
+  }
+}

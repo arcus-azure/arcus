@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/url-loader/README",
+  "title": "README",
+  "description": "npm",
+  "source": "@site/node_modules/url-loader/README.md",
+  "sourceDirName": "node_modules/url-loader",
+  "slug": "/node_modules/url-loader/",
+  "permalink": "/node_modules/url-loader/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/url-loader/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "react-dom",
+    "permalink": "/node_modules/react-dom/"
+  },
+  "next": {
+    "title": "Changelog",
+    "permalink": "/node_modules/url-loader/CHANGELOG"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@fortawesome/react-fontawesome/README",
+  "title": "README",
+  "description": "npm",
+  "source": "@site/node_modules/@fortawesome/react-fontawesome/README.md",
+  "sourceDirName": "node_modules/@fortawesome/react-fontawesome",
+  "slug": "/node_modules/@fortawesome/react-fontawesome/",
+  "permalink": "/node_modules/@fortawesome/react-fontawesome/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@fortawesome/react-fontawesome/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "@fortawesome/free-solid-svg-icons - SVG with JavaScript version",
+    "permalink": "/node_modules/@fortawesome/free-solid-svg-icons/"
+  },
+  "next": {
+    "title": "@mdx-js/react",
+    "permalink": "/node_modules/@mdx-js/react/"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/file-loader/README",
+  "title": "README",
+  "description": "npm",
+  "source": "@site/node_modules/file-loader/README.md",
+  "sourceDirName": "node_modules/file-loader",
+  "slug": "/node_modules/file-loader/",
+  "permalink": "/node_modules/file-loader/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/file-loader/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Release Process",
+    "permalink": "/node_modules/docusaurus-plugin-image-zoom/RELEASE"
+  },
+  "next": {
+    "title": "Changelog",
+    "permalink": "/node_modules/file-loader/CHANGELOG"
+  }
+}

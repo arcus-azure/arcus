@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@svgr/webpack/README",
+  "title": "@svgr/webpack",
+  "description": "Build Status",
+  "source": "@site/node_modules/@svgr/webpack/README.md",
+  "sourceDirName": "node_modules/@svgr/webpack",
+  "slug": "/node_modules/@svgr/webpack/",
+  "permalink": "/node_modules/@svgr/webpack/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@svgr/webpack/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "@mdx-js/react",
+    "permalink": "/node_modules/@mdx-js/react/"
+  },
+  "next": {
+    "title": "clsx [![CI](https://github.com/lukeed/clsx/workflows/CI/badge.svg)](https://github.com/lukeed/clsx/actions?query=workflow%3ACI) [![codecov](https://badgen.net/codecov/c/github/lukeed/clsx)](https://codecov.io/gh/lukeed/clsx) [![licenses](https://licenses.dev/b/npm/clsx)](https://licenses.dev/npm/clsx)",
+    "permalink": "/node_modules/clsx/"
+  }
+}

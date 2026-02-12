@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/prism-react-renderer/README",
+  "title": "README",
+  "description": "A lean Prism highlighter component for React",
+  "source": "@site/node_modules/prism-react-renderer/README.md",
+  "sourceDirName": "node_modules/prism-react-renderer",
+  "slug": "/node_modules/prism-react-renderer/",
+  "permalink": "/node_modules/prism-react-renderer/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/prism-react-renderer/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Changelog",
+    "permalink": "/node_modules/file-loader/CHANGELOG"
+  },
+  "next": {
+    "title": "react",
+    "permalink": "/node_modules/react/"
+  }
+}

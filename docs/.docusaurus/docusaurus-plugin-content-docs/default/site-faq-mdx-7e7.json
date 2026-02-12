@@ -1,0 +1,18 @@
+{
+  "id": "faq",
+  "title": "Frequently asked questions",
+  "description": "'Arcus' is an umbrella term for a set of NuGet packages/PowerShell modules that helps reducing boilerplate code from projects. Whether it is setting up testing suite, automating infrastructure tasks or other frequently repeated patterns, Arcus provides a well-tested quality solution to kickstart your project.",
+  "source": "@site/faq.mdx",
+  "sourceDirName": ".",
+  "slug": "/faq",
+  "permalink": "/faq",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "hide_table_of_contents": true,
+    "pagination_prev": null,
+    "pagination_next": null
+  }
+}

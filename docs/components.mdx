@@ -1,0 +1,71 @@
+---
+title: ''
+hide_table_of_contents: true
+pagination_prev: null
+pagination_next: null
+---
+
+import Columns from '@site/src/components/Columns';
+import Column from '@site/src/components/Column';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+<head>
+  <title>Arcus | Components</title>
+</head>
+
+<Columns className="components">
+  <Column>
+    ![Testing logo](/img/component.messaging.dark.jpg#gh-dark-mode-only)
+    ![Testing logo](/img/component.messaging.light.jpg#gh-light-mode-only)
+  </Column>
+  <Column>
+    <h2>Arcus <span className="highlight">Messaging</span></h2>
+    Arcus Messaging helps with abstracting away boilerplate code when integrating with messaging systems like Azure Service Bus. It allows you to focus on implementing business logic instead of spending time with message picking, connections, deserialization, and the like.
+
+    <Button icon={faBook} label="Docs" link="https://messaging.arcus-azure.net" className="components-docs-button" style={{marginRight: 10}} />
+    <Button icon={faGithub} label="GitHub" link="https://github.com/arcus-azure/arcus.messaging" className="components-gh-button" outline />
+  </Column>
+</Columns>
+
+<Columns className="components">
+   <Column>
+    <h2>Arcus <span className="highlight">Observability</span></h2>
+    Arcus Observability helps with tracking telemetry in projects by simplifying, combining and hiding observability code infrastructure behind a developer-friendly and a highly extensible facade. Perfect in synchronized with built-in telemetry tracking. 
+
+    <Button icon={faBook} label="Docs" link="https://observability.arcus-azure.net" className="components-docs-button" style={{marginRight: 10}} />
+    <Button icon={faGithub} label="GitHub" link="https://github.com/arcus-azure/arcus.observability" className="components-gh-button" outline />
+  </Column>
+  <Column>
+    ![Testing logo](/img/component.observability.dark.jpg#gh-dark-mode-only)
+    ![Testing logo](/img/component.observability.light.jpg#gh-light-mode-only)
+  </Column>
+</Columns>
+
+<Columns className="components">
+ <Column>
+    ![Testing logo](/img/component.scripting.dark.jpg#gh-dark-mode-only)
+    ![Testing logo](/img/component.scripting.light.jpg#gh-light-mode-only)
+  </Column>
+   <Column>
+    <h2>Arcus <span className="highlight">Scripting</span></h2>
+    Arcus Scripting helps with frequently-used, repeated tasks in Azure. Categorized in separate PowerShell modules, these functions help with backing up your API Management service, removing resource locks, disabling Logic Apps, injecting content in ARM templates, and many more.
+
+    <Button icon={faBook} label="Docs" link="https://scripting.arcus-azure.net" className="components-docs-button" style={{marginRight: 10}} />
+    <Button icon={faGithub} label="GitHub" link="https://github.com/arcus-azure/arcus.scripting" className="components-gh-button" outline />
+  </Column>
+</Columns>
+
+<Columns className="components">
+ <Column>
+    <h2>Arcus <span className="highlight">Testing</span></h2>
+    Arcus Testing helps with the creation, maintenance, and defect localization of code testing. Specifically designed to help with integration testing against Azure resources, but also helps with tech-independent infrastructure.
+
+    <Button icon={faBook} label="Docs" link="https://testing.arcus-azure.net" className="components-docs-button" style={{marginRight: 10}} />
+    <Button icon={faGithub} label="GitHub" link="https://github.com/arcus-azure/arcus.testing" className="components-gh-button" outline />
+  </Column>
+ <Column>
+    ![Testing logo](/img/component.testing.dark.jpg#gh-dark-mode-only)
+    ![Testing logo](/img/component.testing.light.jpg#gh-light-mode-only)
+  </Column>
+</Columns>

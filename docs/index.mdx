@@ -1,0 +1,82 @@
+---
+title: ''
+hide_table_of_contents: true
+pagination_prev: null
+pagination_next: null
+---
+
+import Columns from '@site/src/components/Columns';
+import Column from '@site/src/components/Column';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCubes, faStopwatch, faEuroSign } from '@fortawesome/free-solid-svg-icons';
+
+<head>
+  <title>Arcus | Simplify your Azure development</title>
+</head>
+
+<Columns className="showcase">
+  <Column className="simplify-title">
+  
+  <h1><span className="highlight">Simplify</span> your Azure development</h1>
+  'Arcus' is an umbrella term for a series of NuGet packages/PowerShell modules to build applications running on Microsoft Azure, faster and more robust.
+
+  </Column>
+  <Column>
+
+  ![Showcase product image](/img/showcase.dark.jpg#gh-dark-mode-only)
+  ![Showcase product image](/img/showcase.light.jpg#gh-light-mode-only)
+
+  </Column>
+</Columns>
+
+
+<Columns className="advantages">
+  <Column>
+    <FontAwesomeIcon icon={faStopwatch} className="highlight advantages-icon" />
+    <span className="advantages-title">Less code</span>
+    Removes boilerplate code from your project to speed up project development.
+  </Column>
+    <Column>
+    <FontAwesomeIcon icon={faCubes} className="highlight advantages-icon" />
+    <span className="advantages-title">Modular design</span>
+    Pick, choose and extend one or more parts that adds value to your project.
+  </Column>
+    <Column>
+    <FontAwesomeIcon icon={faEuroSign} className="highlight advantages-icon" />
+    <span className="advantages-title">Free to use</span>
+    Open-source under MIT License, now and always.
+  </Column>
+</Columns>
+
+<span className="adopted-by-title">Adopted by</span>
+<Columns>
+  <Column className="adopted-by-logo">
+    [![Codit logo](/img/user_codit.png)](https://codit.eu)
+  </Column>
+  <Column className="adopted-by-logo">
+    [![Kubernetes Event Grid Bridge logo](/img/user_kubernetes-event-grid-bridge.png)](https://docs.k8s-event-grid-bridge.io/)
+  </Column>
+  <Column className="adopted-by-logo">
+    [![Promitor logo](/img/user_promitor.png#gh-light-mode-only)](https://promitor.io/)
+    [![Promitor logo](/img/user_promitor.dark.png#gh-dark-mode-only)](https://promitor.io/)
+  </Column>
+  <Column className="adopted-by-logo">
+    [![Van Gelder logo](/img/user_van-gelder.png#gh-light-mode-only)](https://www.vangeldernederland.nl/nl_NL/)
+    [![Van Gelder logo](/img/user_van-gelder.dark.png#gh-dark-mode-only)](https://www.vangeldernederland.nl/nl_NL/)
+  </Column>
+</Columns>
+
+
+<h1 className="exploring-title"><span className="highlight">Start</span> exploring</h1>
+<p className="exploring-description">All Arcus components are available via NuGet and the PowerShell Gallery. Browse our [full catalog](./components.mdx) to learn more.</p>
+<Columns>
+  <Column>
+    <h2 className="exploring-contribute-title">Want to <br/> <span className="highlight">contribute</span>?</h2>
+  </Column>
+  <Column>
+    <span className="exploring-contribute-description">
+      Arcus is constantly updated by contributions from Codit employees and abroad! We happily accept your contributions! Have a look at our [contribution guide](https://github.com/arcus-azure/.github/blob/main/CONTRIBUTING.md) and thank you!
+    </span>
+  </Column>
+</Columns>

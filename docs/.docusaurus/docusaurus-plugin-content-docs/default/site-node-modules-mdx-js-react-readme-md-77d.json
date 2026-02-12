@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@mdx-js/react/readme",
+  "title": "@mdx-js/react",
+  "description": "Build",
+  "source": "@site/node_modules/@mdx-js/react/readme.md",
+  "sourceDirName": "node_modules/@mdx-js/react",
+  "slug": "/node_modules/@mdx-js/react/",
+  "permalink": "/node_modules/@mdx-js/react/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@mdx-js/react/readme.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "README",
+    "permalink": "/node_modules/@fortawesome/react-fontawesome/"
+  },
+  "next": {
+    "title": "@svgr/webpack",
+    "permalink": "/node_modules/@svgr/webpack/"
+  }
+}

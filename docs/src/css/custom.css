@@ -1,25 +1,28 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
 :root {
-  /* Primary theme color: Modernized Navy Blue */
-  --ifm-color-primary: #0e223d;
-  --ifm-color-primary-dark: #0c1e36;
-  --ifm-color-primary-darker: #0a1a2f;
-  --ifm-color-primary-darkest: #061320;
-  --ifm-color-primary-light: #1a3b5d;
-  --ifm-color-primary-lighter: #305278;
-  --ifm-color-primary-lightest: #466a94;
+  --ifm-color-primary: #248eff;
+  --ifm-color-primary-dark: #078fff;
+  --ifm-color-primary-darker: #0088f7;
+  --ifm-color-primary-darkest: #006cc6;
+  --ifm-color-primary-light: #47acff;
+  --ifm-color-primary-lighter: #55b2ff;
+  --ifm-color-primary-lightest: #81c6ff;
 
-  /* Secondary accent color: Darkened Light Blue for contrast */
-  --ifm-color-secondary: #a8d9f5;
-  --ifm-color-secondary-dark: #89c9f1;
-  --ifm-color-secondary-darker: #6ab9ec;
-  --ifm-color-secondary-darkest: #4da9e8;
-  --ifm-color-secondary-light: #c2e4f9;
-  --ifm-color-secondary-lighter: #d6eefc;
-  --ifm-color-secondary-lightest: #e9f6fe;
+  --ifm-color-secondary: #cacad2;
+  --ifm-color-secondary-dark: #9f9fac;
+  --ifm-color-secondary-darker: #9f9fac;
+  --ifm-color-secondary-darkest: #666675;
+  --ifm-color-secondary-light: #e9e9f0;
+  --ifm-color-secondary-lighter: #f4f4f7;
+  --ifm-color-secondary-lightest: #f4f4f7;
 
-  --ifm-background-color: #f5f9fc;
-
-  /* Warning (unchanged) */
   --ifm-color-warning: #ff970f;
   --ifm-color-warning-dark: #db770a;
   --ifm-color-warning-darker: #b75b07;
@@ -27,62 +30,36 @@
   --ifm-color-warning-light: #ffb84b;
   --ifm-color-warning-lighter: #ffcd6f;
   --ifm-color-warning-lightest: #ffe29f;
-
   --ifm-code-font-size: 95%;
 
-  /* Gray scale */
-  --ifm-color-gray-100: #eef1f1;
-  --ifm-color-gray-200: #d9dddd;
-  --ifm-color-gray-300: #c4c8c8;
-  --ifm-color-gray-400: #a0a4a4;
-  --ifm-color-gray-500: #7e8282;
-  --ifm-color-gray-600: #5b5f5f;
-  --ifm-color-gray-700: #404343;
-  --ifm-color-gray-800: #2c2f2f;
-  --ifm-color-gray-900: #1e2020;
+  --ifm-color-gray-100: #e9edfa;
+  --ifm-color-gray-200: #d5daec;
+  --ifm-color-gray-300: #ccd1e3;
+  --ifm-color-gray-400: #a6aecb;
+  --ifm-color-gray-500: #8b95b8;
+  --ifm-color-gray-600: #575f82;
+  --ifm-color-gray-700: #444b6d;
+  --ifm-color-gray-800: #242b47;
+  --ifm-color-gray-900: #1d2338;
 
-  --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-primary);
+  --docusaurus-details-decoration-color: var(--ifm-color-primary-darkest);
+
+  /* --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-primary); */
   --ifm-toc-border-color: var(--ifm-color-primary);
   --ifm-global-spacing: 1.5rem;
+
+  --docusaurus-highlighted-code-line-bg: rgb(233 234 235);
 }
 
-html[data-theme='dark'] {
-  /* Primary: Slate Blue */
-  --ifm-color-primary: #7aa2f7;
-  --ifm-color-primary-dark: #5a83d1;
-  --ifm-color-primary-darker: #476fb3;
-  --ifm-color-primary-darkest: #355c96;
-  --ifm-color-primary-light: #9ebbf9;
-  --ifm-color-primary-lighter: #bdd0fb;
-  --ifm-color-primary-lightest: #dbe5fd;
-
-  /* Contrast secondary: Warm light yellow (works with white text) */
-  --ifm-color-secondary: #e9c891;
-  --ifm-color-secondary-dark: #d8b270;
-  --ifm-color-secondary-darker: #c79e53;
-  --ifm-color-secondary-darkest: #b78a39;
-  --ifm-color-secondary-light: #f1d9ae;
-  --ifm-color-secondary-lighter: #f6e6c6;
-  --ifm-color-secondary-lightest: #faf1df;
-
-  --ifm-background-color: #121e2d;
-  --ifm-navbar-background-color: #101b2a;
-  --ifm-footer-background-color: #101b2a;
-  --ifm-footer-link-color: #b0cdfc;
-
-  --ifm-color-content: #f0f6ff;
-  --ifm-link-color: #b0cdfc;
-  --ifm-link-hover-color: #ffffff;
-
-  --ifm-toc-border-color: #2a4263;
-  --ifm-navbar-shadow: 0 1px 2px 0 #0e223d;
-  --ifm-color-gray-800: #1a263b;
-  --ifm-color-gray-900: #121e2d;
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .footer--dark {
-  background-color: var(--ifm-navbar-background-color);
-  border-top: 1px solid var(--ifm-color-primary);
+.alert {
+  background-color: var(--ifm-alert-background-color) !important;
 }
 
 .alert--praise {
@@ -99,13 +76,6 @@ html[data-theme='dark'] .alert--praise {
   --ifm-alert-border-color: #ce93d8;
 }
 
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: var(--ifm-color-gray-800);
 }
@@ -114,53 +84,43 @@ html[data-theme='dark'] code {
   background-color: var(--ifm-color-gray-800);
 }
 
+/* 
 html[data-theme='dark'] main img[src$='.png'] {
   background-color: white;
-}
+} */
 
-html[data-theme='dark'] h1 {
-  text-decoration: underline;
-  text-decoration-color: #e9c891 !important;
-}
+html[data-theme='dark'] {
+  --docusaurus-highlighted-code-line-bg: rgb(27 33 56);
+  --ifm-background-color: var(--ifm-color-gray-900);
+  --ifm-color-primary: #249cff;
 
-html[data-theme='dark'] p>strong {
-  color: #e9c891;
-}
-
-html[data-theme='dark'] li>strong {
-  text-decoration-color: #e9c891 !important;
-  text-decoration: underline;
-}
-
-html[data-theme='dark'] p>u {
-  text-decoration-color: #e9c891 !important;
-}
-
-p>strong {
-  color: #466a94;
-}
-
-p>u {
-  text-decoration-color: #466a94;
-}
-
-li>strong {
-  text-decoration-color: #466a94 !important;
-  text-decoration: underline;
+  --ifm-navbar-background-color: var(--ifm-color-gray-800);
 }
 
 .footer--dark {
   background-color: var(--ifm-color-gray-800);
 }
 
+html[data-theme='dark'] .footer--dark {
+  background-color: var(--ifm-color-gray-800);
+  /* border-top: 1px solid var(--ifm-color-primary); */
+}
+
+.footer__copyright {
+  font-size: 0.9rem;
+}
+
 .navbar__brand img {
+  width: 110px;
+  height: auto;
   margin-right: 10px;
   margin-bottom: 5px;
 }
 
 html {
-  font-family: 'Inter', sans-serif;
-  font-weight: normal;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1,
@@ -172,10 +132,8 @@ h5 {
   line-height: 110%;
 }
 
-html[data-theme='light'] h1 {
+h1 {
   margin-top: 0.25rem;
-  text-decoration: underline;
-  text-decoration-color: #466a94;
 }
 
 p,
@@ -195,15 +153,175 @@ strong,
   margin-top: 8px;
 }
 
+.navbar__link {
+  font-size: 1.2rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 500;
+}
+
+.navbar__brand {
+  margin-right: 15rem;
+}
+
+nav {
+  margin-bottom: 9rem;
+}
+
 nav.menu {
   padding: 1rem;
 }
 
-.hidden {
-  display: none !important;
+.components {
+  margin-bottom: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.components-docs-button:hover {
+  background-color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme="dark"] .alert--info {
+  color: white !important;
+  --ifm-alert-background-color: rgb(57 63 79) !important;
+  --ifm-alert-border-color: var(--ifm-color-primary) !important;
+}
+
+[data-theme="light"] .alert--info {
+  --ifm-alert-background-color: #efefef !important;
+  --ifm-alert-border-color: var(--ifm-color-primary) !important;
 }
 
 [data-theme="light"] img[src$="#gh-dark-mode-only"],
 [data-theme="dark"] img[src$="#gh-light-mode-only"] {
   display: none;
+}
+
+.simplify-title {
+  margin-top: 6rem;
+}
+
+.showcase {
+  padding-bottom: 10rem;
+  position: relative;
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 2pt solid var(--ifm-color-primary-dark);
+}
+
+.advantages {
+  padding-top: 6rem;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 300;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
+.advantages-title {
+  font-family: 'Bitter', sans-serif;
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.advantages-icon {
+  font-size: 7rem;
+  text-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.adopted-by-title {
+  color: var(--ifm-color-gray-300);
+  text-align: center;
+  display: block;
+  padding-bottom: 3rem;
+}
+
+.adopted-by-logo {
+  text-align: center;
+
+}
+
+.adopted-by-logo img {
+  filter: grayscale(1);
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.adopted-by-logo img:hover {
+  opacity: 1;
+  filter: none;
+  border-color: #006cc6;
+}
+
+.exploring-title {
+  position: relative;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.exploring-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 2pt solid var(--ifm-color-primary-dark);
+}
+
+.exploring-description {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.exploring-contribute-title {
+  font-size: 3rem;
+  text-align: right;
+}
+
+.exploring-contribute-description {
+  /* width: 80%;
+  display: block; */
+}
+
+.highlight {
+  color: var(--ifm-color-primary);
+}
+
+.atkinson-hyperlegible-regular {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.atkinson-hyperlegible-bold {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.atkinson-hyperlegible-regular-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.atkinson-hyperlegible-bold-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }

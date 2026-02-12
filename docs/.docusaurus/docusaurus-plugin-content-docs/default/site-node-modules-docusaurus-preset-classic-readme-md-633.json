@@ -1,0 +1,24 @@
+{
+  "id": "node_modules/@docusaurus/preset-classic/README",
+  "title": "@docusaurus/preset-classic",
+  "description": "Classic preset for Docusaurus.",
+  "source": "@site/node_modules/@docusaurus/preset-classic/README.md",
+  "sourceDirName": "node_modules/@docusaurus/preset-classic",
+  "slug": "/node_modules/@docusaurus/preset-classic/",
+  "permalink": "/node_modules/@docusaurus/preset-classic/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/arcus-azure/arcus/edit/main/docs/node_modules/@docusaurus/preset-classic/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "Docusaurus core",
+    "permalink": "/node_modules/@docusaurus/core/"
+  },
+  "next": {
+    "title": "Docusaurus Theme Classic",
+    "permalink": "/node_modules/@docusaurus/theme-classic/"
+  }
+}

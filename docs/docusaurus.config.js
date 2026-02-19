@@ -61,7 +61,7 @@ module.exports = {
               href: 'https://github.com/arcus-azure/.github/blob/main/CONTRIBUTING.md'
             },
             {
-              label: 'Discuss something',
+              label: 'Discuss an idea',
               href: 'https://github.com/arcus-azure/arcus/discussions/new/choose'
             }
           ],

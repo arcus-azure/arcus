@@ -1,0 +1,40 @@
+---
+hide_table_of_contents: true
+pagination_prev: null
+pagination_next: null
+---
+
+import DetailsByIndex from '@site/src/components/DetailsByIndex';
+
+# Frequently asked questions
+
+<div className="faq">
+<DetailsByIndex index={1} summary="What is Arcus?">
+  'Arcus' is an umbrella term for a set of NuGet packages/PowerShell modules that helps reducing boilerplate code from projects. Whether it is setting up [testing suite](https://testing.arcus-azure.net), [automating infrastructure tasks](https://scripting.arcus-azure.net) or other frequently repeated patterns, Arcus provides a well-tested quality solution to kickstart your project.
+
+  **It is not the purpose of Arcus to replace existing Microsoft technology.** It builds on top of their stack to provide added-value and connect missing links. Arcus is and continues to evolve in this goal.
+</DetailsByIndex>
+
+<DetailsByIndex index={2} summary="Why should I use Arcus?">
+  The frequently used boilerplate code that is often copy-pasted between projects is centralized in Arcus. Maintained by experts in the field, it **gives confidence** and **saves you time** during development. This results in **less code** to maintain.
+</DetailsByIndex>
+
+<DetailsByIndex index={3} summary="How to start with Arcus?">
+  Arcus is split into [components](./components.mdx), each active in a specific field. The functionality in each component is highly modular and can be used independent or together with other components. The easiest way to get started is to determine in what field you want to experiment with Arcus and go over its getting started guide:
+  * [**Arcus Messaging:**](https://messaging.arcus-azure.net/getting-started) lets users focus on business logic when interacting with messaging systems.
+  * [**Arcus Observability**](https://observability.arcus-azure.net) simplifies telemetry tracking.
+  * [**Arcus Scripting:**](https://scripting.arcus-azure.net/) provides frequently-used, repeated infrastructure tasks.
+  * [**Arcus Security**](https://security.arcus-azure.net/getting-started) abstracts and simplifies secrets interaction.
+  * [**Arcus Testing:**](https://testing.arcus-azure.net/getting-started) provide test infrastructure components.
+</DetailsByIndex>
+
+<DetailsByIndex index={4} summary="Where can I download Arcus?">
+  Arcus is split into [components](./components.mdx), each active in a specific field. Most Arcus components are available via [NuGet packages](https://www.nuget.org/packages?q=arcus.*&includeComputedFrameworks=true&packagetype=dependency&prerel=false&sortby=created-desc), with the exception of Arcus Scripting, which are [PowerShell modules](https://www.powershellgallery.com/packages?q=arcus.*).
+</DetailsByIndex>
+
+<DetailsByIndex index={5} summary="How can I contribute to Arcus?">
+  First off: Thank you! We are always happy to receive contributions on our Arcus components. TODO work is managed via GitHub issues:
+  * Do you want to contribute something simple to get familiar with Arcus' codebases? See our [getting started issues](https://github.com/issues/assigned?q=is%3Aissue%20state%3Aopen%20archived%3Afalse%20sort%3Aupdated-desc%20label%3A%22good%20first%20issue%22%20org%3Aarcus-azure).
+  * Do you have an idea or a problem with Arcus? Feel free to add an issue/bug to the GitHub repository of the Arcus component of your choosing!
+</DetailsByIndex>
+</div>

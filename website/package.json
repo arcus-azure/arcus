@@ -9,7 +9,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@types/node": "24.10.9",
+    "@types/node": "24.10.13",
     "@mapbox/rehype-prism": "^0.8.0",
     "@types/styled-components": "^5.1.25",
     "date-fns": "^4.0.0",

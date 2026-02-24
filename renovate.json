@@ -1,8 +1,10 @@
 {
-  "branchPrefix":"renovate-",
-  "labels":["dependencies"],
-  "assignees": ["@tomkerkhove", "@samneirinck"],
-  "ignoreDeps":[],
+  "branchPrefix": "renovate-",
+  "labels": [
+    "dependencies"
+  ],
+  "assignees": [],
+  "ignoreDeps": [],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "extends": [

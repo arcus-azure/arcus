@@ -130,7 +130,7 @@ module.exports = {
           routeBasePath: '/',
           path: '.',
           sidebarCollapsible: false,
-          includeCurrentVersion: process.env.CONTEXT !== 'production',
+          includeCurrentVersion: true,
           include: ['**/*.md', '**/*.mdx'],
           exclude: ['node_modules/**', 'src/**', 'docusaurus.config.js', 'sidebars.js'],
         },

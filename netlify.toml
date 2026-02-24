@@ -17,6 +17,8 @@ ID = "a94cac62-0d30-4d52-a378-d60cc1717db9"
   # a base has not been set.
   publish = "build"
 
+  ignore = "ignore"
+
   # Default build command.
   command = "pnpm run build"
 
